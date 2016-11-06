@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My Recipe Repository</title>
+		<link rel="stylesheet" href="style.css" media="screen">
+	</head>
+	<body>
+
+		
+		<header>
+      	<!-- The <i> tag below includes the sticky note icon from Font Awesome -->
+	      <h1><a href="/">My Recipe Repository</a></h1>
+
+	      <nav>
+	        <ul class="navbar-list">
+	          <li class="navbar-item"><a href="#">Home</a></li>
+	          <li class="navbar-item"><a href="#">Add Recipe</a></li>
+	          <li class="navbar-item navbar-right"><a href="images/log_out.gif">Log out</a></li>
+	        </ul>
+	      </nav>
+
+	<main>
+
+		<div class="left-navbar">
+			<ul class="left-nav-list">
+				<li class="catagory"><a href="#">Mexican</a></li>
+				<li class="catagory"><a href="#">Greek</a></li>
+				<li class="catagory"><a href="#">Asian</a></li>
+				<li class="catagory"><a href="#">Italian</a></li>
+				<li class="catagory"><a href="#">Etc.</a></li>
+			</ul>	
+		</div>
+
+	<div class="add-note-button-container">
+        <button id="add-note-button">+</button>
+    </div>
+
+
+
+	</main>
+
+    <footer>
+      <div class="copyright">
+        Copyright &copy; 2016
+      </div>
+    </footer>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="add-note-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Add a ToDo</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="todo-input-element required">
+            <label for="todo-input-what">What</label>
+            <input type="text" id="todo-input-what">
+          </div>
+          <div class="todo-input-element">
+            <label for="todo-input-where">Where</label>
+            <input type="text" id="todo-input-where">
+          </div>
+          <div class="todo-input-element">
+            <label for="todo-input-when">When</label>
+            <input type="text" id="todo-input-when">
+          </div>
+          <div class="todo-input-element">
+            <label for="todo-input-who">Who</label>
+            <input type="text" id="todo-input-who">
+          </div>
+          <div class="todo-input-element">
+            <label for="todo-input-details">Details</label>
+            <textarea id="todo-input-details"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Add ToDo</button>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
