@@ -130,6 +130,16 @@ footer{
   margin: 2px;
 }
 
+.link-icon{
+  display: inline-block;
+  margin: 10px;
+}
+
+.link-icon img{
+  display: block;
+  margin: 0 auto;
+}
+
 .recipe-header{
   color: blue;
   font-size: 18px;
