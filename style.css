@@ -125,7 +125,8 @@ footer{
 
 .recipe{
   color: blue;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
   list-style-type: none;
   margin: 2px;
 }
@@ -138,6 +139,7 @@ footer{
 .link-icon img{
   display: block;
   margin: 0 auto;
+  width: 50px;
 }
 
 .recipe-header{
