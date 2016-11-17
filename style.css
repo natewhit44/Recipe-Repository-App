@@ -1,92 +1,17 @@
-.header-h1{
- 	padding: 0px;
- 	margin: 0px;
- 	background-image: url("images/Food_Header.jpg");
- 	background-size: cover;
- 	height: 80px;
-}
-
-.header-h1 a{
- 	padding-left: 15px;
- 	text-decoration: none;
- 	font-family: "Comic Sans MS";
- 	color: white;
- 	font-size: 1.5em;
-}
-
-.Main_Image{
-	padding: 20px;
-}
-
-body{
- 	border: 0px;
- 	margin: 0px
-}
-
-head{
-	border: 0px;
-	margin: 0px;
-}
-
-.navbar-list{
- 	background-color: #333333;
- 	padding: 0;
- 	margin: 0; 
- 	height: 32px;
-}
-
-.navbar-item{
-	display: inline-block;
-	margin: 0px 5px 0px 5px;
-	padding: 5px 10px 5px 10px;
-}
-
-.navbar-item a{
-	color: white;
-	text-decoration: none;
-	font-size: 1.2em;
-}
-
-.navbar-item:hover{
-	background-color: #696969;
-}
-
-.navbar-right{
-	float: right;
-}
-
-footer{
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	height: 26px;
-	background-color: #333333;
-}
-
-.copyright{
-	position: relative;
-	right: 10px;
-	color: white;
-	text-align: right;
-	font-size: 18px;
-}
-
-.navbar-item-Assignment:hover{
-	background-color: green;
-	display: inline-block;
-	margin: 0px 5px 0px 5px;
-	padding: 5px 10px 5px 10px;
-}
-
 /* Post boilerplate rules*/
+
+body {
+  background-color: blue;
+}
 
 .left-navbar{
 	position: fixed;
 	width: 200px;
 	background-color: gray;
 	left: 0;
+  top: 53px;
 	height: 100%;
+  border-radius: 10px; 
 }
 
 .left-nav-list{
@@ -112,15 +37,33 @@ footer{
 	background-color: #333333;
 }
 
+.right-bar{
+  position: fixed;
+  width: 200px;
+  background-color: gray;
+  right: 0;
+  top: 53px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.bottom-bar {
+  position: fixed;
+  width: 100%;
+  background-color: gray;
+  bottom: 0px;
+  height: 43px;
+}
+
 /* Workspace Rules*/
 .recipe-workspace{
   background-color: #fffbf4;
   position: fixed;
-  top: 112px;
+  top: 53px;
   left: 200px;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
+  width: 79%;
+  height: 90%;
+  /*overflow: scroll;*/
 }
 
 .recipe{
@@ -270,3 +213,78 @@ footer{
   background-color: #5481e4;
 }
 
+/* Fancy Nav-Bar */
+/*
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+*/
+
+.navbar-brand { position: absolute; z-index: 2; left: 100px; top: 0px;} 
+
+.navbar-header a{
+     font-size: 32px;
+}
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
+
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 220px; padding-left: 0px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background-color: rgb(111, 84, 153); /* This is the rule for the sign in and search bottons*/
+    border-color: rgb(111, 84, 153);
+    color: rgb(255, 255, 255); /* Font color of button text */
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+    
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%,0px);
+    }
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px,0px);
+    }
+    
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px,-100%);
+    }
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px,0px);
+    }
+}
+
+.icon{
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  left: 25px;
+}
