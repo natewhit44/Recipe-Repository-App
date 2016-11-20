@@ -2,9 +2,9 @@
 //--------------------------------------------
 // // 
 // //--------------------------------------------
-// function handleGoogleSearchClick(event){
-// 	console.log(event);
-// }
+function handleGoogleSearchClick(event){
+	console.log(event);
+}
 
 
 
@@ -17,10 +17,10 @@
 // window.addEventListener('DOMContentLoaded', function (event) {
 
 //   // Delegate an event listener to <main> to handle clicks on dismiss buttons.
-//   var google_search = document.getElementsByClassName('google-search');
-//   if (google_search) {
-//     google_search.addEventListener('click', handleGoogleSearchClick);
-//   }
+  var google_search = document.getElementsByClassName('google-search');
+  if (google_search) {
+    google_search.addEventListener('click', handleGoogleSearchClick);
+  }
 
 
 // });

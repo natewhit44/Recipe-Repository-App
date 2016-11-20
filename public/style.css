@@ -21,6 +21,14 @@ body {
  	border: 0px;
 }
 
+.left-nav-list li{
+  border-radius: 10px;
+}
+
+.left-nav-list li:hover{
+  cursor: pointer;
+}
+
 .left-nav-list li a{
   text-decoration: none;
 }
