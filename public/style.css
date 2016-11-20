@@ -53,6 +53,10 @@ body {
 	background-color: #333333;
 }
 
+.recipe a:hover{
+  text-decoration: none;
+}
+
 .google-api{
   position: fixed;
   right: 0;
