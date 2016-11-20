@@ -1,0 +1,23 @@
+{
+  "name": "Recipe-Repository",
+  "version": "1.0.0",
+  "description": "Final Project for CS 290",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natewhit44/Recipe-Repository-App.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/natewhit44/Recipe-Repository-App/issues"
+  },
+  "homepage": "https://github.com/natewhit44/Recipe-Repository-App/blob/master/README.md",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
