@@ -37,14 +37,15 @@ body {
 	background-color: #333333;
 }
 
-.right-bar{
+.google-api{
   position: fixed;
-  width: 200px;
-  background-color: gray;
   right: 0;
-  top: 53px;
-  height: 100%;
+  left: 200px;
+  background-color: blue;
+  bottom: 0px;
+  height: 200px;
   border-radius: 10px;
+  visibility: hidden;
 }
 
 .bottom-bar {
@@ -55,14 +56,32 @@ body {
   height: 43px;
 }
 
+
+footer{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 26px;
+}
+
+.copyright{
+  position: relative;
+  right: 10px;
+  color: white;
+  text-align: right;
+  font-size: 18px;
+}
+
 /* Workspace Rules*/
 .recipe-workspace{
   background-color: #fffbf4;
   position: fixed;
   top: 53px;
-  left: 200px;
-  width: 79%;
-  height: 90%;
+  left: 201px;
+  width: 86%;
+  height: 88%;
+  border-radius: 10px;
   /*overflow: scroll;*/
 }
 
