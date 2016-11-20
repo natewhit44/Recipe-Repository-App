@@ -29,9 +29,12 @@ app.get('/index.js', function(req, res){
 	res.render('index.js');
 });
 
+
 // Catch all for 404
 app.get('*', function (req, res) {
-  res.render('404-page');
+  res.render('404-page',{
+  	title: "Error Page"
+  });
 });
 
 // Listen on the specified port.
