@@ -21,6 +21,14 @@ body {
  	border: 0px;
 }
 
+.left-nav-list li a{
+  text-decoration: none;
+}
+
+.left-nav-list li a:hover{
+  color: white;
+}
+
 .catagory{
 	color: white;
 	font-size: 2em;
@@ -46,6 +54,21 @@ body {
   height: 200px;
   border-radius: 10px;
   visibility: hidden;
+}
+
+.google-search{
+  border-radius: 20px;
+  background-color: #3fb53d;
+  border-width: 2px;
+  border-color: white;
+  position: fixed;
+  left: 23px;
+  bottom: 8px;
+  color: white;
+}
+
+.google-search button:hover{
+  cursor: pointer;
 }
 
 .bottom-bar {
