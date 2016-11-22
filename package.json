@@ -1,5 +1,5 @@
 {
-  "name": "Recipe Repository",
+  "name": "Recipe_Repository",
   "version": "1.0.0",
   "description": "Final Project for CS 290",
   "main": "server.js",
