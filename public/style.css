@@ -96,7 +96,7 @@ body {
 }
 
 .hidden{
-  visibility: hidden;
+  visibility: visible;
 }
 
 .bottom-bar {
@@ -231,7 +231,7 @@ footer{
   padding: 10;
 }
 .recipe-component h4 {
-  display: block;
+  display: ;
   margin: 10px 0;
   padding: 10px 0;
   /*position: fixed;*/
