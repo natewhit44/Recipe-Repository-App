@@ -11,7 +11,7 @@ body {
 	left: 0;
   top: 53px;
 	height: 100%;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .left-nav-list{
@@ -79,7 +79,7 @@ body {
 }
 
 /*
-  Something is wrong with the clickability of
+  Something is wrong with the clickability of 
   this button from the perspective of the user.
   Someone should look into it...
 */
@@ -126,7 +126,7 @@ footer{
 
 /* Workspace Rules*/
 .recipe-workspace{
-  background-color: #fffbf4;
+  background-color: blue;
   position: fixed;
   top: 53px;
   left: 201px;
@@ -164,7 +164,7 @@ footer{
   margin-left: 15px;
 }
 /* Modal CSS from assignment 2*/
-#recipe-display-backdrop {
+#modal-backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -174,41 +174,41 @@ footer{
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#recipe-modal {
+#add-note-modal {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1010;
-  /*overflow: scroll;*/
+  overflow: scroll;
 }
 
 .hidden {
   display: none;
 }
 
-#modal-dialog {
+.modal-dialog {
   width: auto;
-  max-width: 1000px;
-  min-width: 450px;
-  min-height: 500px;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
   margin: 40px auto;
   background-color: #fff;
   border-radius: 15px;
 }
 
-#modal-header {
+.modal-header {
   position: relative;
   padding: 10px 20px;
 }
 
-#modal-header h3 {
+.modal-header h3 {
   margin: 0;
   font-size: 28px;
 }
 
-#modal-close-button {
+.modal-close-button {
   position: absolute;
   right: 10px;
   top: 5px;
@@ -219,39 +219,8 @@ footer{
   cursor: pointer;
 }
 
-#modal-content {
+.modal-body {
   padding: 20px;
-  display: list-item;
-  overflow-x: wrap;
-  overflow-y: scroll;
-}
-
-.recipe-component {
-  display: flex;
-  padding: 10;
-}
-.recipe-component h4 {
-  display: block;
-  margin: 10px 0;
-  padding: 10px 0;
-  /*position: fixed;*/
-}
-.recipe-list {
-  /*position: relative;*/
-  /*border-radius: 2px solid #000;*/
-  margin: 10px;
-}
-.recipe-list-item {
-  text-align: left;
-}
-.ingredient {
-  text-decoration: underline;
-}
-.quantity {
-  font-weight: bold;
-}
-.step {
-  font-style: italic;
 }
 
 .todo-input-element {
@@ -320,7 +289,7 @@ Code snippet by maridlcrmn for Bootsnipp.com
 Follow me on Twitter @maridlcrmn
 */
 
-.navbar-brand { position: absolute; z-index: 2; left: 100px; top: 0px;}
+.navbar-brand { position: absolute; z-index: 2; left: 100px; top: 0px;} 
 
 .navbar-header a{
      font-size: 32px;
@@ -358,12 +327,12 @@ Follow me on Twitter @maridlcrmn
 }
 
 @media screen and (max-width: 767px) {
-    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; }
-
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
     .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
     .navbar .nav-collapse .navbar-form { margin: 0; }
     .nav-collapse>li { float: none; }
-
+    
     .navbar.navbar-default .nav-collapse,
     .navbar.navbar-inverse .nav-collapse {
         transform: translate(-100%,0px);
@@ -372,7 +341,7 @@ Follow me on Twitter @maridlcrmn
     .navbar.navbar-inverse .nav-collapse.in {
         transform: translate(0px,0px);
     }
-
+    
     .navbar.navbar-default .nav-collapse.slide-down,
     .navbar.navbar-inverse .nav-collapse.slide-down {
         transform: translate(0px,-100%);
