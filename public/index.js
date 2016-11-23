@@ -1,5 +1,4 @@
 
-
 // function handleGoogleSearchClick(event){
 // 	console.log(event);
 // }
