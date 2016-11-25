@@ -62,9 +62,5 @@ $(document).ready(function(){
 		console.log("\nRecipe icon was pressed\n\nImplement double click");
 	});
 
-	// $('.google-api').on("click", function(){
-
-	// });
-
 
 });
