@@ -3,11 +3,11 @@
 <main>
 	<div class="left-navbar">
 		<ul class="left-nav-list">
-			<li class="catagory"><a href="#">Mexican</a></li>
-			<li class="catagory"><a href="#">Greek</a></li>
-			<li class="catagory"><a href="#">Asian</a></li>
-			<li class="catagory"><a href="#">Italian</a></li>
-			<li class="catagory"><a href="#">Etc.</a></li>
+			<li class="category"><a href="#">Mexican</a></li>
+			<li class="category"><a href="#">Greek</a></li>
+			<li class="category"><a href="#">Asian</a></li>
+			<li class="category"><a href="#">Italian</a></li>
+			<li class="category"><a href="#">Etc.</a></li>
 		</ul>	
 	</div>
 
@@ -69,7 +69,21 @@
       </div>
     </div>
 
-    <div class="google-api hidden">
+    <div class="google-api">
+      <div class="google-search-container">    
+        <script>
+          (function() {
+            var cx = '005796311790971295777:1lg27itme2e';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+      <gcse:search></gcse:search>
+      </div>
     </div>
 
 	</main>
