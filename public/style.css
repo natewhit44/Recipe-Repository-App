@@ -393,7 +393,7 @@ header {
   background-image: url("/images/Food_Header.jpg");
   background-size: cover;
   border-radius: 10px;
-  max-height: 100px;
+  max-height: 87px;
   /*background-image: "./Food_Header.jpg";*/
 }
 
@@ -403,9 +403,12 @@ header h1 {
   font-size: 48px;
   font-weight: 200;
   position: relative;
-  left: 55px;
-  bottom: 5px;
+  left: 10px;
+  bottom: 10px;
   text-decoration: none;
+  background-color: rgba(18, 142, 35, 0.6);
+  padding: 5px;
+  border-radius: 10px;
 }
 
 header h1 a {
@@ -433,7 +436,7 @@ nav {
   display: inline-block;
   position: absolute;
   right: 0px;
-  top: 40px;
+  top: 48px;
 }
 
 .navbar-item {
@@ -441,21 +444,19 @@ nav {
 }
 
 .navbar-item a {
-  margin-right: 20px;
+  margin-right: 10px;
+  padding: 5px;
   color: white;
   font-size: 24px;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: rgba(18, 142, 35, 0.6);
+  border-radius: 10px;
 }
 
 .navbar-item a:hover {
   text-decoration: none;
+  background-color: rgba(18, 142, 35, 0.8);
   color: white;
   border-radius: 10px;
   cursor: pointer;
 }
-
-/*.navbar-right {
-  float: right;
-  position: relative;
-  bottom: 5px;
-}*/
