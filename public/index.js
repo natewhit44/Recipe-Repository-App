@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 	$('.google-search').on("click", function(){
 		console.log("\nGoogle Search button pressed");
-		$('.google-api').toggle();
+		$('.google-api').slideToggle('slow');
 
 	});
 
