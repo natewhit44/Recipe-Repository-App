@@ -461,3 +461,8 @@ nav {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.navbar-item a:visited{
+  text-decoration: none;
+  color: white;
+}
