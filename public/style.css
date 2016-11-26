@@ -37,6 +37,17 @@ body {
   color: white;
 }
 
+.right-frame{
+  position: fixed;
+  background-color: gray;
+  height: 100%;
+  width: 65px;
+  top: 53px;
+  right: 0px;
+  border-radius: 10px;
+
+}
+
 .category{
 	color: white;
 	font-size: 2em;
@@ -110,21 +121,13 @@ body {
   visibility: hidden;
 }
 
-.bottom-bar {
-  position: fixed;
-  width: 100%;
-  background-color: gray;
-  bottom: 0px;
-  height: 43px;
-}
-
-
 footer{
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   height: 26px;
+  background-color: gray;
 }
 
 .copyright{
@@ -137,12 +140,12 @@ footer{
 
 /* Workspace Rules*/
 .recipe-workspace{
-  background-color: #fbffd9;
+  background-color: #fcf2de;
   position: fixed;
-  top: 53px;
-  left: 201px;
+  top: 54px;
+  left: 202px;
   width: 86%;
-  height: 88%;
+  bottom: 29px;
   border-radius: 10px;
   /*overflow: scroll;*/
 }
@@ -167,12 +170,22 @@ footer{
 }
 
 .recipe-header{
-  color: blue;
-  font-size: 18px;
+  color: green;
+  padding-left: 17px;
+  font-family: Papyrus, fantasy;
+  font-size: 32px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26.4px;
 }
 
 .recipe-list{
   margin-left: 15px;
+  height: 93%;
+  width: 98%;
+  background-color: #fcf2de;
+  border-radius: 10px;
 }
 /* Modal CSS from assignment 2*/
 #modal-backdrop {
