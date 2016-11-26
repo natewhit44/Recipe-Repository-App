@@ -121,7 +121,7 @@ body {
 }
 
 .hidden{
-  visibility: hidden;
+  visibility: visible;
 }
 
 footer{
@@ -249,6 +249,40 @@ footer{
 
 .modal-body {
   padding: 20px;
+<<<<<<< HEAD
+=======
+  display: list-item;
+  overflow-x: wrap;
+  overflow-y: scroll;
+}
+
+.recipe-component {
+  display: flex;
+  padding: 10;
+}
+.recipe-component h4 {
+  display: ;
+  margin: 10px 0;
+  padding: 10px 0;
+  /*position: fixed;*/
+}
+.recipe-list {
+  /*position: relative;*/
+  /*border-radius: 2px solid #000;*/
+  margin: 10px;
+}
+.recipe-list-item {
+  text-align: left;
+}
+.ingredient {
+  text-decoration: underline;
+}
+.quantity {
+  font-weight: bold;
+}
+.step {
+  font-style: italic;
+>>>>>>> RecipeDisplayModal
 }
 
 .todo-input-element {
