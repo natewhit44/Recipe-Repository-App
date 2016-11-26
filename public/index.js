@@ -62,9 +62,24 @@ $(document).ready(function(){
 		console.log("\nRecipe icon was pressed\n\nImplement double click");
 	});
 
-	// $('.google-api').on("click", function(){
-
-	// });
-
 
 });
+
+
+// Recipe icon hash table
+var iconDict = {}
+
+iconDict.mexican = '/images/Mexican/favicon-96x96.png';
+iconDict.greek = '/images/Greek/favicon-96x96.png';
+iconDict.asian = '/images/Asian/favicon-96x96.png';
+iconDict.italian = '/images/Italian/favicon-96x96.png';
+iconDict.etc = '/images/Etc./favicon-96x96.png';
+iconDict.beverage = '/images/Beverage/favicon-96x96.png';
+iconDict.breakfast = '/images/Breakfast/favicon-96x96.png';
+iconDict.dessert = '/images/Dessert/favicon-96x96.png';
+iconDict.salad = '/images/Salad/favicon-96x96.png';
+iconDict.side = '/images/Side_Dish/favicon-96x96.png';
+iconDict.seafood = '/images/Seafood/favicon-96x96.png'
+iconDict.entree = '/images/Entree/favicon-96x96.png';
+
+console.log('== iconDict.mexian', iconDict.mexican)
