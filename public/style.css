@@ -9,7 +9,7 @@ body {
 	width: 200px;
 	background-color: gray;
 	left: 0;
-  top: 53px;
+  top: 90px;
 	height: 100%;
   border-radius: 10px; 
 }
@@ -31,6 +31,7 @@ body {
 
 .left-nav-list li a{
   text-decoration: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .left-nav-list li a:hover{
@@ -42,7 +43,7 @@ body {
   background-color: gray;
   height: 100%;
   width: 65px;
-  top: 53px;
+  top: 90px;
   right: 0px;
   border-radius: 10px;
 
@@ -70,10 +71,10 @@ body {
 
 .google-api{
   position: fixed;
-  right: 0;
-  left: 200px;
+  right: 67px;
+  left: 202px;
   background-color: #006666;
-  bottom: 0px;
+  bottom: 28px;
   height: 650px;
   border-radius: 10px;
   display: none;
@@ -88,6 +89,7 @@ body {
   left: 23px;
   bottom: 8px;
   color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .google-search-container{
@@ -136,13 +138,14 @@ footer{
   color: white;
   text-align: right;
   font-size: 18px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 /* Workspace Rules*/
 .recipe-workspace{
   background-color: #fcf2de;
   position: fixed;
-  top: 54px;
+  top: 90px;
   left: 202px;
   width: 86%;
   bottom: 29px;
@@ -312,7 +315,7 @@ footer{
 Code snippet by maridlcrmn for Bootsnipp.com
 Follow me on Twitter @maridlcrmn
 */
-
+/*
 .navbar-brand { position: absolute; z-index: 2; left: 100px; top: 0px;} 
 
 .navbar-header a{
@@ -334,9 +337,9 @@ Follow me on Twitter @maridlcrmn
 .btn.btn-outline { background-color: transparent; }
 
 .navbar-nav.navbar-right .btn:not(.collapsed) {
-    background-color: rgb(111, 84, 153); /* This is the rule for the sign in and search bottons*/
+    background-color: rgb(111, 84, 153); 
     border-color: rgb(111, 84, 153);
-    color: rgb(255, 255, 255); /* Font color of button text */
+    color: rgb(255, 255, 255); 
 }
 
 .navbar.navbar-default .nav-collapse,
@@ -374,11 +377,85 @@ Follow me on Twitter @maridlcrmn
     .navbar.navbar-inverse .nav-collapse.in.slide-down {
         transform: translate(0px,0px);
     }
-}
+}*/
 
-.icon{
+/*.icon{
   height: 50px;
   width: 50px;
   position: fixed;
   left: 25px;
+}*/
+
+/* Alternative Header*/
+header {
+  color: white;
+  padding: 5px 20px 0 5px;
+  background-image: url("/images/Food_Header.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  max-height: 100px;
+  /*background-image: "./Food_Header.jpg";*/
 }
+
+header h1 {
+  display: inline-block;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 48px;
+  font-weight: 200;
+  position: relative;
+  left: 55px;
+  bottom: 5px;
+  text-decoration: none;
+}
+
+header h1 a {
+  color: inherit;
+  border-radius: 10px;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  margin: 0 -20px;  /* negative margin here makes up for header padding */
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 20px;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+}
+
+.navbar-item {
+  display: inline-block;
+}
+
+.navbar-item a {
+  margin-right: 20px;
+  color: white;
+  font-size: 24px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.navbar-item a:hover {
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*.navbar-right {
+  float: right;
+  position: relative;
+  bottom: 5px;
+}*/
