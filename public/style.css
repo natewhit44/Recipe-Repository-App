@@ -73,7 +73,7 @@ body {
   position: fixed;
   right: 67px;
   left: 202px;
-  background-color: #006666;
+  background-color: rgba(0, 102, 102,0.7);
   bottom: 28px;
   height: 350px;
   border-radius: 10px;
@@ -192,7 +192,7 @@ footer{
   border-radius: 10px;
 }
 /* Modal CSS from assignment 2*/
-#modal-backdrop {
+#recipe-display-backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -200,60 +200,84 @@ footer{
   right: 0;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.85);
+  display: none;
 }
 
-#add-note-modal {
+#recipe-modal {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1010;
-  overflow: scroll;
+  display: none;
+  /*overflow: scroll;*/
 }
 
 .hidden {
   display: none;
 }
 
-.modal-dialog {
+#modal-dialog {
   width: auto;
-  max-width: 600px;
-  min-width: 350px;
-  min-height: 300px;
+  max-width: 1000px;
+  min-width: 450px;
+  min-height: 500px;
   margin: 40px auto;
   background-color: #fff;
   border-radius: 15px;
 }
 
-.modal-header {
+#modal-header {
   position: relative;
-  padding: 10px 20px;
+  padding: 3px ;
+  display: inline-block;
+  width: 100%;
+  display: none;
 }
 
-.modal-header h3 {
+#modal-header h3 {
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
+  background-color: blue;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: rgba(18, 142, 35, 0.6);
+  border-radius: 15px;
 }
 
-.modal-close-button {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 24px;
+#modal-close-button {
+  position: absolute;;
+  right: 20px;
+  bottom: 0px;
+  font-size: 32px;
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
+  float: right;
+  background-color: blue;
+}
+
+#modal-content {
+  /*padding: 20px;*/
+  display: inline-block;
+  overflow-x: wrap;
+  margin: 10px 40px;
+  background-color: rgba(18, 142, 35, 0.3);
+ /* overflow-y: scroll;*/
+ left: 100px;
+ border-radius: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  
 }
 
 .modal-body {
   padding: 20px;
-<<<<<<< HEAD
-=======
   display: list-item;
   overflow-x: wrap;
-  overflow-y: scroll;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+  /*overflow-y: scroll;*/
 }
 
 .recipe-component {
@@ -282,7 +306,6 @@ footer{
 }
 .step {
   font-style: italic;
->>>>>>> RecipeDisplayModal
 }
 
 .todo-input-element {
@@ -345,81 +368,6 @@ footer{
   background-color: #5481e4;
 }
 
-/* Fancy Nav-Bar */
-/*
-Code snippet by maridlcrmn for Bootsnipp.com
-Follow me on Twitter @maridlcrmn
-*/
-/*
-.navbar-brand { position: absolute; z-index: 2; left: 100px; top: 0px;} 
-
-.navbar-header a{
-     font-size: 32px;
-}
-
-.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
-
-.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
-.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
-
-.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 220px; padding-left: 0px; width: 100%; }
-.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
-.navbar.navbar-inverse .nav-collapse { background-color: #222; }
-.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
-.nav-collapse>li { float: right; }
-
-.btn.btn-circle { border-radius: 50px; }
-.btn.btn-outline { background-color: transparent; }
-
-.navbar-nav.navbar-right .btn:not(.collapsed) {
-    background-color: rgb(111, 84, 153); 
-    border-color: rgb(111, 84, 153);
-    color: rgb(255, 255, 255); 
-}
-
-.navbar.navbar-default .nav-collapse,
-.navbar.navbar-inverse .nav-collapse {
-    height: auto !important;
-    transition: transform 0.3s;
-    transform: translate(0px,-50px);
-}
-.navbar.navbar-default .nav-collapse.in,
-.navbar.navbar-inverse .nav-collapse.in {
-    transform: translate(0px,0px);
-}
-
-@media screen and (max-width: 767px) {
-    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
-    
-    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
-    .navbar .nav-collapse .navbar-form { margin: 0; }
-    .nav-collapse>li { float: none; }
-    
-    .navbar.navbar-default .nav-collapse,
-    .navbar.navbar-inverse .nav-collapse {
-        transform: translate(-100%,0px);
-    }
-    .navbar.navbar-default .nav-collapse.in,
-    .navbar.navbar-inverse .nav-collapse.in {
-        transform: translate(0px,0px);
-    }
-    
-    .navbar.navbar-default .nav-collapse.slide-down,
-    .navbar.navbar-inverse .nav-collapse.slide-down {
-        transform: translate(0px,-100%);
-    }
-    .navbar.navbar-default .nav-collapse.in.slide-down,
-    .navbar.navbar-inverse .nav-collapse.in.slide-down {
-        transform: translate(0px,0px);
-    }
-}*/
-
-/*.icon{
-  height: 50px;
-  width: 50px;
-  position: fixed;
-  left: 25px;
-}*/
 
 /* Alternative Header*/
 header {
@@ -499,4 +447,37 @@ nav {
 .navbar-item a:visited{
   text-decoration: none;
   color: white;
+}
+
+.icon{
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+#search-box{
+  width: 400px;
+  height: 65px;
+  position: fixed;
+  top: 21px;
+  right: 165px;
+  border-radius: 10px;
+  display: none;    
+
+}
+
+#search-box input{
+  width: 98%;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 5px;
+  font-size: 36px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+/*  opacity: 0.7;*/
+  display: none;
 }

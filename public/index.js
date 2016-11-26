@@ -62,6 +62,19 @@ $(document).ready(function(){
 		console.log("\nRecipe icon was pressed\n\nImplement double click");
 	});
 
+	$('#add-recipe-button').on('click', function(){
+		console.log("\nAdd note button clicked");
+		$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeIn( "slow");
+	});
+
+	$('#modal-close-button').on('click', function(){
+		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
+	});
+
+	$('#search-button').on('click', function(){
+		$('#search-box, #search-box-input').fadeToggle();
+	});
+
 
 });
 
