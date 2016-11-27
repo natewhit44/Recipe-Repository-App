@@ -73,6 +73,8 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
+		$('#home, #categories, #add-recipe-button').fadeToggle();
+		//$('#search-button').stop().animate({height: "61px"});
 	});
 
 

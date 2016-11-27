@@ -4,7 +4,7 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
   host: "oniddb.cws.oregonstate.edu",
   user: "whitlocn-db",
-  password: "S4kcsUGuUS8194Yh",
+  password: "mX0IKGvySdN1jVen",
   database: "whitlocn-db"
 });
 
