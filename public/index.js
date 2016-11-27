@@ -67,7 +67,7 @@ $(document).ready(function(){
 		$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeIn( "slow");
 	});
 
-	$('#modal-close-button').on('click', function(){
+	$('#go-back').on('click', function(){
 		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
 	});
 
