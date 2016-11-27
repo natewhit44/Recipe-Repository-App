@@ -162,15 +162,25 @@ footer{
   margin: 2px;
 }
 
+.link-icon p{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  color: rgba(18, 142, 35, 0.8);
+}
+
 .link-icon{
   display: inline-block;
   margin: 10px;
 }
 
+.link-icon:hover{
+  cursor: pointer;
+}
+
 .link-icon img{
   display: block;
   margin: 0 auto;
-  width: 50px;
+  width: 100px;
 }
 
 .recipe-header{
