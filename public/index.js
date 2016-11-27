@@ -1,7 +1,9 @@
 // jQuery functions to have a look at:
 // http://www.w3schools.com/jquery/jquery_examples.asp
 
-//LOOK AT THIS NATE: http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
+//LOOK AT THIS FOR EXAMPLES
+//ON HOW TO USE jQuery: 
+//http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
 
 // -Selectors
 // -Events
@@ -34,28 +36,26 @@ $(document).ready(function(){
 		console.log("\nHome button pressed");
 	});
 
-	$('#about').on("click", function(){
+	$('#categories').on("click", function(){
 		console.log("\nAbout button pressed");
 	});
 
-	$('#contact').on("click", function(){
+	$('#add-recipe-button').on("click", function(){
 		console.log("\nContact button pressed");
 	});
 
-	$('.btn.btn-danger').on("click", function(){
-		console.log("\nSearch icon pressed...\n\nExecuting query.");
-		//https://developers.google.com/custom-search/docs/element
-		//https://developers.google.com/web-search/docs/
-		//http://stackoverflow.com/questions/17863086/how-to-get-started-with-google-custom-search-api
-		var query = $('.form-control').val();
-		console.log("\nQuery: ", query);
-		$('.form-control').val("");
+	// Sets search input initializer to enter button
+	$('#search-box-input').bind('keypress', function(e){
+	   if(e.which === 13) { // return
+	      var query = $('#search-box-input').val();
+	      console.log("\nQuery: ", query);
+	      $('#search-box-input').val('');
+	   }
 	});
 
 	$('.google-search').on("click", function(){
 		console.log("\nGoogle Search button pressed");
 		$('.google-api').slideToggle('slow');
-
 	});
 
 	$('.link-icon').dblclick(function(){

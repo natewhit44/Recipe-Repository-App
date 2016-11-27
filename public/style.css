@@ -459,9 +459,9 @@ nav {
 
 #search-box{
   width: 400px;
-  height: 48px;
+  height: 50px;
   position: fixed;
-  top: 41px;
+  top: 39px;
   right: 165px;
   border-radius: 10px;
   display: none;    
