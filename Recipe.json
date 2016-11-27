@@ -10,77 +10,107 @@
           "Powdered sugar": "2 Tbls",
           "Vanilla": "1/2 tsp"
         },
-        "steps": {
-          "1": "Pour milk into blender. Add in cocoa, powder sugar, and vanilla. Blend all ingredients until fully incorporated, about 30 seconds.",
-          "2": "Serve and enjoy!",
-          "3": "This will last about one week covered in the fridge. (Or the life of the milk).",
-        },
-        "equipment": {
-          "1": "Blender"
-        },
         "timeNtemp": {
           "prep": "5 mins",
           "cook": "0 min",
           "temp": "Ambient"
-        }
+        },
+        "equipment": {
+          "1": "Blender"
+        },
+        "steps": {
+          "1": "Pour milk into blender. Add in cocoa, powder sugar, and vanilla. Blend all ingredients until fully incorporated, about 30 seconds.",
+          "2": "Serve and enjoy!",
+          "3": "This will last about one week covered in the fridge. (Or the life of the milk)."
+        },      
+      }
       {
-        "what": "Pick up Han",
-        "body": {
-          "where": "Jabba's"
-        }
+        "title": "Basic Vanilla Shake",
+        "yield": "Serves 1",
+        "ingredients": {
+          "Milk": "1/3 c",
+          "Premium Vanilla Ice Cream": "10 oz"
+        },
+        "timeNtemp": {
+          "prep": "3 mins",
+          "cook": "0 min",
+          "temp": "Ambient"
+        },
+        "equipment": {
+          "1": "Blender"
+        },
+        "steps": {
+          "1": "In a blender, combine the milk and ice cream and blend until smooth. Serve immediately."
+        },      
       }
     ]
   },
-
-  "albert": {
-    "name": "Albert Einstein",
-    "notes": [
+  "mexican": {
+    "recipes": [
       {
-        "what": "Investigate that dumb constant value"
+        "title": "Taco Salad",
+        "yeild": "Serves 4-6",
+        "ingredients": {
+          "Lean ground beef": "1 lb",
+          "Taco seasoning mix": "1.25 oz",
+          "Chili beans": "16 oz",
+          "French dressing": "16 oz",
+          "Iceberg lettuce head": "1 pc",
+          "Tortilla chips": "14.5 oz",
+          "Shredded Cheddar cheese": "2 c",
+          "Chopped tomatoes": "1 c",
+          "Sour cream": "4 Tbls",
+          "Prepared salsa": "0.5 c"
+        },
+        "timeNtemp": {
+          "prep": "10 mins",
+          "cook": "30 mins",
+          "temp": "Medium-high"
+        },
+        "equipment": {
+          "1": "Large skillet",
+          "2": "Large bowl"
+        },
+        "steps": {
+          "1": "In a large skillet over medium-high heat, brown the ground beef and drain excess fat. Stir in the taco seasoning, chili beans and French-style dressing. Fill the dressing bottle 2/3 full of water and add to the skillet. Bring to a boil, reduce heat and simmer for 15 minutes.",
+          "2": "Crush the bag of chips, open the bag, and toss the broken chips into a large bowl with the lettuce, cheese and tomatoes. When the meat mixture is done, combine it with the lettuce, tomatoes, chips and mix well. Then, add salsa and sour cream."
+        },
       }
-    ]
-  },
-
-  "stephen": {
-    "name": "Stephen Curry",
-    "notes": [
       {
-        "what": "Pick up MVP trophy",
-        "body": {
-          "where": "Bay Bridge Trophy Polishing",
-          "details": "1402 Mandella Parkway, Oakland"
-        }
-      },
-      {
-        "what": "Win another Championship",
-        "body": {
-          "when": "2017",
-          "who": "with the Warriors"
-        }
-      }
-    ]
-  },
-
-  "donald": {
-    "name": "Donald Knuth",
-    "notes": [
-      {
-        "what": "Finish TAOCP Volume 5"
-      },
-      {
-        "what": "Start Volume 6",
-        "body": {
-          "when": "tomorrow",
-          "details": "context free languages"
-        }
-      },
-      {
-        "what": "Start Volume 7",
-        "body": {
-          "when": "Saturday",
-          "details": "compilers"
-        }
-      }
-    ]
+        "title": "Awesome Easy Burritos",
+        "yeild": "Serves 4-6",
+        "ingredients": {
+          "Lean ground beef": "1-2 lbs",
+          "Refried beans, with chilies": "15 oz",
+          "Chunky salsa": "12 oz",
+          "Shredded cheddar cheese": "1-2c",
+          "Iceberg lettuce head": "1 pc",
+          "Tortilla chips": "14.5 oz",
+          "Shredded Cheddar cheese": "2 c",
+          "Onion (opitonial)": "0.5 pc",
+          "Flour tortillias": "6-8 pc"
+        },
+        "timeNtemp": {
+          "prep": "20 mins",
+          "cook": "30 mins",
+          "temp": "200-205 F"
+        },
+        "equipment": {
+          "1": "Large skillet",
+          "2": "9x13 baking pan"
+        },
+        "steps": {
+          "1": "Brown the beef in a large skillet until it is ready; drain well when done. At this point, onions can be added if they are desired.",
+          "2": "Stir in the refried beans and 3/4 of the salsa, leave some for topping, add the cheddar cheese and salt and peper to taste.",
+          "3": "Let the mixture warm on the stove for a few minutes just to melt the cheese; once the cheese is melted turn off the range.",
+          "4": "Warm the tortillas a few at a time in the microwave on a plate with a slightly damp paper tower on top.",
+          "5": "Place 2 ice cream scoop sizes of meat mixture in the middle of the shell, roll up and place seam side down in a lightly buttered 9x13 pan.",
+          "6": "Once you have rolled them all and placed in pans, brush lightly with butter or margarine. Spread remaining salsa on top (I like to use lots and have some left over if anyone wants to add more). Serve with extra salsa and sour cream."
+        },
+      
+      }]
   }
+
+
 }
+
