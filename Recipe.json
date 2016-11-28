@@ -45,6 +45,8 @@
       }
     ]
   },
+
+
   "mexican": {
     "recipes": [
       {
@@ -109,8 +111,166 @@
         },
       
       }]
-  }
+  },
 
 
+  "greek": {
+  	"recipes": [
+  		{
+  			"title": "Chickpea Falafel Burgers",
+  			"yield": "Serves 1",
+  			"ingredients": {
+  				"Vegetable oil": "3 Tbls",
+  				"Green onions": "2 pc",
+  				"Fresh mushroom": "0.75 cp",
+  				"Garlic cloves": "3 pc",
+  				"Garbanzo beans": "15.5 oz",
+  				"Fresh cilantro": "1.5 Tbls",
+  				"Fresh parsely": "1.5 tsp",
+  				"Curry powder": "1.5 Tbls",
+  				"Ground cumin": "0.5 tsp",
+  				"Bread crumbs": "0.5 cp",
+  				"Egg whites": "2 pc"
+  		},
+  		"timeNtemp": {
+  			"prep": "15 min",
+  			"cook": "10 min",
+  			"temp": ""
+  		},
+  		"equipment": {
+  			"1": "Food processor",
+  			"2": "Mixing bowl",
+  			"3": "Large skillet"
+  		},
+  		"steps": {
+  			"1": "Heat 1 tablespoon of oil in a large skillet over medium-high heat. Add green onions and mushrooms, and fry until tender, stirring frequently.",
+  			"2": "Combine the garbanzo beans (with liquid) and garlic in the container of a blender or food processor. Blend until smooth, and transfer to a medium bowl. Stir in the mushrooms and onions. Mix in the cilantro, parsley, curry powder and cumin. Add the bread crumbs and egg whites, and mix until thoroughly blended. You can let the mixture sit in the refrigerator to blend flavors at this point, or go on to frying.",
+  			"3": "Heat enough oil to cover the bottom of a large skillet over medium heat. Form the bean mixture into 4 balls, and flatten into patties. Place the burgers in the hot skillet, and fry for about 5 minutes on each side, until nicely browned."
+  		},
+
+  	}]
+  },
+
+
+  "asian": {
+  	"recipes": [
+  		{
+  			"title": "Shrimp Fried Rice",
+  			"yield": "Serves 2-4",
+  			"ingredients": {
+  				"Uncooked white rice": "1.5 cp",
+  				"Water": "3 cp",
+  				"Vegetable oil": "4 tsp",
+  				"Fresh bean sprouts": "1cp",
+  				"Cooked medium shrimp": "1.5 cp",
+  				"Chopped green onion": "0.25 cp",
+  				"Egg": "2 pc",
+  				"Salt": "1 tsp",
+  				"Ground black powder": "0.25 tsp",
+  				"Soy sauce": "4 tsp",
+  				"Sesame oil": "0.25 tsp"
+  		},
+  		"timeNtemp": {
+  			"prep": "20 min",
+  			"cook": "10 min",
+  			"temp": ""
+  		},
+  		"equipment": {
+  			"1": "Saucepan",
+  			"2": "Large skillet or wok"
+  		},
+  		"steps": {
+  			"1": "In a saucepan bring water to a boil. Add rice and stir. Reduce heat, cover and simmer for 20 minutes. Set aside and allow rice to cool.",
+  			"2": "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
+  			"3": "Mix in cooled rice and shrimp and cook for another 3 minutes. Stirring constantly.",
+  			"4": "Mix in green onions, eggs, salt, pepper, soy sauce and sesame oil. Cook for another 4 minutes, stirring continuously, until eggs are cooked and everything is blended evenly."
+  		}
+  	}]
+  },
+
+
+  "italian": {
+  	"recipes": [
+  		{
+  			"title": "Cheese Pizza",
+  			"yield": "1 pizza, serves 8",
+  			"ingredients": {
+  				"Dry yeast": "0.25 oz",
+  				"Water": "1 cp",
+  				"Sugar": "1 tsp",
+  				"Bread flour": "3 cp",
+  				"Salt": "0.5 tsp",
+  				"Olive oil": "1 Tbls",
+  				"Tomatoe puree": "0.5 cp",
+  				"Tomatoe paste": "2 Tbls",
+  				"Garlic clove": "1 pc",
+  				"Fresh basil": "1 Tbls",
+  				"Fresh mozarella cheese": "4 oz"
+  		},
+  		"timeNtemp": {
+  			"prep": "60 min",
+  			"cook": "13 min",
+  			"temp": "500 F"
+  		},
+  		"equipment": {
+  			"1": "2 Glass or plastic bowls",
+  			"2": "Kneading board",
+  			"3": "Pizza pan"
+  		},
+  		"steps": {
+  			"dough": {
+  				"1": "In a glass or plastic bowl, combine yeast, water, and sugar (the water can just be water from the tap, make sure it's below 100°F).",
+  				"2": "Stir to dissolve the yeast and let the yeast 'bloom' for 15 minutes.",
+  				"3": "Stir in 1 cup flour, add salt, and then stir in another cup of flour (the remaining cup of flour will be your 'bench' flour and added flour).",
+  				"4": "Dump mixture onto kneading board and work in last cup of flour, kneading until dough is soft and elastic, but not sticky. Form dough into a ball.",
+  				"5": "In another bowl, pour in the 1 tbsp olive oil and spread around.",
+  				"6": "Coat ball of dough with oil and cover bowl with a damp towel and let dough rise for 40 minutes.",
+  				"7": "Punch down dough and knead on board about 2 minutes. Dough is now ready to spread in the pan.",
+  				"8": "To avoid sticking of crust, lightly spray pizza pan with olive oil or vegetable oil spray and then work dough to pan (or use free form pan) - this dough is enough for 1 14-in pizza with a thin bottom crust and enough dough around the edge to munch."
+  			},
+  			"sauce":{
+  				"1": "Combine pureed tomatoes, tomato paste, minced garlic, and basil.",
+  				"2": "Spread onto prepared pizza dough.",
+  				"3": "Top with sliced mozzarella cheese and bake at 500°F for 11-13 minutes."
+  			}
+  		}
+  	}
+  ]},
+
+
+  	"other": {
+  		"recipes": [
+  			{
+  				"title": "Chocolate Chip Cookies",
+  				"yield": "30 cookies",
+  				"ingredients": {
+  					"Sugar": "0.75 cp",
+  					"Unsalted butter": "0.5 cp",
+  					"Flour": "2.25 cp",
+  					"Brown sugar": "0.75 cp",
+  					"Large eggs": "2 pc",
+  					"Chocolate chips": "12 oz",
+  					"Baking soda": "0.75 tsp",
+  					"Vanilla extract": "1 tsp",
+  					"Fine salt": "1 tsp",
+  			},
+  			"timeNtemp": {
+  				"prep": "20 min",
+  				"cook": "15 min",
+  				"temp": "375 F"
+  			},
+  			"equipment": {
+  				"1": "2 baking sheets lined with parvhment paper",
+  				"2": "Microwavable bowl or saucepan",
+  				"3": "2 Large bowls"
+  			},
+  			"steps": {
+  				"1": "Evenly position 2 racks in the middle of the oven and preheat to 375 degrees F. (on convection setting if you have it.) Line 2 baking sheets with parchment paper or silicone sheets. (If you only have 1 baking sheet, let it cool completely between batches.)",
+  				"2": "Put the butter in a microwave safe bowl, cover and microwave on medium power until melted. (Alternatively melt in a small saucepan.) Cool slightly. Whisk the sugars, eggs, butter and vanilla in a large bowl until smooth.",
+  				"3": "Whisk the flour, baking soda and salt in another bowl. Stir the dry ingredients into the wet ingredients with a wooden spoon; take care not to over mix. Stir in the chocolate chips or chunks.",
+  				"4": "Scoop heaping tablespoons of the dough onto the prepared pans. Wet hands slightly and roll the dough into balls. Space the cookies about 2-inches apart on the pans. Bake, until golden, but still soft in the center, 12 to 16 minutes, depending on how chewy or crunchy you like your cookies. Transfer hot cookies with a spatula to a rack to cool. Serve."
+  			}
+  		}
+  	]}
 }
 
