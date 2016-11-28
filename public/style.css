@@ -185,15 +185,25 @@ footer {
   margin: 2px;
 }
 
+.link-icon p{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  color: rgba(18, 142, 35, 0.8);
+}
+
 .link-icon{
   display: inline-block;
   margin: 10px;
 }
 
+.link-icon:hover{
+  cursor: pointer;
+}
+
 .link-icon img{
   display: block;
   margin: 0 auto;
-  width: 50px;
+  width: 100px;
 }
 
 .recipe-header{
@@ -246,9 +256,10 @@ footer {
   width: auto;
   max-width: 1000px;
   min-width: 450px;
-  min-height: 500px;
+  min-height: 800px;
+  max-height: 100%;
   margin: 40px auto;
-  background-color: #fff;
+  background-color: rgba(252,242,222,0.9);
   border-radius: 15px;
 }
 
@@ -256,21 +267,23 @@ footer {
   position: relative;
   padding: 3px ;
   display: inline-block;
-  width: 100%;
+  width: 50%;
+  right: 50%;
+/*  right: 50%;*/
+  left: 25%;
   display: none;
 }
 
-#modal-header h3 {
+#modal-header h1 {
   margin: 0;
-  font-size: 32px;
-  background-color: blue;
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  background-color: rgba(18, 142, 35, 0.6);
+  background-color: rgba(0, 117, 58, 1);
   border-radius: 15px;
+  color: white;
 }
 
-#modal-close-button {
+/*#modal-close-button {
   position: absolute;;
   right: 20px;
   bottom: 0px;
@@ -281,20 +294,55 @@ footer {
   margin: 0;
   cursor: pointer;
   float: right;
-  /*background-color: blue;*/
+  /*background-color: blue;
+}*/
+
+#go-back{
+  position: fixed;
+  top: 47px;
+  left: 470px;
+  height: 30px;
+  width: 30px;
+}
+
+#go-back:hover{
+  cursor: pointer;
+}
+
+#image-placeholder{
+  background-color: blue;
+  height: 250px;
+  width: 320px;
+  position: absolute;
+  border-radius: 10px;
+  top: 150px;
+  right: 550px;
+}
+
+#image-placeholder img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 #modal-content {
-  /*padding: 20px;*/
-  display: inline-block;
+  display: block;
   overflow-x: wrap;
   margin: 10px 40px;
   background-color: rgba(18, 142, 35, 0.3);
+<<<<<<< HEAD
  /* overflow-y: scroll;*/
  left: 100px;
  border-radius: 10px;
   font-family: "Comic Sans MS", cursive, sans-serif;
 
+=======
+  /*overflow-y: scroll;?*/
+  left: 100px;
+  border-radius: 10px;
+  /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+  
+>>>>>>> master
 }
 
 .modal-body {
@@ -306,25 +354,32 @@ footer {
 }
 
 .recipe-component {
-  display: flex;
-  padding: 10;
+  display: relative;
+/*  padding: 10px;*/
+  width: 420px;
 }
-.recipe-component h4 {
-  display: inline;
-  margin: 10px 0;
-  padding: 10px 0;
-  /*position: fixed;*/
+
+.recipe-component-steps {
+  display: relative;
+  padding: 10px;
+  height: 100%;
 }
+
+#recipe-header{
+  margin-left: 15px;
+}
+
 .recipe-list {
   /*position: relative;*/
   /*border-radius: 2px solid #000;*/
   margin: 10px;
+  width: 95%;
 }
 .recipe-list-item {
   text-align: left;
 }
 .ingredient {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 .quantity {
   font-weight: bold;
@@ -503,6 +558,6 @@ nav {
   border-radius: 5px;
   font-size: 24px;
   font-family: "Comic Sans MS", cursive, sans-serif;
-/*  opacity: 0.7;*/
+  opacity: 0.9;
   display: none;
 }
