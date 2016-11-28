@@ -1,6 +1,8 @@
 var mysql = require("mysql");
 
 // First you need to create a connection to the db
+
+// ADD ENVIRONMENT VARIABLES!!!
 var con = mysql.createConnection({
   host: "oniddb.cws.oregonstate.edu",
   user: "whitlocn-db",

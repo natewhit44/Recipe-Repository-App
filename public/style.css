@@ -330,19 +330,14 @@ footer {
   overflow-x: wrap;
   margin: 10px 40px;
   background-color: rgba(18, 142, 35, 0.3);
-<<<<<<< HEAD
- /* overflow-y: scroll;*/
- left: 100px;
- border-radius: 10px;
+  /* overflow-y: scroll;*/
+  left: 100px;
+  border-radius: 10px;
   font-family: "Comic Sans MS", cursive, sans-serif;
-
-=======
   /*overflow-y: scroll;?*/
   left: 100px;
   border-radius: 10px;
   /*font-family: "Comic Sans MS", cursive, sans-serif;*/
-
->>>>>>> 3c76f4ba771ca2aeefc5180c012b13cf4db694d6
 }
 
 .modal-body {
