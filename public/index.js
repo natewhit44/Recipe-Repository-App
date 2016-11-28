@@ -2,7 +2,7 @@
 // http://www.w3schools.com/jquery/jquery_examples.asp
 
 //LOOK AT THIS FOR EXAMPLES
-//ON HOW TO USE jQuery: 
+//ON HOW TO USE jQuery:
 //http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
 
 // -Selectors
@@ -77,6 +77,10 @@ $(document).ready(function(){
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
+	$('.google-api .dismiss-button').on('click', function () {
+		console.log("dismiss button pressed.");
+		$('.google-api').slideToggle("slow");
+	});
 
 });
 

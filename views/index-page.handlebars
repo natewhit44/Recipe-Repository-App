@@ -1,3 +1,5 @@
+{{> header}}
+
 <main>
 	<div class="left-navbar">
 		<ul class="left-nav-list">
@@ -6,14 +8,14 @@
 			<li class="category"><a href="#">Asian</a></li>
 			<li class="category"><a href="#">Italian</a></li>
 			<li class="category"><a href="#">Etc.</a></li>
-		</ul>	
+		</ul>
 	</div>
 
     <div class="recipe-workspace">
-     <h1 class="recipe-header">List of Recipes:</h1>      
+     <h1 class="recipe-header">List of Recipes:</h1>
 
       <div class="recipe-list">
-    
+
         <div class="link-icon">
           <img src="/images/Mexican/favicon-96x96.png">
           <li class="recipe"><p>Mexican</p></li>
@@ -48,8 +50,13 @@
         </div>
          <div class="link-icon">
           <img src="./images/Salad/favicon-96x96.png">
+<<<<<<< HEAD
+          <li class="recipe"><a href="#">Salads</a></li>
+        </div>
+=======
           <li class="recipe"><p>Salads</p></li>
         </div>  
+>>>>>>> master
         <div class="link-icon">
           <img src="./images/Side_Dish/favicon-96x96.png">
           <li class="recipe"><p>Side Dishes</p></li>
@@ -60,9 +67,15 @@
         </div>
         <div class="link-icon">
           <img src="./images/Entree/favicon-96x96.png">
+<<<<<<< HEAD
+          <li class="recipe"><a href="#">Entrees</a></li>
+        </div>
+
+=======
           <li class="recipe"><p>Entrees</p></li>
         </div>      
         
+>>>>>>> master
       </div>
     </div>
 
@@ -72,31 +85,13 @@
     <div id="search-box">
       <input id="search-box-input" type="text" placeholder="Enter search query...">
     </div>
- 
 
-    <div class="google-api">
-      <div class="google-search-container">    
-         <script>
-            (function() {
-              var cx = '005796311790971295777:1lg27itme2e';
-              var gcse = document.createElement('script');
-              gcse.type = 'text/javascript';
-              gcse.async = true;
-              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(gcse, s);
-            })();
-      </script>
-      <gcse:search></gcse:search>
-      </div>
-    </div>
+		{{> google-search}}
 
 	</main>
 
-	{{> footer}}
+	<!-- {{> footer}} -->
 
   <button type="button" class="google-search">Google Search?</button>
-
-  {{> header}}
 
   {{> recipe-display}}
