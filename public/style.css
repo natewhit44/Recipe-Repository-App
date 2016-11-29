@@ -171,10 +171,10 @@ footer {
   position: fixed;
   top: 90px;
   left: 202px;
-  width: 86%;
+  width: 84%;
   bottom: 29px;
   /*border-radius: 10px;*/
-  /*overflow: scroll;*/
+  overflow-y: scroll;
 }
 
 .recipe{
