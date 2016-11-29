@@ -1,15 +1,7 @@
 {{> header}}
 
 <main>
-	<div class="left-navbar">
-		<ul class="left-nav-list">
-			<li class="category"><a href="#">Mexican</a></li>
-			<li class="category"><a href="#">Greek</a></li>
-			<li class="category"><a href="#">Asian</a></li>
-			<li class="category"><a href="#">Italian</a></li>
-			<li class="category"><a href="#">Etc.</a></li>
-		</ul>
-	</div>
+	{{> left-navbar}}
 
     <div class="recipe-workspace">
 			<h1 class="recipe-header">List of Recipes:</h1>
@@ -20,7 +12,7 @@
 					<p>{{this.title}}</p>
 				{{/each}}
 			{{/each}}
-			
+
 			<div class="recipe-list"></div>
 		</div>
 
