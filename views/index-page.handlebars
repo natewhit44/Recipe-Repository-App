@@ -12,11 +12,18 @@
 	</div>
 
     <div class="recipe-workspace">
-     <h1 class="recipe-header">List of Recipes:</h1>
+			<h1 class="recipe-header">List of Recipes:</h1>
 
-      <div class="recipe-list">
+			{{#each category}}
+				<h3>{{@key}}</h3>
+				{{#each this.recipes}}
+					<p>{{this.title}}</p>
+				{{/each}}
+			{{/each}}
+			
+			<div class="recipe-list"></div>
+		</div>
 
-       
 
     <div class="right-frame">
     </div>
