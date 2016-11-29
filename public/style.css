@@ -2,44 +2,36 @@
 
 body {
   background-color: blue;
-  margin: 0;
 }
 
-.left-navbar {
+.left-navbar{
 	position: fixed;
 	width: 200px;
-	/*background-color: gray;*/
-  /*background-color: rgba(18, 200, 30, .5);*/
-  /*background-color: #192;*/
+	background-color: gray;
 	left: 0;
   top: 90px;
 	height: 100%;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .left-nav-list{
-  height: auto;
- 	/*height: 300px;*/
+ 	height: 300px;
  	padding: 0px;
  	margin: 0px;
  	border: 0px;
 }
 
 .left-nav-list li{
-  margin-top: 5px;
-  background-color: rgba(18, 200, 30, .5);
   border-radius: 10px;
 }
 
 .left-nav-list li:hover{
-  background-color: rgba(18, 150, 30, .8);
   cursor: pointer;
 }
 
 .left-nav-list li a{
   text-decoration: none;
-  font-family: "Helvetica"/*"Comic Sans MS"*/, cursive, sans-serif;
-  color: #000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .left-nav-list li a:hover{
@@ -47,7 +39,6 @@ body {
 }
 
 .right-frame{
-  visibility: hidden;
   position: fixed;
   background-color: gray;
   height: 100%;
@@ -83,23 +74,10 @@ body {
   right: 67px;
   left: 202px;
   background-color: rgba(0, 102, 102,0.7);
-  bottom: 100px;
-  height: 500px;
+  bottom: 28px;
+  height: 350px;
   border-radius: 10px;
   display: none;
-}
-
-.google-api .dismiss-button {
-  font-family: sans-serif;
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 30px;
-  display: none;
-  cursor: pointer;
-}
-.google-api:hover .dismiss-button {
-  display: initial;
 }
 
 .google-search{
@@ -115,19 +93,18 @@ body {
 }
 
 .google-search-container{
-  margin: 50px;
-  position: absolute;
-  max-height: 400px;
-  /*width: 80%;*/
-  /*position: relative;
+  width: 80%;
+  max-height: 100%;
+  position: relative;
   top: 10px;
-  left: 175px;*/
-  /*display: inline-block;*/
+  left: 175px;
+/*  display: inline-block;*/
+ /* border-radius: 100px;*/
   overflow: scroll;
 }
 
 /*
-  Something is wrong with the clickability of
+  Something is wrong with the clickability of 
   this button from the perspective of the user.
   Someone should look into it...
 */
@@ -147,12 +124,12 @@ body {
   visibility: visible;
 }
 
-footer {
+footer{
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 40px;
+  height: 26px;
   background-color: gray;
 }
 
@@ -162,7 +139,7 @@ footer {
   color: white;
   text-align: right;
   font-size: 18px;
-  font-family: "Helvetica"/*"Comic Sans MS"*/, cursive, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 /* Workspace Rules*/
@@ -173,7 +150,7 @@ footer {
   left: 202px;
   width: 86%;
   bottom: 29px;
-  /*border-radius: 10px;*/
+  border-radius: 10px;
   /*overflow: scroll;*/
 }
 
@@ -248,8 +225,7 @@ footer {
 }
 
 .hidden {
-  visibility: hidden;
-  /*display: none;*/
+  display: none;
 }
 
 #modal-dialog {
@@ -330,14 +306,11 @@ footer {
   overflow-x: wrap;
   margin: 10px 40px;
   background-color: rgba(18, 142, 35, 0.3);
-  /* overflow-y: scroll;*/
-  left: 100px;
-  border-radius: 10px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
   /*overflow-y: scroll;?*/
   left: 100px;
   border-radius: 10px;
   /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+  
 }
 
 .modal-body {
@@ -539,7 +512,7 @@ nav {
   top: 39px;
   right: 165px;
   border-radius: 10px;
-  display: none;
+  display: none;    
 
 }
 
@@ -555,4 +528,9 @@ nav {
   font-family: "Comic Sans MS", cursive, sans-serif;
   opacity: 0.9;
   display: none;
+}
+
+.ingredientQuantity
+{
+  width: 64px;
 }
