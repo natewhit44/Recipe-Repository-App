@@ -4,7 +4,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 
 var app = express();
-//var usersData = require('./users-data');
+var Recipes = require('./Recipe');
 var port = process.env.PORT || 3000;
 
 // Use Handlebars as the view engine for the app.
@@ -29,6 +29,13 @@ app.get('/index.js', function(req, res){
 	res.render('index.js');
 });
 
+//////////////////////////////
+
+// app.get('/categories', function(req, res) {
+// 	res.render
+// });
+console.log(Recipes);
+///////////////
 
 // Catch all for 404
 app.get('*', function (req, res) {
