@@ -22,7 +22,7 @@
           "1": "Pour milk into blender. Add in cocoa, powder sugar, and vanilla. Blend all ingredients until fully incorporated, about 30 seconds.",
           "2": "Serve and enjoy!",
           "3": "This will last about one week covered in the fridge. (Or the life of the milk)."
-        },
+        }
       },
       {
         "title": "Basic Vanilla Shake",
@@ -231,19 +231,19 @@
 
 	"other": {
 		"recipes": [
-			{
-				"title": "Chocolate Chip Cookies",
-				"yield": "30 cookies",
-				"ingredients": {
-					"Sugar": "0.75 cp",
-					"Unsalted butter": "0.5 cp",
-					"Flour": "2.25 cp",
-					"Brown sugar": "0.75 cp",
-					"Large eggs": "2 pc",
-					"Chocolate chips": "12 oz",
-					"Baking soda": "0.75 tsp",
-					"Vanilla extract": "1 tsp",
-					"Fine salt": "1 tsp",
+		{
+			"title": "Chocolate Chip Cookies",
+			"yield": "30 cookies",
+			"ingredients": {
+				"Sugar": "0.75 cp",
+				"Unsalted butter": "0.5 cp",
+				"Flour": "2.25 cp",
+				"Brown sugar": "0.75 cp",
+				"Large eggs": "2 pc",
+				"Chocolate chips": "12 oz",
+				"Baking soda": "0.75 tsp",
+				"Vanilla extract": "1 tsp",
+				"Fine salt": "1 tsp"
 			},
 			"timeNtemp": {
 				"prep": "20 min",
