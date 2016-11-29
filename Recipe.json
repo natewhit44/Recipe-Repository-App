@@ -22,8 +22,8 @@
           "1": "Pour milk into blender. Add in cocoa, powder sugar, and vanilla. Blend all ingredients until fully incorporated, about 30 seconds.",
           "2": "Serve and enjoy!",
           "3": "This will last about one week covered in the fridge. (Or the life of the milk)."
-        },      
-      }
+        }
+      },
       {
         "title": "Basic Vanilla Shake",
         "yield": "Serves 1",
@@ -41,11 +41,10 @@
         },
         "steps": {
           "1": "In a blender, combine the milk and ice cream and blend until smooth. Serve immediately."
-        },      
+        }
       }
     ]
   },
-
 
   "mexican": {
     "recipes": [
@@ -76,8 +75,8 @@
         "steps": {
           "1": "In a large skillet over medium-high heat, brown the ground beef and drain excess fat. Stir in the taco seasoning, chili beans and French-style dressing. Fill the dressing bottle 2/3 full of water and add to the skillet. Bring to a boil, reduce heat and simmer for 15 minutes.",
           "2": "Crush the bag of chips, open the bag, and toss the broken chips into a large bowl with the lettuce, cheese and tomatoes. When the meat mixture is done, combine it with the lettuce, tomatoes, chips and mix well. Then, add salsa and sour cream."
-        },
-      }
+        }
+      },
       {
         "title": "Awesome Easy Burritos",
         "yeild": "Serves 4-6",
@@ -108,15 +107,12 @@
           "4": "Warm the tortillas a few at a time in the microwave on a plate with a slightly damp paper tower on top.",
           "5": "Place 2 ice cream scoop sizes of meat mixture in the middle of the shell, roll up and place seam side down in a lightly buttered 9x13 pan.",
           "6": "Once you have rolled them all and placed in pans, brush lightly with butter or margarine. Spread remaining salsa on top (I like to use lots and have some left over if anyone wants to add more). Serve with extra salsa and sour cream."
-        },
-      
+        }
       }]
   },
 
-
   "greek": {
-  	"recipes": [
-  		{
+  	"recipes": [{
   			"title": "Chickpea Falafel Burgers",
   			"yield": "Serves 1",
   			"ingredients": {
@@ -146,15 +142,12 @@
   			"1": "Heat 1 tablespoon of oil in a large skillet over medium-high heat. Add green onions and mushrooms, and fry until tender, stirring frequently.",
   			"2": "Combine the garbanzo beans (with liquid) and garlic in the container of a blender or food processor. Blend until smooth, and transfer to a medium bowl. Stir in the mushrooms and onions. Mix in the cilantro, parsley, curry powder and cumin. Add the bread crumbs and egg whites, and mix until thoroughly blended. You can let the mixture sit in the refrigerator to blend flavors at this point, or go on to frying.",
   			"3": "Heat enough oil to cover the bottom of a large skillet over medium heat. Form the bean mixture into 4 balls, and flatten into patties. Place the burgers in the hot skillet, and fry for about 5 minutes on each side, until nicely browned."
-  		},
-
+  		}
   	}]
   },
 
-
   "asian": {
-  	"recipes": [
-  		{
+  	"recipes": [{
   			"title": "Shrimp Fried Rice",
   			"yield": "Serves 2-4",
   			"ingredients": {
@@ -187,7 +180,6 @@
   		}
   	}]
   },
-
 
   "italian": {
   	"recipes": [
@@ -237,40 +229,38 @@
   	}
   ]},
 
-
-  	"other": {
-  		"recipes": [
-  			{
-  				"title": "Chocolate Chip Cookies",
-  				"yield": "30 cookies",
-  				"ingredients": {
-  					"Sugar": "0.75 cp",
-  					"Unsalted butter": "0.5 cp",
-  					"Flour": "2.25 cp",
-  					"Brown sugar": "0.75 cp",
-  					"Large eggs": "2 pc",
-  					"Chocolate chips": "12 oz",
-  					"Baking soda": "0.75 tsp",
-  					"Vanilla extract": "1 tsp",
-  					"Fine salt": "1 tsp",
-  			},
-  			"timeNtemp": {
-  				"prep": "20 min",
-  				"cook": "15 min",
-  				"temp": "375 F"
-  			},
-  			"equipment": {
-  				"1": "2 baking sheets lined with parvhment paper",
-  				"2": "Microwavable bowl or saucepan",
-  				"3": "2 Large bowls"
-  			},
-  			"steps": {
-  				"1": "Evenly position 2 racks in the middle of the oven and preheat to 375 degrees F. (on convection setting if you have it.) Line 2 baking sheets with parchment paper or silicone sheets. (If you only have 1 baking sheet, let it cool completely between batches.)",
-  				"2": "Put the butter in a microwave safe bowl, cover and microwave on medium power until melted. (Alternatively melt in a small saucepan.) Cool slightly. Whisk the sugars, eggs, butter and vanilla in a large bowl until smooth.",
-  				"3": "Whisk the flour, baking soda and salt in another bowl. Stir the dry ingredients into the wet ingredients with a wooden spoon; take care not to over mix. Stir in the chocolate chips or chunks.",
-  				"4": "Scoop heaping tablespoons of the dough onto the prepared pans. Wet hands slightly and roll the dough into balls. Space the cookies about 2-inches apart on the pans. Bake, until golden, but still soft in the center, 12 to 16 minutes, depending on how chewy or crunchy you like your cookies. Transfer hot cookies with a spatula to a rack to cool. Serve."
-  			}
-  		}
-  	]}
+	"other": {
+		"recipes": [
+		{
+			"title": "Chocolate Chip Cookies",
+			"yield": "30 cookies",
+			"ingredients": {
+				"Sugar": "0.75 cp",
+				"Unsalted butter": "0.5 cp",
+				"Flour": "2.25 cp",
+				"Brown sugar": "0.75 cp",
+				"Large eggs": "2 pc",
+				"Chocolate chips": "12 oz",
+				"Baking soda": "0.75 tsp",
+				"Vanilla extract": "1 tsp",
+				"Fine salt": "1 tsp"
+			},
+			"timeNtemp": {
+				"prep": "20 min",
+				"cook": "15 min",
+				"temp": "375 F"
+			},
+			"equipment": {
+				"1": "2 baking sheets lined with parvhment paper",
+				"2": "Microwavable bowl or saucepan",
+				"3": "2 Large bowls"
+			},
+			"steps": {
+				"1": "Evenly position 2 racks in the middle of the oven and preheat to 375 degrees F. (on convection setting if you have it.) Line 2 baking sheets with parchment paper or silicone sheets. (If you only have 1 baking sheet, let it cool completely between batches.)",
+				"2": "Put the butter in a microwave safe bowl, cover and microwave on medium power until melted. (Alternatively melt in a small saucepan.) Cool slightly. Whisk the sugars, eggs, butter and vanilla in a large bowl until smooth.",
+				"3": "Whisk the flour, baking soda and salt in another bowl. Stir the dry ingredients into the wet ingredients with a wooden spoon; take care not to over mix. Stir in the chocolate chips or chunks.",
+				"4": "Scoop heaping tablespoons of the dough onto the prepared pans. Wet hands slightly and roll the dough into balls. Space the cookies about 2-inches apart on the pans. Bake, until golden, but still soft in the center, 12 to 16 minutes, depending on how chewy or crunchy you like your cookies. Transfer hot cookies with a spatula to a rack to cool. Serve."
+			}
+		}
+	]}
 }
-
