@@ -4,7 +4,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 
 var app = express();
-var Recipes = require('./Recipe');
+var recipeContent = require('./Recipe');
 var port = process.env.PORT || 3000;
 
 // Use Handlebars as the view engine for the app.
@@ -20,6 +20,18 @@ app.get('/', function(req,res) {
 	});
 });
 
+//////////////////////////////
+
+app.get('/categories', function(req, res) {
+	// res.status(200).send(recipeContent["beverages"]);
+	res.status(200).render('index-page', {
+		title: "~Categories~",
+		category: recipeContent
+	});
+});
+// console.log(Recipes);
+///////////////
+
 // Sever static files on request
 app.get('/style.css', function(req, res){
 	res.render('style.css');
@@ -28,14 +40,6 @@ app.get('/style.css', function(req, res){
 app.get('/index.js', function(req, res){
 	res.render('index.js');
 });
-
-//////////////////////////////
-
-// app.get('/categories', function(req, res) {
-// 	res.render
-// });
-console.log(Recipes);
-///////////////
 
 // Catch all for 404
 app.get('*', function (req, res) {
