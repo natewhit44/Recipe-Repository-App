@@ -2,7 +2,7 @@
 // http://www.w3schools.com/jquery/jquery_examples.asp
 
 //LOOK AT THIS FOR EXAMPLES
-//ON HOW TO USE jQuery:
+//ON HOW TO USE jQuery: 
 //http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
 
 // -Selectors
@@ -24,6 +24,9 @@
 // -Traversing Filtering
 // -AJAX load() Method
 // -AJAX get() and post() Methods
+
+var ingredientCount = 1;
+var equipmentCount = 1;
 
 $(document).ready(function(){
 	console.log("Ready");
@@ -76,12 +79,66 @@ $(document).ready(function(){
 		$('#home, #categories, #add-recipe-button').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
+	// Creates buttons, listeners add button and incriments count.
 
-	$('.google-api .dismiss-button').on('click', function () {
-		console.log("dismiss button pressed.");
-		$('.google-api').slideToggle("slow");
+	//var ingredientBtnDiv = $(document.createElement('div')).attr('id', 'ingredientBtnDiv');
+	var ingredientListItem = $(document.createElement('li')).attr('id', 'ingredientListItem_1');
+	var ingredientBox = $(document.createElement('input')).attr('class', 'ingredientBox');
+	var quantitySpan = $(document.createElement('span')).attr('class', 'quantitySpan').text(" Quantity: ");
+	var ingredientQuantity = $(document.createElement('input')).attr('class', 'ingredientQuantity');
+
+	//ingredientBox.value("ingredient");
+	ingredientBox.appendTo(ingredientListItem);
+	ingredientQuantity.appendTo(quantitySpan);
+	quantitySpan.appendTo(ingredientListItem);
+	
+
+	var addIngredientBtn = $(document.createElement('button')).click(function(){
+		$('#ingredientListItem_1').clone().find("input:text").val("").end().attr('id', 'ingredientListItem_' + (ingredientCount + 1)).appendTo('.addRecipe-list');
+		ingredientCount++;
 	});
+	$(addIngredientBtn).text("Add");
 
+	var removeIngredientBtn = $(document.createElement('button')).click(function(){
+		if (ingredientCount > 1){
+			$('#ingredientListItem_' + ingredientCount).remove();
+			ingredientCount--;
+		}
+		
+	});
+	$(removeIngredientBtn).text("Remove");
+	
+	//add initial ingredietn textboxes
+	addIngredientBtn.appendTo('.addRecipe-list');
+	removeIngredientBtn.appendTo('.addRecipe-list');
+	ingredientListItem.appendTo('.addRecipe-list');	
+
+
+	//add equipment textboxes and buttons
+
+	var equipmentListItem = $(document.createElement('li')).attr('id', 'equipmentListItem_1');
+	var equipmentBox = $(document.createElement('input')).attr('class', 'equipmentBox');
+
+	equipmentBox.appendTo(equipmentListItem);
+
+	var addEquipmentBtn = $(document.createElement('button')).click(function(){
+		$('#equipmentListItem_1').clone().find("input:text").val("").end().attr('id', 'equipmentListItem_' + (equipmentCount + 1)).appendTo('.addEquipment-list');
+		equipmentCount++;
+	});
+	$(addEquipmentBtn).text("Add");
+
+	var removeEquipmentBtn = $(document.createElement('button')).click(function(){
+		if (equipmentCount > 1){
+			$('#equipmentListItem_' + equipmentCount).remove();
+			equipmentCount--;
+		}
+		
+	});
+	$(removeEquipmentBtn).text("Remove");
+
+	addIngredientBtn.appendTo('.addRecipe-list');
+	removeIngredientBtn.appendTo('.addRecipe-list');
+	ingredientListItem.appendTo('.addRecipe-list');	
 });
 
 
