@@ -310,7 +310,11 @@ footer{
   left: 100px;
   border-radius: 10px;
   /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> master
 }
 
 .modal-body {
@@ -533,4 +537,8 @@ nav {
 .ingredientQuantity
 {
   width: 64px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
