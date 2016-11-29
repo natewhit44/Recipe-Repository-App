@@ -11,7 +11,7 @@ body {
 	left: 0;
   top: 90px;
 	height: 100%;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .left-nav-list{
@@ -104,7 +104,7 @@ body {
 }
 
 /*
-  Something is wrong with the clickability of 
+  Something is wrong with the clickability of
   this button from the perspective of the user.
   Someone should look into it...
 */
@@ -310,11 +310,6 @@ footer{
   left: 100px;
   border-radius: 10px;
   /*font-family: "Comic Sans MS", cursive, sans-serif;*/
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> master
 }
 
 .modal-body {
@@ -516,7 +511,7 @@ nav {
   top: 39px;
   right: 165px;
   border-radius: 10px;
-  display: none;    
+  display: none;
 
 }
 
@@ -534,11 +529,6 @@ nav {
   display: none;
 }
 
-.ingredientQuantity
-{
+.ingredientQuantity {
   width: 64px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
