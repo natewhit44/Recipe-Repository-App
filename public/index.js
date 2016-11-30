@@ -2,7 +2,7 @@
 // http://www.w3schools.com/jquery/jquery_examples.asp
 
 //LOOK AT THIS FOR EXAMPLES
-//ON HOW TO USE jQuery: 
+//ON HOW TO USE jQuery:
 //http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
 
 // -Selectors
@@ -91,7 +91,7 @@ $(document).ready(function(){
 	ingredientBox.appendTo(ingredientListItem);
 	ingredientQuantity.appendTo(quantitySpan);
 	quantitySpan.appendTo(ingredientListItem);
-	
+
 
 	var addIngredientBtn = $(document.createElement('button')).click(function(){
 		$('#ingredientListItem_1').clone().find("input:text").val("").end().attr('id', 'ingredientListItem_' + (ingredientCount + 1)).appendTo('.addRecipe-list');
@@ -104,14 +104,14 @@ $(document).ready(function(){
 			$('#ingredientListItem_' + ingredientCount).remove();
 			ingredientCount--;
 		}
-		
+
 	});
 	$(removeIngredientBtn).text("Remove");
-	
+
 	//add initial ingredietn textboxes
 	addIngredientBtn.appendTo('.addRecipe-list');
 	removeIngredientBtn.appendTo('.addRecipe-list');
-	ingredientListItem.appendTo('.addRecipe-list');	
+	ingredientListItem.appendTo('.addRecipe-list');
 
 
 	//add equipment textboxes and buttons
@@ -132,13 +132,13 @@ $(document).ready(function(){
 			$('#equipmentListItem_' + equipmentCount).remove();
 			equipmentCount--;
 		}
-		
+
 	});
 	$(removeEquipmentBtn).text("Remove");
 
 	addIngredientBtn.appendTo('.addRecipe-list');
 	removeIngredientBtn.appendTo('.addRecipe-list');
-	ingredientListItem.appendTo('.addRecipe-list');	
+	ingredientListItem.appendTo('.addRecipe-list');
 });
 
 
