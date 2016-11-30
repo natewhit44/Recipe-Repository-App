@@ -555,3 +555,16 @@ nav {
 {
   width: 100%;
 }
+.categoryBox
+{
+  width: 192px;
+}
+.titleBox
+{
+  text-align: center;
+}
+#acceptButton-container
+{
+  text-align: center;
+
+}
