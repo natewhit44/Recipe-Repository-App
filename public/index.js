@@ -90,9 +90,20 @@ $(document).ready(function(){
 
 	//Creates textbox for the titleBox
 
-	var titleBox = $(document.createElement('input')).attr('class', 'titleBox');
+	var titleBox = $(document.createElement('input')).val("Insert Text").attr('class', 'titleBox');
+	var titleNode = $(document.createElement('node')).text("Add Title").attr('class', 'titleNode')
 
+	//titleBox.defaultValue = "Add Title";
+	// titleNode.appendTo(titleBox);
 	titleBox.appendTo('.addTitleBox');
+
+
+	//Adds a box to include the category of the box
+
+	var categoryBox = $(document.createElement('input')).attr('class', 'categoryBox');
+
+	categoryBox.appendTo('.addCategoryBox');
+
 
 	//creates box to enter how many people it serves
 
@@ -204,7 +215,12 @@ $(document).ready(function(){
 
 	//Saves info to a json using a "accept" button
 	
+	var acceptButton = $(document.createElement('button')).text("Accept!!!").click(function(){
+		console.log("Add the stuffs");
+	});
 
+	acceptButton.appendTo('#acceptButton-container');
+	
 });
 
 
