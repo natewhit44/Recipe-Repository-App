@@ -80,6 +80,21 @@ body {
   padding-left: 450px;
 }
 
+#contact-page{
+  display: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.contact-title{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#contact-text{
+  font-size: 30px;
+  padding-left: 100px;
+}
+
 .category{
 	color: white;
 	font-size: 2em;

@@ -32,11 +32,16 @@ $(document).ready(function(){
 	console.log("Ready");
 
 	$('.category').on("click", function(){
-		console.log("\nA button in the left pane was clicked!")
+		console.log("\nA button in the left pane was clicked!");
 	});
 
 	$('#home').on("click", function(){
-		console.log("\nHome button pressed");
+		$('.home-page').show();
+	});
+
+	$('#contact').on("click", function(){
+		$('.home-page').hide();
+		$('#contact-page').show();
 	});
 
 	$('#categories').on("click", function(){
@@ -76,7 +81,7 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
-		$('#home, #categories, #add-recipe-button').fadeToggle();
+		$('#home, #categories, #add-recipe-button, #contact').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 	// Creates buttons, listeners add button and incriments count.
@@ -138,7 +143,9 @@ $(document).ready(function(){
 
 	addIngredientBtn.appendTo('.addRecipe-list');
 	removeIngredientBtn.appendTo('.addRecipe-list');
-	ingredientListItem.appendTo('.addRecipe-list');	
+	ingredientListItem.appendTo('.addRecipe-list');
+
+	
 });
 
 
