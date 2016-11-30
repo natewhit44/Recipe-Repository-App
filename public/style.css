@@ -202,6 +202,15 @@ footer{
   background-color: #fcf2de;
   border-radius: 10px;
 }
+
+.recipe-title-container {
+  width: 50%;
+  height: 25px;
+  background-color: green;
+  display: block;
+  border-radius: 5px;
+}
+
 /* Modal CSS from assignment 2*/
 #recipe-display-backdrop {
   position: fixed;
@@ -333,7 +342,7 @@ footer{
   height: 100%;
 }
 
-#recipe-header{
+#recipe-component-header{
   margin-left: 15px;
 }
 
