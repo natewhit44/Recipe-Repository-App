@@ -1,21 +1,22 @@
 {{> header}}
 
 <main>
-	{{> left-navbar}}
+	<div class="left-navbar">
+		<ul class="left-nav-list">
+			<li class="category"><a href="#">Mexican</a></li>
+			<li class="category"><a href="#">Greek</a></li>
+			<li class="category"><a href="#">Asian</a></li>
+			<li class="category"><a href="#">Italian</a></li>
+			<li class="category"><a href="#">Etc.</a></li>
+		</ul>
+	</div>
 
     <div class="recipe-workspace">
-			<h1 class="recipe-header">List of Recipes:</h1>
+     <h1 class="recipe-header">List of Recipes:</h1>
 
-			{{#each category}}
-				<h3>{{@key}}</h3>
-				{{#each this.recipes}}
-					<p>{{this.title}}</p>
-				{{/each}}
-			{{/each}}
+      <div class="recipe-list">
 
-			<div class="recipe-list"></div>
-		</div>
-
+       
 
     <div class="right-frame">
     </div>
@@ -32,4 +33,6 @@
 
   <button type="button" class="google-search">Google Search?</button>
 
-  {{> recipe-display}}
+
+  {{> create-recipe}}
+

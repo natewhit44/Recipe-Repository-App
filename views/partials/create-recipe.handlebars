@@ -1,14 +1,15 @@
 <div id="recipe-display-backdrop"></div>
 <div id="recipe-modal">
   <div id="modal-dialog">
-
-    <div id="modal-header">
-      <h1>Taco Salad</h1>
+    <div id="addModal-header">
+      <h1 class = "addTitleBox"></h1>
+      <h3 class="addServe-header" id="recipe-header">Serves: </h3>
     </div>
 
    <img src="/images/go-back.png" id="go-back">
 
     <div id="modal-content">
+      
 
       <div class="addRecipe-component">      
         <h3 id="addRecipe-header">Ingredients</h3>
@@ -20,26 +21,20 @@
           <!--Equipment goes here!-->
         </ul>
         <h3 id="addCooking-header">Temperature and Time</h3>
-        <ul class="recipe-list">
-          <li class="recipe-list-item ingredient" id = "prep">Preperation: 10 mins</li>
-          <li class="recipe-list-item ingredient" id = "cook">Cook: 30 mins</li>
-          <li class="recipe-list-item ingredient" id = "temp">Temperature: Medium-high</li>
+        <ul class="addCooking-list">
+          <li class="recipe-list-item ingredient" id = "prep">Preperation: </li>
+          <li class="recipe-list-item ingredient" id = "cook">Cook Time  : </li>
+          <li class="recipe-list-item ingredient" id = "temp">Temperature:</li>
         </ul>
-        <h3 id="recipe-header">Serves 4-6</h3>
       </div>
-
-
     </div>
 
     <div id="modal-content">
       <div class="recipe-component-steps">
         <h3 id="recipe-header">Steps</h3>
-        <ol class="recipe-list">
-          <li class="recipe-list-item step">In a large skillet over medium-high heat, brown the ground beef and drain excess fat. Stir in the taco seasoning, chili beans and French-style dressing. Fill the dressing bottle 2/3 full of water and add to the skillet. Bring to a boil, reduce heat and simmer for 15 minutes.</li>
-          <li class="recipe-list-item step">Crush the bag of chips, open the bag, and toss the broken chips into a large bowl with the lettuce, cheese and tomatoes. When the meat mixture is done, combine it with the lettuce, tomatoes, chips and mix well. Then, add salsa and sour cream.</li>
+        <ol class="addStep-list">
+          {{!-- Steps go here! --}}
         </ol>
       </div>
     </div>
-
-
   </div>
