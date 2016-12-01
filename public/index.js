@@ -35,11 +35,16 @@ $(document).ready(function(){
 	console.log("Ready");
 
 	$('.category').on("click", function(){
-		console.log("\nA button in the left pane was clicked!")
+		console.log("\nA button in the left pane was clicked!");
 	});
 
 	$('#home').on("click", function(){
-		console.log("\nHome button pressed");
+		$('.home-page').show();
+	});
+
+	$('#contact').on("click", function(){
+		$('.home-page').hide();
+		$('#contact-page').show();
 	});
 
 	$('#categories').on("click", function(){
@@ -79,7 +84,7 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
-		$('#home, #categories, #add-recipe-button').fadeToggle();
+		$('#home, #categories, #add-recipe-button, #contact').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
@@ -169,6 +174,12 @@ $(document).ready(function(){
 	});
 	$(removeEquipmentBtn).text("Remove");
 
+<<<<<<< HEAD
+	addIngredientBtn.appendTo('.addRecipe-list');
+	removeIngredientBtn.appendTo('.addRecipe-list');
+	ingredientListItem.appendTo('.addRecipe-list');
+
+=======
 	addEquipmentBtn.appendTo('.addEquipment-list');
 	removeEquipmentBtn.appendTo('.addEquipment-list');
 	equipmentListItem.appendTo('.addEquipment-list');	
@@ -220,6 +231,7 @@ $(document).ready(function(){
 	});
 
 	acceptButton.appendTo('#acceptButton-container');
+>>>>>>> 7cd9e6e1deb8a573e7c01c0c6ef80c529d763c52
 	
 });
 
