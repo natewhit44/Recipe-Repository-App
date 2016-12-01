@@ -29,7 +29,7 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 
 $(document).ready(function(){
-	console.log("Ready");
+	// console.log("Ready");
 
 	$('.category').on("click", function(){
 		console.log("\nA button in the left pane was clicked!")
@@ -158,4 +158,4 @@ iconDict.side = '/images/Side_Dish/favicon-96x96.png';
 iconDict.seafood = '/images/Seafood/favicon-96x96.png'
 iconDict.entree = '/images/Entree/favicon-96x96.png';
 
-console.log('== iconDict.mexian', iconDict.mexican)
+// console.log('== iconDict.mexian', iconDict.mexican)

@@ -203,14 +203,18 @@ footer{
   border-radius: 10px;
 }
 
-.recipe-title-container {
-  width: 50%;
-  height: 25px;
+.recipe-title-icon-container {
+  width: 200px;
+  height: 200px;
   background-color: green;
-  display: block;
+  display: inline-block;
   border-radius: 5px;
+  text-align: center;
 }
 
+.recipe-title {
+  vertical-align: bottom;
+}
 /* Modal CSS from assignment 2*/
 #recipe-display-backdrop {
   position: fixed;
@@ -507,8 +511,10 @@ nav {
 }
 
 #icon{
-  height: 40px;
-  width: 40px;
+  top: 10px;
+  left: 20%;
+  height: 60%;
+  width: 60%;
   padding: 0px;
   margin: 0px;
   border: 0px;
