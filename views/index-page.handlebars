@@ -1,8 +1,15 @@
 {{> header}}
 
 <main>
-	{{> left-navbar}}
+
+	
   <div class="recipe-workspace">
+  		{{> home-page}}
+
+    	{{> contact-page}}
+
+    	{{recipes}}
+
 		<h1 class="recipe-header">List of Recipes:</h1>
 		<div class="recipe-list">
 
@@ -21,6 +28,7 @@
 			{{/each}}
 			{{/if}}
 
+			{{> left-navbar}}
 		</div>
 	</div>
 
@@ -36,6 +44,6 @@
 
 </main>
 
-<!-- {{> footer}} -->
+{{> footer}}
 
 <button type="button" class="google-search">Google Search?</button>

@@ -4,10 +4,10 @@ var mysql = require("mysql");
 
 // ADD ENVIRONMENT VARIABLES!!!
 var con = mysql.createConnection({
-  host: "oniddb.cws.oregonstate.edu",
-  user: "whitlocn-db",
-  password: "mX0IKGvySdN1jVen",
-  database: "whitlocn-db"
+  host: "mysql.cs.orst.edu",
+  user: "cs290_whitlocn",
+  password: "2093",
+  database: "cs290_whitlocn"
 });
 
 con.connect(function(err){
