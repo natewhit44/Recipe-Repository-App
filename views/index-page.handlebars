@@ -10,16 +10,17 @@
 				{{#each recipes}}
 					{{> recipe-icon-title categoryName = ../title}}
 				{{/each}}
-			{{else}}
-				{{#if category}}
-					{{#each category}}
-						<h3>{{@key}}</h3>
-						{{#each this.recipes}}
-							<p>{{this.title}}</p>
-						{{/each}}
-					{{/each}}
-				{{/if}}
 			{{/if}}
+			<!-- {{else}} -->
+			{{#if category}}
+				{{#each category}}
+					<h3>{{@key}}</h3>
+					{{#each this.recipes}}
+						<p>{{this.title}}</p>
+					{{/each}}
+				{{/each}}
+			{{/if}}
+		<!-- {{/if}} -->
 
 		</div>
 	</div>
