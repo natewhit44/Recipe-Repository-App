@@ -91,7 +91,6 @@ app.get('/categories/:category', function(req, res, next) {
 	if (requestedCategory) {
 		res.status(200).render('index-page', {
 			title: requestedCategory.category,
-			// category: requestedCategory,
 			recipes: requestedCategory.recipes
 		});
 	} else {
