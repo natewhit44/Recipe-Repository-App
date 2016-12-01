@@ -16,17 +16,16 @@
 				{{#each recipes}}
 					{{> recipe-icon-title categoryName = ../title}}
 				{{/each}}
-			{{/if}}
-			<!-- {{else}} -->
-			{{#if category}}
-				{{#each category}}
-					<h3>{{@key}}</h3>
-					{{#each this.recipes}}
-						<p>{{this.title}}</p>
+			{{else}}
+				{{#if category}}
+					{{#each category}}
+						<h3>{{@key}}</h3>
+						{{#each this.recipes}}
+							<p>{{this.title}}</p>
+						{{/each}}
 					{{/each}}
-				{{/each}}
+				{{/if}}
 			{{/if}}
-		<!-- {{/if}} -->
 
 			{{> left-navbar}}
 		</div>
