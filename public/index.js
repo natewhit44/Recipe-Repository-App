@@ -40,11 +40,13 @@ $(document).ready(function(){
 
 	$('#home').on("click", function(){
 		$('.home-page').show();
+		console.log("registering the home")
 	});
 
 	$('#contact').on("click", function(){
 		$('.home-page').hide();
 		$('#contact-page').show();
+		console.log("Registering the contact");
 	});
 
 	$('#categories').on("click", function(){
@@ -174,12 +176,6 @@ $(document).ready(function(){
 	});
 	$(removeEquipmentBtn).text("Remove");
 
-<<<<<<< HEAD
-	addIngredientBtn.appendTo('.addRecipe-list');
-	removeIngredientBtn.appendTo('.addRecipe-list');
-	ingredientListItem.appendTo('.addRecipe-list');
-
-=======
 	addEquipmentBtn.appendTo('.addEquipment-list');
 	removeEquipmentBtn.appendTo('.addEquipment-list');
 	equipmentListItem.appendTo('.addEquipment-list');	
@@ -230,9 +226,7 @@ $(document).ready(function(){
 		console.log("Add the stuffs");
 	});
 
-	acceptButton.appendTo('#acceptButton-container');
->>>>>>> 7cd9e6e1deb8a573e7c01c0c6ef80c529d763c52
-	
+	acceptButton.appendTo('#acceptButton-container');	
 });
 
 

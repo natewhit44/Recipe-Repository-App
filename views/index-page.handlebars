@@ -1,7 +1,6 @@
 {{> header}}
 
 <main>
-<<<<<<< HEAD
 	<div class="left-navbar">
 		<ul class="left-nav-list">
 			<li class="category"><a href="#">Mexican</a></li>
@@ -12,16 +11,12 @@
 		</ul>
 	</div>
 
-    <div class="recipe-workspace">
-    	{{> home-page}}
+	
+  <div class="recipe-workspace">
+  		{{> home-page}}
 
     	{{> contact-page}}
 
-			<h1 class="recipe-header">List of Recipes:</h1>
-
-=======
-	{{> left-navbar}}
-  <div class="recipe-workspace">
 		<h1 class="recipe-header">List of Recipes:</h1>
 		<div class="recipe-list">
 
@@ -32,7 +27,6 @@
 			{{/if}}
 			<!-- else? -->
 			{{#if category}}
->>>>>>> 7cd9e6e1deb8a573e7c01c0c6ef80c529d763c52
 			{{#each category}}
 				<h3>{{@key}}</h3>
 				{{#each this.recipes}}
@@ -41,6 +35,7 @@
 			{{/each}}
 			{{/if}}
 
+			{{> left-navbar}}
 		</div>
 	</div>
 
@@ -56,6 +51,6 @@
 
 </main>
 
-<!-- {{> footer}} -->
+{{> footer}}
 
 <button type="button" class="google-search">Google Search?</button>
