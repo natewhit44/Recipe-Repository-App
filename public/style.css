@@ -211,6 +211,15 @@ footer{
   border-radius: 5px;
   text-align: center;
 }
+#icon{
+  top: 10px;
+  left: 20%;
+  height: 60%;
+  width: 60%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
 
 .recipe-title {
   vertical-align: bottom;
@@ -510,11 +519,9 @@ nav {
   color: white;
 }
 
-#icon{
-  top: 10px;
-  left: 20%;
-  height: 60%;
-  width: 60%;
+#search-icon{
+  height: 40px;
+  width: 40px;
   padding: 0px;
   margin: 0px;
   border: 0px;
