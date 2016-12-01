@@ -49,6 +49,52 @@ body {
 
 }
 
+.home-page{
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.home-page-title{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#home-page-text{
+  padding-top: 15px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  font-size: large;
+}
+
+#home-page-img1{
+  padding-left: 300px;
+}
+
+#home-page-img2{
+  padding-left: 100px;
+}
+
+#home-page-img3{
+  padding-left: 450px;
+}
+
+#contact-page{
+  display: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.contact-title{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#contact-text{
+  font-size: 30px;
+  padding-left: 100px;
+}
+
 .category{
 	color: white;
 	font-size: 2em;
