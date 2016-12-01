@@ -1,6 +1,7 @@
 {{> header}}
 
 <main>
+<<<<<<< HEAD
 	<div class="left-navbar">
 		<ul class="left-nav-list">
 			<li class="category"><a href="#">Mexican</a></li>
@@ -18,30 +19,43 @@
 
 			<h1 class="recipe-header">List of Recipes:</h1>
 
+=======
+	{{> left-navbar}}
+  <div class="recipe-workspace">
+		<h1 class="recipe-header">List of Recipes:</h1>
+		<div class="recipe-list">
+
+			{{#if recipes}}
+			{{#each recipes}}
+				{{> recipe-icon-title recipeTitle = this.title}}
+			{{/each}}
+			{{/if}}
+			<!-- else? -->
+			{{#if category}}
+>>>>>>> 7cd9e6e1deb8a573e7c01c0c6ef80c529d763c52
 			{{#each category}}
 				<h3>{{@key}}</h3>
 				{{#each this.recipes}}
 					<p>{{this.title}}</p>
 				{{/each}}
 			{{/each}}
-			
-			<div class="recipe-list"></div>
+			{{/if}}
+
 		</div>
+	</div>
 
 
-    <div class="right-frame">
-    </div>
+  <div class="right-frame">
+  </div>
 
-    <div id="search-box">
-      <input id="search-box-input" type="text" placeholder="Enter search query...">
-    </div>
+  <div id="search-box">
+    <input id="search-box-input" type="text" placeholder="Enter search query...">
+  </div>
 
-		{{> google-search}}
+	{{> google-search}}
 
-	</main>
+</main>
 
-	<!-- {{> footer}} -->
+<!-- {{> footer}} -->
 
-  <button type="button" class="google-search">Google Search?</button>
-
-  {{> recipe-display}}
+<button type="button" class="google-search">Google Search?</button>

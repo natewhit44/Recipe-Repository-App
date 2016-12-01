@@ -1,5 +1,6 @@
 {
   "beverages": {
+    "category": "Beverages",
     "recipes": [
       {
         "title": "Chocolate Milk",
@@ -47,6 +48,7 @@
   },
 
   "mexican": {
+    "category": "Mexican",
     "recipes": [
       {
         "title": "Taco Salad",
@@ -112,6 +114,7 @@
   },
 
   "greek": {
+    "category": "Greek",
   	"recipes": [{
   			"title": "Chickpea Falafel Burgers",
   			"yield": "Serves 1",
@@ -147,6 +150,7 @@
   },
 
   "asian": {
+    "category": "Asian",
   	"recipes": [{
   			"title": "Shrimp Fried Rice",
   			"yield": "Serves 2-4",
@@ -182,6 +186,7 @@
   },
 
   "italian": {
+    "category": "Italian",
   	"recipes": [
   		{
   			"title": "Cheese Pizza",
@@ -230,6 +235,7 @@
   ]},
 
 	"other": {
+    "category": "Other",
 		"recipes": [
 		{
 			"title": "Chocolate Chip Cookies",

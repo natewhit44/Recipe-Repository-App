@@ -11,7 +11,7 @@ body {
 	left: 0;
   top: 90px;
 	height: 100%;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .left-nav-list{
@@ -150,7 +150,7 @@ body {
 }
 
 /*
-  Something is wrong with the clickability of
+  Something is wrong with the clickability of 
   this button from the perspective of the user.
   Someone should look into it...
 */
@@ -194,10 +194,10 @@ footer{
   position: fixed;
   top: 90px;
   left: 202px;
-  width: 84%;
+  width: 86%;
   bottom: 29px;
   border-radius: 10px;
-  overflow-y: scroll;
+  /*overflow: scroll;*/
 }
 
 .recipe{
@@ -356,6 +356,7 @@ footer{
   left: 100px;
   border-radius: 10px;
   /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+  
 }
 
 .modal-body {
@@ -557,7 +558,7 @@ nav {
   top: 39px;
   right: 165px;
   border-radius: 10px;
-  display: none;
+  display: none;    
 
 }
 
@@ -575,6 +576,41 @@ nav {
   display: none;
 }
 
-.ingredientQuantity {
+.ingredientQuantity
+{
   width: 64px;
+}
+#addModal-header
+{
+  margin: 0;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: rgba(0, 117, 58, 1);
+  border-radius: 15px;
+}
+.addServe-header
+{
+  /*font-size: 20px;*/
+
+}
+.serveBox
+{
+  width: 64px;
+}
+.stepBox
+{
+  width: 100%;
+}
+.categoryBox
+{
+  width: 192px;
+}
+.titleBox
+{
+  text-align: center;
+}
+#acceptButton-container
+{
+  text-align: center;
+
 }
