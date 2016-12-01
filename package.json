@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/natewhit44/Recipe-Repository-App/blob/master/README.md",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",

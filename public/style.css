@@ -26,6 +26,7 @@ body {
   margin-top: 5px;
   background-color: rgba(18, 200, 30, .5);
   border-radius: 10px;
+  /*text-align: center;*/
 }
 
 .left-nav-list li:hover{
@@ -36,7 +37,7 @@ body {
 .left-nav-list li a{
   text-decoration: none;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  color: #000;
+  color: white;
 }
 
 .left-nav-list li a:hover{
