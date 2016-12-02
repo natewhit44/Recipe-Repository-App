@@ -60,6 +60,7 @@ app.get('/mysql', function(req,res){
 				});
 			});
 
+			console.log("== Recipes array: ", recipes);
 			res.render('index-page',{
 				title: "MySQL Results",
 				recipes: recipes

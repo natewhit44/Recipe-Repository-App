@@ -59,31 +59,48 @@ body {
   text-decoration: none;
   height: 100%;
   width: 100%;
+  /*background-color: blue;*/
 }
 
 .home-page-title{
   font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
   padding-bottom: 15px;
+  color: rgb(18, 142, 35);
+}
+
+.home-page-title h1{
+    font-size: 50px;
 }
 
 #home-page-text{
-  padding-top: 15px;
+/*  padding-top: 15px;*/
   font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
-  font-size: large;
+  font-size: 24px;
+  width: 800px;
+  position: relative;
+  left: 25%;
+  top: 5%;
 }
 
-#home-page-img1{
+/*#home-page-img1{
   padding-left: 300px;
 }
 
 #home-page-img2{
   padding-left: 100px;
-}
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}*/
 
 #home-page-img3{
-  padding-left: 450px;
+ /* padding-left: 450px;*/
+ position: relative;
+ left: 36%;
+ bottom: -75px;
+ height: 400px;
 }
 
 #contact-page{
