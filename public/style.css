@@ -274,9 +274,9 @@ footer{
 }*/
 
 #go-back{
-  position: fixed;
-  top: 47px;
-  left: 470px;
+  position: relative;
+  top: 35px;
+  left: 20px;
   height: 30px;
   width: 30px;
 }
@@ -289,10 +289,10 @@ footer{
   background-color: blue;
   height: 250px;
   width: 320px;
-  position: absolute;
+  position: relative;
   border-radius: 10px;
-  top: 150px;
-  right: 550px;
+  bottom: 325px;
+  right: 540px;
 }
 
 #image-placeholder img{
@@ -566,5 +566,22 @@ nav {
 #acceptButton-container
 {
   text-align: center;
-
+}
+#addGo-back
+{
+  position: relative;
+  top: -154px;
+  left: 8px;
+  height: 30px;
+  width: 30px;
+}
+#addGo-back:hover
+{
+  cursor: pointer;
+}
+#addRecipe-image
+{
+  position: relative;
+  top: 180px;
+  left: 350px;
 }

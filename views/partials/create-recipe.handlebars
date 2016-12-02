@@ -1,39 +1,42 @@
-<div id="recipe-display-backdrop"></div>
-<div id="recipe-modal">
-  <div id="modal-dialog">
-    <div id="addModal-header">
-      <h1 class = "addTitleBox"></h1>
-      <h2 class = "addCategoryBox">Category: </h2>
-      <h3 class="addServe-header" id="recipe-header">Serves: </h3>
+<div id = "recipe-display-backdrop"></div>
+<div id = "recipe-modal">
+  <div id = "modal-dialog">
+    <div id = "addModal-header">
+      <h1 class = "addTitleBox">
+        <input class = "titleBox" type = "text" placeholder="Name your recipe!">
+      </h1>
+      <h2 class = "addCategoryBox">Category: <input class = "categoryBox"></h2>
+      <h3 class = "addServe-header" id = "recipe-header">Serves: <input class = "serveBox"> guests</h3>
+      
     </div>
 
-   <img src="/images/go-back.png" {{!-- id="go-back" --}}>
-
-    <div id="modal-content">
+   <img src = "/images/go-back.png" id = "addGo-back">
+    <h4 id = "addRecipe-image">Add a delicious image: <input id = "imageBox"></h4>
+    <div id = "modal-content">
       
 
-      <div class="addRecipe-component">      
-        <h3 id="addRecipe-header">Ingredients</h3>
-        <ul class="addRecipe-list">
+      <div class = "addRecipe-component">      
+        <h3 id = "addRecipe-header">Ingredients</h3>
+        <ul class = "addRecipe-list">
           <!--Recipes go here!-->
         </ul>
-        <h3 id="addEquipment-header">Equipment</h3>
-        <ul class="addEquipment-list">
+        <h3 id = "addEquipment-header">Equipment</h3>
+        <ul class = "addEquipment-list">
           <!--Equipment goes here!-->
         </ul>
-        <h3 id="addCooking-header">Temperature and Time</h3>
-        <ul class="addCooking-list">
-          <li class="recipe-list-item ingredient" id = "prep">Preperation: </li>
-          <li class="recipe-list-item ingredient" id = "cook">Cook Time  : </li>
-          <li class="recipe-list-item ingredient" id = "temp">Temperature:</li>
+        <h3 id = "addCooking-header">Temperature and Time</h3>
+        <ul class = "addCooking-list">
+          <li class = "recipe-list-item ingredient" id = "prep">Preperation: <input class = "addCookingBox" id = "prepBox" type = "text"></li>
+          <li class="recipe-list-item ingredient" id = "cook">Cook Time  : <input class = "addCookingBox" id = "cookBox" type = "text"></li>
+          <li class = "recipe-list-item ingredient" id = "temp">Temperature:<input class = "addCookingBox" id = "tempBox" type = "text"></li>
         </ul>
       </div>
     </div>
 
-    <div id="modal-content">
-      <div class="recipe-component-steps">
-        <h3 id="recipe-header">Steps</h3>
-        <ol class="addStep-list">
+    <div id = "modal-content">
+      <div class = "recipe-component-steps">
+        <h3 id = "recipe-header">Steps</h3>
+        <ol class = "addStep-list">
           {{!-- Steps go here! --}}
         </ol>
       </div>

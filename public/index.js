@@ -31,6 +31,9 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
+
+
+
 $(document).ready(function(){
 	console.log("Ready");
 
@@ -77,6 +80,10 @@ $(document).ready(function(){
 		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
 	});
 
+	$('#addGo-back').on('click', function(){
+		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
+	});
+
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
 		$('#home, #categories, #add-recipe-button').fadeToggle();
@@ -90,29 +97,25 @@ $(document).ready(function(){
 
 	//Creates textbox for the titleBox
 
-	var titleBox = $(document.createElement('input')).val("Insert Text").attr('class', 'titleBox');
-	var titleNode = $(document.createElement('node')).text("Add Title").attr('class', 'titleNode')
-
-	//titleBox.defaultValue = "Add Title";
-	// titleNode.appendTo(titleBox);
-	titleBox.appendTo('.addTitleBox');
+	// var titleBox = $(document.createElement('input')).val("Insert Text").attr('class', 'titleBox');
+	// titleBox.appendTo('.addTitleBox');
 
 
 	//Adds a box to include the category of the box
 
-	var categoryBox = $(document.createElement('input')).attr('class', 'categoryBox');
+	// var categoryBox = $(document.createElement('input')).attr('class', 'categoryBox');
 
-	categoryBox.appendTo('.addCategoryBox');
+	// categoryBox.appendTo('.addCategoryBox');
 
 
 	//creates box to enter how many people it serves
 
-	var serveBox = $(document.createElement('input')).attr('class', 'serveBox');
-	var serveSpan = $(document.createElement('span')).text(" guests").attr('class', 'serveSpan');
+	// var serveBox = $(document.createElement('input')).attr('class', 'serveBox');
+	// var serveSpan = $(document.createElement('span')).text(" guests").attr('class', 'serveSpan');
 
 	
-	serveBox.appendTo('.addServe-header');
-	serveSpan.appendTo('.addServe-header');
+	// serveBox.appendTo('.addServe-header');
+	// serveSpan.appendTo('.addServe-header');
 
 	//creates ingredient textboxes and add/remove buttons
 
@@ -175,13 +178,13 @@ $(document).ready(function(){
 
 	//adds textboxes to preperation, cookingtime, and temperature
 
-	var prepBox = $(document.createElement('input')).attr('class', 'prepBox');
-	var cookBox = $(document.createElement('input')).attr('class', 'cookBox');
-	var tempBox = $(document.createElement('input')).attr('class', 'tempBox');
+	// var prepBox = $(document.createElement('input')).attr('class', 'prepBox');
+	// var cookBox = $(document.createElement('input')).attr('class', 'cookBox');
+	// var tempBox = $(document.createElement('input')).attr('class', 'tempBox');
 
-	prepBox.appendTo('#prep');
-	cookBox.appendTo('#cook');
-	tempBox.appendTo('#temp');
+	// prepBox.appendTo('#prep');
+	// cookBox.appendTo('#cook');
+	// tempBox.appendTo('#temp');
 
 	//adds textboxes for typing the steps to follow in order to create a recipe
 
@@ -211,16 +214,14 @@ $(document).ready(function(){
 	removeStepBtn.appendTo('.addStep-list');
 	stepListItem.appendTo('.addStep-list');	
 
-
-
 	//Saves info to a json using a "accept" button
 	
-	var acceptButton = $(document.createElement('button')).text("Accept!!!").click(function(){
+	var acceptButton = $(document.createElement('button')).text("Accept!!!").attr("id", 'acceptButton').click(function(){
 		console.log("Add the stuffs");
+
 	});
 
 	acceptButton.appendTo('#acceptButton-container');
-	
 });
 
 
