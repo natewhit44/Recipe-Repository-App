@@ -547,7 +547,7 @@ nav {
   /*font-size: 20px;*/
 
 }
-.serveBox
+#serveBox
 {
   width: 64px;
 }
@@ -555,11 +555,11 @@ nav {
 {
   width: 100%;
 }
-.categoryBox
+#categoryBox
 {
   width: 192px;
 }
-.titleBox
+#titleBox
 {
   text-align: center;
 }
@@ -583,5 +583,5 @@ nav {
 {
   position: relative;
   top: 180px;
-  left: 350px;
+  left: 500px;
 }

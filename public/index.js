@@ -33,7 +33,6 @@ var stepCount = 1;
 
 
 
-
 $(document).ready(function(){
 	console.log("Ready");
 
@@ -89,33 +88,6 @@ $(document).ready(function(){
 		$('#home, #categories, #add-recipe-button').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
-
-
-
-
-	// Creates buttons, listeners add button and incriments count.
-
-	//Creates textbox for the titleBox
-
-	// var titleBox = $(document.createElement('input')).val("Insert Text").attr('class', 'titleBox');
-	// titleBox.appendTo('.addTitleBox');
-
-
-	//Adds a box to include the category of the box
-
-	// var categoryBox = $(document.createElement('input')).attr('class', 'categoryBox');
-
-	// categoryBox.appendTo('.addCategoryBox');
-
-
-	//creates box to enter how many people it serves
-
-	// var serveBox = $(document.createElement('input')).attr('class', 'serveBox');
-	// var serveSpan = $(document.createElement('span')).text(" guests").attr('class', 'serveSpan');
-
-	
-	// serveBox.appendTo('.addServe-header');
-	// serveSpan.appendTo('.addServe-header');
 
 	//creates ingredient textboxes and add/remove buttons
 
@@ -176,16 +148,6 @@ $(document).ready(function(){
 	removeEquipmentBtn.appendTo('.addEquipment-list');
 	equipmentListItem.appendTo('.addEquipment-list');	
 
-	//adds textboxes to preperation, cookingtime, and temperature
-
-	// var prepBox = $(document.createElement('input')).attr('class', 'prepBox');
-	// var cookBox = $(document.createElement('input')).attr('class', 'cookBox');
-	// var tempBox = $(document.createElement('input')).attr('class', 'tempBox');
-
-	// prepBox.appendTo('#prep');
-	// cookBox.appendTo('#cook');
-	// tempBox.appendTo('#temp');
-
 	//adds textboxes for typing the steps to follow in order to create a recipe
 
 	var stepListItem = $(document.createElement('li')).attr('id', 'stepListItem_1');
@@ -217,10 +179,97 @@ $(document).ready(function(){
 	//Saves info to a json using a "accept" button
 	
 	var acceptButton = $(document.createElement('button')).text("Accept!!!").attr("id", 'acceptButton').click(function(){
-		console.log("Add the stuffs");
+		var success = true;
+		var titleVal;
+		var categoryVal;
+		var serveVal;
+		var ingredientsVal = [];
+		var quantityVal = [];
+		var equipmentVal = [];
+		var cookingPrepVal;
+		var cookingCookVal;
+		var cookingTempVal;
+		var stepsVal = [];
+		var deliciousImageVal;
+
+
+		titleVal = $('#titleBox').val();
+		categoryVal = $('#categoryBox').val();
+		serveVal = $('#serveBox').val();
+		var cookingPrepVal = $('#prepBox').val();
+		var cookingCookVal = $('#cookBox').val();
+		var cookingTempVal = $('#tempBox').val();
+		var deliciousImageVal = $('#imageBox').val();
+		
+		if (titleVal == "") 
+		{
+			alert("You can't make a recipe without a Title!!!  That is like first grade knowledge!!!");
+			success = false;
+		}
+		if (categoryVal == "") 
+		{
+			alert("We need a category to put this recipe in!");
+			success = false;
+		}
+		if (serveVal == "") 
+		{
+			alert("How am I supposed to know how much this feeds my family?!?!");
+			success = false;
+		}
+
+		for (var i = 0; i < ingredientCount; i++)
+		{
+			ingredientsVal.push($('#ingredientListItem_' + (i+1)).children('input').val());
+			quantityVal.push($('#ingredientListItem_' + (i+1)).children('span').children('input').val());
+			console.log("ingredient count:" + ingredientCount);
+			console.log("i:" + i);
+			console.log(ingredientsVal[i]);
+			if (ingredientsVal[i] == "")
+			{
+				alert("Ingredient #" + (i+1) + " is empty!");
+				success = false;
+			}
+			if (quantityVal[i] == "")
+			{
+				alert("Quantity #" + (i+1) + " is empty!");
+				success = false;
+			}
+		}
+
+		for (var i = 0; i < equipmentCount; i++)
+		{
+			equipmentVal.push($('#equipmentListItem_' + (i+1)).children('input').val());
+
+			if (equipmentVal[i] == "")
+			{
+				alert("Equipment #" + (i+1) + " is empty!");
+				success = false;
+			}
+		}
+
+
+
+		for (var i = 0; i < stepsCount; i++)
+		{
+			stepsVal.push($('#stepsListItem_' + (i+1)).children('input').val());
+
+			if (stepsVal[i] == "")
+			{
+				alert("You can't skip steps!!!  Steps #" + (i+1) + " is sad and unused!  Kill it or use it!");
+				success = false;
+			}
+		}
+
+
+
+		if (success)
+		{
+			//close modal, accept values, and clear form
+			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
+		}
+		//else, allow user to fix mistakes
 
 	});
-
 	acceptButton.appendTo('#acceptButton-container');
 });
 
