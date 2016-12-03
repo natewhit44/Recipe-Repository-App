@@ -2,7 +2,7 @@
 // http://www.w3schools.com/jquery/jquery_examples.asp
 
 //LOOK AT THIS FOR EXAMPLES
-//ON HOW TO USE jQuery: 
+//ON HOW TO USE jQuery:
 //http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
 
 // -Selectors
@@ -35,7 +35,7 @@ var stepCount = 1;
 
 $(document).ready(function(){
 	console.log("Ready");
-	
+
 	$('#home').on("click", function(){
 		console.log("\nHome button pressed");
 		$('.home-page').show();
@@ -47,8 +47,8 @@ $(document).ready(function(){
 		console.log("Registering the contact");
   	});
 
-	$('#categories').on("click", function(){
-		console.log("\nAbout button pressed");
+	$('.category').on("click", function() {
+		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
 
 	$('#add-recipe-button').on("click", function(){
@@ -102,7 +102,7 @@ $(document).ready(function(){
 	ingredientBox.appendTo(ingredientListItem);
 	ingredientQuantity.appendTo(quantitySpan);
 	quantitySpan.appendTo(ingredientListItem);
-	
+
 
 	var addIngredientBtn = $(document.createElement('button')).click(function(){
 		$('#ingredientListItem_1').clone().find("input:text").val("").end().attr('id', 'ingredientListItem_' + (ingredientCount + 1)).appendTo('.addRecipe-list');
@@ -118,12 +118,12 @@ $(document).ready(function(){
 		}
 	});
 	$(removeIngredientBtn).text("Remove");
-	
+
 	//add initial ingredient textboxes
 
 	addIngredientBtn.appendTo('.addRecipe-list');
 	removeIngredientBtn.appendTo('.addRecipe-list');
-	ingredientListItem.appendTo('.addRecipe-list');	
+	ingredientListItem.appendTo('.addRecipe-list');
 
 
 	//add equipment textboxes and buttons
@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 	addEquipmentBtn.appendTo('.addEquipment-list');
 	removeEquipmentBtn.appendTo('.addEquipment-list');
-	equipmentListItem.appendTo('.addEquipment-list');	
+	equipmentListItem.appendTo('.addEquipment-list');
 
 	//adds textboxes for typing the steps to follow in order to create a recipe
 
@@ -172,15 +172,15 @@ $(document).ready(function(){
 		}
 	});
 	$(removeStepBtn).text("Remove");
-	
+
 	//add initial step textboxes
 
 	addStepBtn.appendTo('.addStep-list');
 	removeStepBtn.appendTo('.addStep-list');
-	stepListItem.appendTo('.addStep-list');	
+	stepListItem.appendTo('.addStep-list');
 
 	//Saves info to a json using a "accept" button
-	
+
 	var acceptButton = $(document.createElement('button')).text("Accept!!!").attr("id", 'acceptButton').click(function(){
 		var success = true;
 		var titleVal;
@@ -203,18 +203,18 @@ $(document).ready(function(){
 		var cookingCookVal = $('#cookBox').val();
 		var cookingTempVal = $('#tempBox').val();
 		var deliciousImageVal = $('#imageBox').val();
-		
-		if (titleVal == "") 
+
+		if (titleVal == "")
 		{
 			alert("You can't make a recipe without a Title!!!  That is like first grade knowledge!!!");
 			success = false;
 		}
-		if (categoryVal == "") 
+		if (categoryVal == "")
 		{
 			alert("We need a category to put this recipe in!");
 			success = false;
 		}
-		if (serveVal == "") 
+		if (serveVal == "")
 		{
 			alert("How am I supposed to know how much this feeds my family?!?!");
 			success = false;
