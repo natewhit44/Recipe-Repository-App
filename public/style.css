@@ -23,7 +23,7 @@ body {
 }
 
 .left-nav-list li{
-  margin-top: 5px;
+  margin: 5px;
   background-color: rgba(18, 200, 30, .5);
   border-radius: 10px;
   /*text-align: center;*/
