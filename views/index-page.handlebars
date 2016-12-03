@@ -2,31 +2,37 @@
 
 <main>
 	{{> left-navbar}}
+
   <div class="recipe-workspace">
+  		{{> home-page}}
+
+    	{{> contact-page}}
+
+    	{{recipes}}
+
 		<h1 class="recipe-header">List of Recipes:</h1>
 		<div class="recipe-list">
-
 			{{#if recipes}}
-			{{#each recipes}}
-				{{> recipe-icon-title recipeTitle = this.title}}
-			{{/each}}
-			{{/if}}
-			<!-- else? -->
-			{{#if category}}
-			{{#each category}}
-				<h3>{{@key}}</h3>
-				{{#each this.recipes}}
-					<p>{{this.title}}</p>
+				{{#each recipes}}
+					{{> recipe-icon-title categoryName = ../title}}
 				{{/each}}
-			{{/each}}
+			{{else}}
+				{{#if category}}
+					{{#each category}}
+						<h3>{{@key}}</h3>
+						{{#each this.recipes}}
+							<p>{{this.title}}</p>
+						{{/each}}
+					{{/each}}
+				{{/if}}
 			{{/if}}
 
+			{{> left-navbar}}
 		</div>
 	</div>
 
 
-  <div class="right-frame">
-  </div>
+  <div class="right-frame"></div>
 
   <div id="search-box">
     <input id="search-box-input" type="text" placeholder="Enter search query...">
@@ -36,7 +42,7 @@
 
 </main>
 
-<!-- {{> footer}} -->
+{{> footer}}
 
 <button type="button" class="google-search">Google Search?</button>
 

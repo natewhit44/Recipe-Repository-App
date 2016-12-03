@@ -34,14 +34,21 @@ var stepCount = 1;
 
 
 $(document).ready(function(){
-	console.log("Ready");
+	// console.log("Ready");
 
 	$('.category').on("click", function(){
-		console.log("\nA button in the left pane was clicked!")
+		console.log("\nA button in the left pane was clicked!");
 	});
 
 	$('#home').on("click", function(){
-		console.log("\nHome button pressed");
+		$('.home-page').show();
+		console.log("registering the home")
+	});
+
+	$('#contact').on("click", function(){
+		$('.home-page').hide();
+		$('#contact-page').show();
+		console.log("Registering the contact");
 	});
 
 	$('#categories').on("click", function(){
@@ -85,7 +92,7 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
-		$('#home, #categories, #add-recipe-button').fadeToggle();
+		$('#home, #categories, #add-recipe-button, #contact').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
@@ -247,6 +254,7 @@ $(document).ready(function(){
 			}
 		}
 
+<<<<<<< HEAD
 
 
 		for (var i = 0; i < stepsCount; i++)
@@ -271,6 +279,9 @@ $(document).ready(function(){
 
 	});
 	acceptButton.appendTo('#acceptButton-container');
+=======
+	acceptButton.appendTo('#acceptButton-container');	
+>>>>>>> master
 });
 
 
@@ -290,4 +301,4 @@ iconDict.side = '/images/Side_Dish/favicon-96x96.png';
 iconDict.seafood = '/images/Seafood/favicon-96x96.png'
 iconDict.entree = '/images/Entree/favicon-96x96.png';
 
-console.log('== iconDict.mexian', iconDict.mexican)
+// console.log('== iconDict.mexian', iconDict.mexican)
