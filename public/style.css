@@ -270,25 +270,32 @@ footer{
 
 
 .recipe-title-icon-container {
-  width: 200px;
-  height: 200px;
-  background-color: green;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  padding: 5px;
+  background-color: rgba(167, 198, 153, .8);
   display: inline-block;
   border-radius: 5px;
   text-align: center;
 }
-#icon{
+#icon {
   top: 4px;
   left: 20%;
-  height: 38px;
-  width: 38px;
+  height: 100px;
+  width: 100px;
   padding: 0px;
   margin: 0px;
   border: 0px;
 }
-
 .recipe-title {
-  vertical-align: bottom;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recipe-title a {
+  color: #000;
 }
 /* Modal CSS from assignment 2*/
 #recipe-display-backdrop {
@@ -586,13 +593,22 @@ nav {
   color: white;
 }
 
-#search-icon{
+#search-icon {
+  top: 4px;
+  left: 20%;
+  height: 38px;
+  width: 38px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+/*#search-icon{
   height: 40px;
   width: 40px;
   padding: 0px;
   margin: 0px;
   border: 0px;
-}
+}*/
 
 #search-box{
   width: 400px;

@@ -4,10 +4,11 @@
 	{{> left-navbar}}
 
   <div class="recipe-workspace">
-  		{{!-- {{> home-page}}
+  		<!-- {{!-- {{> home-page}}
 
     	{{> contact-page}}
- --}}
+ --}} -->
+
 	 <h1 class="recipe-header">List of Recipes:</h1>
     	{{#each SQL_TEST}}
     		<p>{{this.recipe_name}}
@@ -19,7 +20,7 @@
     		</p>
     	{{/each}}
 
-		
+
 		<div class="recipe-list">
 			{{#if recipes}}
 				{{#each recipes}}
