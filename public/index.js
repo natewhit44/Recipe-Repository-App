@@ -247,11 +247,6 @@ $(document).ready(function(){
 			}
 		}
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 		for (var i = 0; i < stepsCount; i++)
 		{
 			stepsVal.push($('#stepsListItem_' + (i+1)).children('input').val());
@@ -262,8 +257,6 @@ $(document).ready(function(){
 				success = false;
 			}
 		}
-
-
 
 		if (success)
 		{
