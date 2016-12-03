@@ -127,7 +127,8 @@ body {
 	padding: 15px;
 }
 
-.category a{
+.category label {
+  font-weight: lighter; 
 	text-decoration: none;
 	color: white;
 }
