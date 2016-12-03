@@ -34,21 +34,14 @@ var stepCount = 1;
 
 
 $(document).ready(function(){
-	// console.log("Ready");
+	console.log("Ready");
 
 	$('.category').on("click", function(){
-		console.log("\nA button in the left pane was clicked!");
+		console.log("\nA button in the left pane was clicked!")
 	});
 
 	$('#home').on("click", function(){
-		$('.home-page').show();
-		console.log("registering the home")
-	});
-
-	$('#contact').on("click", function(){
-		$('.home-page').hide();
-		$('#contact-page').show();
-		console.log("Registering the contact");
+		console.log("\nHome button pressed");
 	});
 
 	$('#categories').on("click", function(){
@@ -92,7 +85,7 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
-		$('#home, #categories, #add-recipe-button, #contact').fadeToggle();
+		$('#home, #categories, #add-recipe-button').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
@@ -254,6 +247,11 @@ $(document).ready(function(){
 			}
 		}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 		for (var i = 0; i < stepsCount; i++)
 		{
 			stepsVal.push($('#stepsListItem_' + (i+1)).children('input').val());
@@ -295,4 +293,4 @@ iconDict.side = '/images/Side_Dish/favicon-96x96.png';
 iconDict.seafood = '/images/Seafood/favicon-96x96.png'
 iconDict.entree = '/images/Entree/favicon-96x96.png';
 
-// console.log('== iconDict.mexian', iconDict.mexican)
+console.log('== iconDict.mexian', iconDict.mexican)
