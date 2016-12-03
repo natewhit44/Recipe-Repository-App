@@ -4,19 +4,37 @@
 	{{> left-navbar}}
 
   <div class="recipe-workspace">
-  		<!-- {{!-- {{> home-page}}
+  		 {{!-- {{> home-page}}
 
     	{{> contact-page}}
- --}} -->
-
+ --}}
 	 <h1 class="recipe-header">List of Recipes:</h1>
-    	{{#each SQL_TEST}}
+	 	<h3>Main Recipe Info: </h3>
+    	{{#each recipeMain}}
     		<p>{{this.recipe_name}}
     		{{this.recipe_category}}
     		{{this.prep_time}}
     		{{this.cook_time}}
     		{{this.temp}}
     		{{this.yield}}
+    		</p>
+    	{{/each}}
+
+    	<h3>Equipment: </h3>
+    	{{#each equipment}}
+    		<p>{{this.equipment_piece}}
+    		</p>
+    	{{/each}}
+
+{{!--     	<h3>Ingredients: </h3>
+    	{{#each ingredients}}
+    		<p>{{this.ingredient_value}}
+    		</p>
+    	{{/each}}
+ --}}
+    	<h3>Steps: </h3>
+    	{{#each steps}}
+    		<p>{{this.step_value}}
     		</p>
     	{{/each}}
 
