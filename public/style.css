@@ -7,7 +7,7 @@ body {
 .left-navbar{
 	position: fixed;
 	width: 200px;
-	background-color: rgba(255, 173, 51, .8);
+	background-color: rgb(255, 173, 51);
 	left: 0;
   top: 90px;
 	height: 100%;
@@ -47,7 +47,7 @@ body {
 
 .right-frame{
   position: fixed;
-  background-color: rgba(255, 173, 51, .8);
+  background-color: rgb(255, 173, 51);
   height: 100%;
   width: 65px;
   top: 90px;
@@ -196,7 +196,7 @@ footer{
   bottom: 0;
   left: 0;
   height: 26px;
-  background-color: rgba(255, 173, 51, .8);
+  background-color: rgb(255, 173, 51);
 }
 
 .copyright{
