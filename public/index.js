@@ -35,14 +35,17 @@ var stepCount = 1;
 
 $(document).ready(function(){
 	console.log("Ready");
-
-	$('.category').on("click", function(){
-		console.log("\nA button in the left pane was clicked!")
-	});
-
+	
 	$('#home').on("click", function(){
 		console.log("\nHome button pressed");
+		$('.home-page').show();
 	});
+
+	$('#contact').on("click", function(){
+  		$('.home-page').hide();
+  		$('#contact-page').show();
+		console.log("Registering the contact");
+  	});
 
 	$('#categories').on("click", function(){
 		console.log("\nAbout button pressed");
@@ -85,7 +88,7 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
-		$('#home, #categories, #add-recipe-button').fadeToggle();
+		$('#home, #contact, #categories, #add-recipe-button').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
