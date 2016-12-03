@@ -38,12 +38,12 @@ app.get('/', function(req,res) {
 
 // Temp handler to test sql rendering
 app.get('/mysql', function(req,res){
-	connection.query("SELECT * FROM recipe_name WHERE recipe_category = 'Mexican'", function(err, rows){
+	connection.query("SELECT * FROM recipe_name", function(err, rows){
 		if(err){
 			console.log("== Error fectching recipes from DB: ", err);
 			res.status(500).send("Error fetching recipes: " + err);
 		} else{
-			// console.log("== raw rows: ", rows);
+			console.log("== raw rows: ", rows);
 			var recipeNames = [];
 			rows.forEach(function(row){
 				recipeNames.push({

@@ -4,11 +4,12 @@
 	{{> left-navbar}}
 
   <div class="recipe-workspace">
-  		{{> home-page}}
+  		{{!-- {{> home-page}}
 
     	{{> contact-page}}
-
-{{!--     	{{#each SQL_TEST}}
+ --}}
+	 <h1 class="recipe-header">List of Recipes:</h1>
+    	{{#each SQL_TEST}}
     		<p>{{this.recipe_name}}
     		{{this.recipe_category}}
     		{{this.prep_time}}
@@ -16,10 +17,10 @@
     		{{this.temp}}
     		{{this.yield}}
     		</p>
-    	{{/each}} --}}
+    	{{/each}}
 
-		<h1 class="recipe-header">List of Recipes:</h1>
-		<div class="recipe-list">
+		
+{{!-- 		<div class="recipe-list">
 			{{#if recipes}}
 				{{#each recipes}}
 					{{> recipe-icon-title categoryName = ../title}}
@@ -35,7 +36,7 @@
 				{{/if}}
 			{{/if}}
 
-		</div>
+		</div> --}}
 	</div>
 
 
