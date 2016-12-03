@@ -4,6 +4,7 @@
 
     <div id="modal-header">
       <h1>Taco Salad</h1>
+      {{!-- {{recipe_name}} --}}
     </div>
 
     <img src="/images/go-back.png" id="go-back">
@@ -11,25 +12,31 @@
     <div id="modal-content">
 
       <div class="recipe-component">
-        <h3 id="recipe-component-header">Ingredients</h3>
+        <h3 id="recipe-component-header">Ingredients:</h3>
         <ul class="recipe-list">
+        {{!-- {{#each ingredient}} --}}
           <li class="recipe-list-item ingredient">Lean ground beef, <span class="quantity">1 lb.</span></li>
           <li class="recipe-list-item ingredient">Taco seasoning mix, <span class="quantity">1.25 oz.</span></li>
           <li class="recipe-list-item ingredient">Chili beans, <span class="quantity">16 oz.</span></li>
           <!--etc.-->
         </ul>
-        <h3 id="recipe-component-header">Equipment</h3>
+        <h3 id="recipe-component-header">Equipment:</h3>
         <ul class="recipe-list">
+        {{!-- {{#each equipement}} --}}
           <li class="recipe-list-item ingredient">Large Skillet</li>
           <li class="recipe-list-item ingredient">Large Bowl</li>
         </ul>
-        <h3 id="recipe-component-header">Temperature and Time</h3>
+        <h3 id="recipe-component-header">Temperature and Time:</h3>
         <ul class="recipe-list">
           <li class="recipe-list-item ingredient">Preperation: 10 mins</li>
+          {{!-- {{prep_time}} --}}
           <li class="recipe-list-item ingredient">Cook: 30 mins</li>
+          {{!-- {{cook_time}} --}}
           <li class="recipe-list-item ingredient">Temperature: Medium-high</li>
+          {{!-- {{temp}} --}}
         </ul>
         <h3 id="recipe-component-header">Serves 4-6</h3>
+        {{!-- {{yield}} --}}
       </div>
 
       <div id="image-placeholder">
@@ -40,7 +47,8 @@
 
     <div id="modal-content">
       <div class="recipe-component-steps">
-        <h3 id="recipe-component-header">Steps</h3>
+        <h3 id="recipe-component-header">Steps:</h3>
+        {{!-- {{#each steps}} --}}
         <ol class="recipe-list">
           <li class="recipe-list-item step">In a large skillet over medium-high heat, brown the ground beef and drain excess fat. Stir in the taco seasoning, chili beans and French-style dressing. Fill the dressing bottle 2/3 full of water and add to the skillet. Bring to a boil, reduce heat and simmer for 15 minutes.</li>
           <li class="recipe-list-item step">Crush the bag of chips, open the bag, and toss the broken chips into a large bowl with the lettuce, cheese and tomatoes. When the meat mixture is done, combine it with the lettuce, tomatoes, chips and mix well. Then, add salsa and sour cream.</li>

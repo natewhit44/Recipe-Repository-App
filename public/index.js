@@ -254,9 +254,6 @@ $(document).ready(function(){
 			}
 		}
 
-<<<<<<< HEAD
-
-
 		for (var i = 0; i < stepsCount; i++)
 		{
 			stepsVal.push($('#stepsListItem_' + (i+1)).children('input').val());
@@ -279,9 +276,6 @@ $(document).ready(function(){
 
 	});
 	acceptButton.appendTo('#acceptButton-container');
-=======
-	acceptButton.appendTo('#acceptButton-container');	
->>>>>>> master
 });
 
 

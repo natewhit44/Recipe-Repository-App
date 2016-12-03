@@ -17,14 +17,7 @@ var connection = mysql.createConnection({
   database: "cs290_whitlocn"
 });
 
-// Make the connection to DB, will remain
-// connected until server stops running
-connection.connect(function(err) {
-  if (err) {
-    console.log("== Unable to make connection to MySQL Database.")
-    throw err;
-  }
-});
+
 
 // Use Handlebars as the view engine for the app.
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
@@ -33,6 +26,7 @@ app.set('view engine', 'handlebars');
 // Parse all request bodies as JSON
 app.use(bodyParser.json());
 
+// Serve static files from public/
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Server index for root request
@@ -42,29 +36,33 @@ app.get('/', function(req,res) {
 	});
 });
 
+// Temp handler to test sql rendering
 app.get('/mysql', function(req,res){
-	connection.query('SELECT * FROM recipe_name', function(err, rows){
+	connection.query("SELECT * FROM recipe_name WHERE recipe_category = 'Mexican'", function(err, rows){
 		if(err){
 			console.log("== Error fectching recipes from DB: ", err);
 			res.status(500).send("Error fetching recipes: " + err);
 		} else{
-			var recipes = [];
+			// console.log("== raw rows: ", rows);
+			var recipeNames = [];
 			rows.forEach(function(row){
-				recipes.push({
-					recipe_name: row.recipe_name,
+				recipeNames.push({
+					recipe_name:row.recipe_name,
 					recipe_category: row.recipe_category,
 					prep_time: row.prep_time,
 					cook_time: row.cook_time,
 					temp: row.temp,
-					yeild: row.yeild
+					yield: row.yeild
 				});
 			});
 
-			console.log("== Recipes array: ", recipes);
+			//console.log("== recipeNames: ", recipeNames);
+
+			// console.log("== Recipes array: ", recipes);
 			res.render('index-page',{
 				title: "MySQL Results",
-				recipes: recipes
-			})
+				SQL_TEST: recipeNames
+			});
 		}
 	});
 });
@@ -98,7 +96,6 @@ app.get('/categories/:category', function(req, res, next) {
 		next();
 	}
 });
-///////////////
 
 // Catch all for 404
 app.get('*', function (req, res) {
@@ -107,7 +104,18 @@ app.get('*', function (req, res) {
   });
 });
 
-// Listen on the specified port.
+/*
+ * Make a connection to our MySQL database.  This connection will persist for
+ * as long as our server is running.  Start the server listening on the
+ * specified port if we succeeded in opening the connection.
+ */
+connection.connect(function(err) {
+  if (err) {
+    console.log("== Unable to make connection to MySQL Database.")
+    throw err;
+  }
+});
+
 app.listen(port, function () {
   console.log("== Listening on port", port);
 });

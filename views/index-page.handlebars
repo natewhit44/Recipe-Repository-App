@@ -8,7 +8,15 @@
 
     	{{> contact-page}}
 
-    	{{recipes}}
+{{!--     	{{#each SQL_TEST}}
+    		<p>{{this.recipe_name}}
+    		{{this.recipe_category}}
+    		{{this.prep_time}}
+    		{{this.cook_time}}
+    		{{this.temp}}
+    		{{this.yield}}
+    		</p>
+    	{{/each}} --}}
 
 		<h1 class="recipe-header">List of Recipes:</h1>
 		<div class="recipe-list">
@@ -27,7 +35,6 @@
 				{{/if}}
 			{{/if}}
 
-			{{> left-navbar}}
 		</div>
 	</div>
 
