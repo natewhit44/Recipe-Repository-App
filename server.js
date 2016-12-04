@@ -36,6 +36,61 @@ app.get('/', function(req,res) {
 	});
 });
 
+app.get('/categories', function(req, res) {
+	res.status(200).render('index-page', {
+		title: "~Categories~",
+		category: recipeContent
+	});
+});
+
+// app.get('/categories/:category', function(req, res, next) {
+// 	var requestedCategory = recipeContent[req.params.category];
+// 	if (requestedCategory) {
+// 		res.status(200).render('index-page', {
+// 			title: requestedCategory.category,
+// 			recipes: requestedCategory.recipes
+// 		});
+// 	} else {
+// 		next();
+// 	}
+// });
+
+app.get('/categories/:category', function(req, res, next) {
+
+  var requestedRecipes = [];
+
+	connection.query("SELECT * FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
+    if (err) {
+      console.log("== Error fectching recipes from DB: ", err);
+			res.status(500).send("Error fetching recipes: " + err);
+    } else {
+      rows.forEach(function(row) {
+        // console.log("row: " + row.recipe_name);
+        requestedRecipes.push({
+          // row: {
+            recipe_name:row.recipe_name,
+  					recipe_category: row.recipe_category,
+  					prep_time: row.prep_time,
+  					cook_time: row.cook_time,
+  					temp: row.temp,
+  					yield: row.yeild
+          // }
+        });
+      });
+      if (requestedRecipes.length > 0) {
+        for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
+    		res.status(200).render('index-page', {
+    			title: requestedRecipes[0].recipe_category,
+    			recipes: requestedRecipes
+    		});
+      } else {
+        next();
+      }
+      // console.log(requestedRecipes);
+    }
+  });
+});
+
 // Temp handler to test sql rendering
 app.get('/mysql', function(req,res){
 
@@ -54,7 +109,7 @@ app.get('/mysql', function(req,res){
 			res.status(500).send("Error fetching recipes: " + err);
 		} else{
 			//console.log("== raw rows: ", rows);
-			
+
 			rows.forEach(function(row){
 				recipeMain.push({
 					recipe_name:row.recipe_name,
@@ -66,14 +121,14 @@ app.get('/mysql', function(req,res){
 				});
 			});
 
-			
+
 			rows.forEach(function(row){
 				recipeIDs.push({
 					recipe_id: row.recipe_id
 				});
 			});
-			
-			// Get single variable recipe id 
+
+			// Get single variable recipe id
 			var refID = recipeIDs[0].recipe_id;
 			//console.log("== refID: ", refID);
 
@@ -153,27 +208,6 @@ app.get('/style.css', function(req, res){
 
 app.get('/index.js', function(req, res){
 	res.render('index.js');
-});
-
-//////////////////////////////
-
-app.get('/categories', function(req, res) {
-	res.status(200).render('index-page', {
-		title: "~Categories~",
-		category: recipeContent
-	});
-});
-
-app.get('/categories/:category', function(req, res, next) {
-	var requestedCategory = recipeContent[req.params.category];
-	if (requestedCategory) {
-		res.status(200).render('index-page', {
-			title: requestedCategory.category,
-			recipes: requestedCategory.recipes
-		});
-	} else {
-		next();
-	}
 });
 
 // Catch all for 404
