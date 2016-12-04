@@ -12,6 +12,7 @@ body {
   top: 90px;
 	height: 100%;
   border-radius: 10px;
+  overflow-y: scroll;
 }
 
 .left-nav-list{
@@ -124,11 +125,11 @@ body {
 	color: white;
 	font-size: 24px;
 	list-style-type: none;
-	padding: 15px;
+	padding: 10px;
 }
 
 .category label {
-  font-weight: lighter; 
+  font-weight: lighter;
 	text-decoration: none;
 	color: white;
 }

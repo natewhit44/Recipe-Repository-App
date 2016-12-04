@@ -80,7 +80,7 @@ app.get('/categories/:category', function(req, res, next) {
         });
       });
       if (requestedRecipes.length > 0) {
-        for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
+        // for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
     		res.status(200).render('index-page', {
     			title: requestedRecipes[0].recipe_category,
     			recipes: requestedRecipes
