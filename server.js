@@ -43,6 +43,8 @@ app.get('/categories', function(req, res) {
 	});
 });
 
+
+
 // app.get('/categories/:category', function(req, res, next) {
 // 	var requestedCategory = recipeContent[req.params.category];
 // 	if (requestedCategory) {
@@ -109,7 +111,7 @@ app.get('/mysql', function(req,res){
 			res.status(500).send("Error fetching recipes: " + err);
 		} else{
 			//console.log("== raw rows: ", rows);
-
+			
 			rows.forEach(function(row){
 				recipeMain.push({
 					recipe_name:row.recipe_name,
@@ -121,19 +123,19 @@ app.get('/mysql', function(req,res){
 				});
 			});
 
-
+			
 			rows.forEach(function(row){
 				recipeIDs.push({
 					recipe_id: row.recipe_id
 				});
 			});
-
-			// Get single variable recipe id
+			
+			// Get single variable recipe id 
 			var refID = recipeIDs[0].recipe_id;
 			//console.log("== refID: ", refID);
 
 			// Create dynamic query with variable
-			var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + refID;
+			var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + connection.escape(refID);
 			//console.log("== dynamicQuery: ", dynamicQuery);
 
 			// Grab equipment data from DB
@@ -148,11 +150,10 @@ app.get('/mysql', function(req,res){
 							equipment_piece: row.equipment
 						});
 					});
-				}
-			console.log("== equipment: ", equipment);
-			});
-
-			var ingredientQuery = "SELECT * FROM ingredients WHERE recipe_id = " + refID;
+				
+			//console.log("== equipment: ", equipment);
+			
+			var ingredientQuery = "SELECT * FROM ingredients WHERE recipe_id = " + connection.escape(refID);
 
 			// Grab ingredients data from DB
 			connection.query(ingredientQuery, function(err, rows){
@@ -166,11 +167,11 @@ app.get('/mysql', function(req,res){
 							ingredient_value: row.ingredient_value
 						});
 					});
-				}
+				
 			//console.log("== ingredient: ", ingredients);
-			});
+		
 
-			var stepsQuery = "SELECT * FROM steps WHERE recipe_id = " + refID;
+			var stepsQuery = "SELECT * FROM steps WHERE recipe_id = " + connection.escape(refID);
 
 			// Grab steps data from DB
 			connection.query(stepsQuery, function(err, rows){
@@ -178,18 +179,22 @@ app.get('/mysql', function(req,res){
 					console.log("== Error fectching steps from DB: ", err);
 					res.status(500).send("Error fetching steps: " + err);
 				} else{
-					console.log("== raw steps: ", rows);
+					//console.log("== raw steps: ", rows);
 					rows.forEach(function(row){
 						stepsArr.push({
 							step_value: row.steps
 						});
 					});
-				}
+				
 			//console.log("== steps: ", steps);
-			});
+			
 
-
+			console.log("== final recipeMain: ", recipeMain);
+			console.log("== final equipment: ", equipment);
+			console.log("== final ingredients: ", ingredients);
 			console.log("== final steps: ", stepsArr);
+			
+			
 			res.render('index-page',{
 				title: "MySQL Results",
 				recipeMain: recipeMain,
@@ -197,6 +202,9 @@ app.get('/mysql', function(req,res){
 				ingredients: ingredients,
 				steps: stepsArr
 			});
+		}});
+		}});
+		}});
 		}
 	});
 });
