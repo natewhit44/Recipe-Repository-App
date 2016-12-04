@@ -8,8 +8,17 @@
 
     	{{> contact-page}}
  --}}
-	 <h1 class="recipe-header">List of Recipes:</h1>
-	 	<h3>Main Recipe Info: </h3>
+			<h1 class="recipe-header">List of Recipes:</h1>
+
+			<!-- <h3>Title: {{title}}</h3>
+			<h4>Recipes:</h4> -->
+			{{#each recipes}}
+				{{> recipe-icon-title categoryName = this.recipe_category}}
+			{{/each}}
+
+
+
+	 	<!-- <h3>Main Recipe Info: </h3>
     	{{#each recipeMain}}
     		<p>{{this.recipe_name}}
     		{{this.recipe_category}}
@@ -37,10 +46,10 @@
     		<p>{{this.step_value}}
     		</p>
     	{{/each}}
-
+ -->
 
 		<div class="recipe-list">
-			{{#if recipes}}
+			<!-- {{#if recipes}}
 				{{#each recipes}}
 					{{> recipe-icon-title categoryName = ../title}}
 				{{/each}}
@@ -53,7 +62,7 @@
 						{{/each}}
 					{{/each}}
 				{{/if}}
-			{{/if}}
+			{{/if}} -->
 
 		</div>
 	</div>
