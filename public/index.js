@@ -1,36 +1,26 @@
-// jQuery functions to have a look at:
-// http://www.w3schools.com/jquery/jquery_examples.asp
-
-//LOOK AT THIS FOR EXAMPLES
-//ON HOW TO USE jQuery:
-//http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
-
-// -Selectors
-// -Events
-// -Hide/Show
-// -Fade
-// -Slide
-// -Animate
-// -Stop Animations
-// -HTML Get Content and Attributes
-// -HTML Set Content and Attributes
-// -HTML Add Elements/Contents (Append function!)
-// -Get and Set CSS Classes
-// -Method
-// -Dimensions
-// -Traversing Ancestors
-// -Traversing Descendants
-// -Traversing Siblings
-// -Traversing Filtering
-// -AJAX load() Method
-// -AJAX get() and post() Methods
-
-
 //keeps track of number of text boxes in create-recipe during the current session
 var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
+function sendFormData(){
+        var formData = JSON.stringify($("#searchForm").serializeArray());
+
+        console.log("== formData", formData);
+        $.ajax({
+            type: "POST",
+            url:"/search",
+            contentType: "application/json",
+            data: formData,
+            datatype: "json",
+            success: function(){
+                alert("something!");
+            },
+            error: function(textstatus, errorThrown) {
+                alert('text status ' + textstatus + ', err ' + errorThrown);
+            }
+        });
+    } 
 
 
 $(document).ready(function(){
@@ -60,6 +50,9 @@ $(document).ready(function(){
 	   if(e.which === 13) { // return
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
+	      console.log("Trying to post form input");
+	      sendFormData();
+	      console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
 	});
