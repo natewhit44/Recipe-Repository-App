@@ -42,7 +42,11 @@ app.get('/', function(req,res) {
 // });
 
 // Get information submitted
+<<<<<<< HEAD
 app.post('/test', function(req, res) {
+=======
+app.post('/search', function(req, res) {
+>>>>>>> f33caab6233100364885f9e955ccd029fbd9d94e
    	//console.log(req.body);
    	var searchTarget = req.body[0].value;
 

@@ -9,7 +9,11 @@ function sendFormData(){
         console.log("== formData", formData);
         $.ajax({
             type: "POST",
+<<<<<<< HEAD
             url:"/test",
+=======
+            url:"/search",
+>>>>>>> f33caab6233100364885f9e955ccd029fbd9d94e
             contentType: "application/json",
             data: formData,
             datatype: "json",
