@@ -4,7 +4,7 @@
 	{{> left-navbar}}
 
   <div class="recipe-workspace">
-  		 {{!-- {{> home-page}}
+{{!--   		 {{> home-page}}
 
     	{{> contact-page}}
  --}}
@@ -16,9 +16,16 @@
 				{{> recipe-icon-title categoryName = this.recipe_category}}
 			{{/each}}
 
+            <h1>Test Zone</h1>
+            {{#each success}}
+                <p>Target Area:
+                    {{this.value}}
+                </p>
+            {{/each}}
 
+{{!-- 
 
-	 	<!-- <h3>Main Recipe Info: </h3>
+	 	 <h3>Main Recipe Info: </h3>
     	{{#each recipeMain}}
     		<p>{{this.recipe_name}}
     		{{this.recipe_category}}
@@ -35,18 +42,18 @@
     		</p>
     	{{/each}}
 
-{{!--     	<h3>Ingredients: </h3>
+    	<h3>Ingredients: </h3>
     	{{#each ingredients}}
     		<p>{{this.ingredient_value}}
     		</p>
     	{{/each}}
- --}}
+
     	<h3>Steps: </h3>
     	{{#each steps}}
     		<p>{{this.step_value}}
     		</p>
-    	{{/each}}
- -->
+    	{{/each}} --}}
+
 
 		<div class="recipe-list">
 			<!-- {{#if recipes}}
@@ -71,8 +78,12 @@
   <div class="right-frame"></div>
 
   <div id="search-box">
-    <input id="search-box-input" type="text" placeholder="Enter search query...">
+    <form id="searchForm">
+        <input id="search-box-input" type="text" name="query" placeholder="Enter search query...">
+   </form>
   </div>
+
+        
 
 	{{> google-search}}
 
