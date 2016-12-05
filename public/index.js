@@ -188,7 +188,6 @@ $(document).ready(function(){
 		var stepsVal = [];
 		var deliciousImageVal;
 
-
 		titleVal = $('#titleBox').val();
 		categoryVal = $('#categoryBox').val();
 		serveVal = $('#serveBox').val();
@@ -218,8 +217,7 @@ $(document).ready(function(){
 			ingredientsVal.push($('#ingredientListItem_' + (i+1)).children('input').val());
 			quantityVal.push($('#ingredientListItem_' + (i+1)).children('span').children('input').val());
 			console.log("ingredient count:" + ingredientCount);
-			console.log("i:" + i);
-			console.log(ingredientsVal[i]);
+
 			if (ingredientsVal[i] == "")
 			{
 				alert("Ingredient #" + (i+1) + " is empty!");
@@ -243,20 +241,68 @@ $(document).ready(function(){
 			}
 		}
 
-		for (var i = 0; i < stepsCount; i++)
+<<<<<<< HEAD
+		if (cookingPrepVal == "") 
 		{
-			stepsVal.push($('#stepsListItem_' + (i+1)).children('input').val());
+			alert("How long to prep? ");
+			success = false;
+		}
+		if (cookingCookVal == "") 
+		{
+			alert("How am I supposed to know how long I need to cook this?");
+			success = false;
+		}
+		if (cookingTempVal == "") 
+		{
+			alert("I might end up burning my food without this!");
+			success = false;
+		}
+
+
+		for (var i = 0; i < stepCount; i++)
+=======
+		for (var i = 0; i < stepsCount; i++)
+>>>>>>> master
+		{
+			stepsVal.push($('#stepListItem_' + (i+1)).children('input').val());
+			console.log(stepsVal);
 
 			if (stepsVal[i] == "")
 			{
-				alert("You can't skip steps!!!  Steps #" + (i+1) + " is sad and unused!  Kill it or use it!");
+				alert("You can't skip steps!!!  Step #" + (i+1) + " is sad and unused!  Kill it or use it!");
 				success = false;
 			}
 		}
 
 		if (success)
 		{
-			//close modal, accept values, and clear form
+			//Put your code here. Create the recipe json/database.
+
+
+			$('#titleBox').val("");
+			$('#categoryBox').val("");
+			$('#serveBox').val("");
+			$('#prepBox').val("");
+			$('#cookBox').val("");
+			$('#tempBox').val("");
+			$('#imageBox').val("");
+
+			for (var i = 0; i < ingredientCount; i++)
+			{
+				$('#ingredientListItem_' + (i+1)).children('input').val("");
+				$('#ingredientListItem_' + (i+1)).children('span').children('input').val("");
+			}
+
+			for (var i = 0; i < equipmentCount; i++)
+			{
+				$('#equipmentListItem_' + (i+1)).children('input').val("");
+			}
+
+			for (var i = 0; i < stepCount; i++)
+			{
+				$('#stepListItem_' + (i+1)).children('input').val("");
+			}
+
 			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
 		}
 		//else, allow user to fix mistakes
