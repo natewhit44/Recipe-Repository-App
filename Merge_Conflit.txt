@@ -1,0 +1,192 @@
+C:\Users\Neo_Hippy\Documents\GitHub> cd .\Recipe-Repository-App
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~5 -0 !]> git status
+On branch Nate_New
+Your branch is up-to-date with 'origin/Nate_New'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   public/index.js
+        modified:   public/style.css
+        modified:   server.js
+        modified:   views/index-page.handlebars
+        modified:   views/partials/recipe-display.handlebars
+
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~5 -0 !]> git add *
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~5 -0 ~]> git commit -m "Tested out rendering data from the DB, test successful, project placed back into working state"
+[Nate_New f4820bb] Tested out rendering data from the DB, test successful, project placed back into working state
+ 5 files changed, 50 insertions(+), 33 deletions(-)
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ↑]> git push
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.52 KiB | 0 bytes/s, done.
+Total 10 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+To https://github.com/natewhit44/Recipe-Repository-App.git
+   be52287..f4820bb  Nate_New -> Nate_New
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡]> git merge master
+Auto-merging public/index.js
+CONFLICT (content): Merge conflict in public/index.js
+Automatic merge failed; fix conflicts and then commit the result.
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~0 -0 !1 | +0 ~0 -0 !1 !]> git status
+On branch Nate_New
+Your branch is up-to-date with 'origin/Nate_New'.
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   public/index.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~0 -0 !1 | +0 ~0 -0 !1 !]> git diff
+diff --cc public/index.js
+index f33e020,5911b52..0000000
+--- a/public/index.js
++++ b/public/index.js
+@@@ -254,6 -247,8 +247,11 @@@ $(document).ready(function()
+                        }
+                }
+
+++<<<<<<< HEAD
+++=======
++
++
+++>>>>>>> master
+                for (var i = 0; i < stepsCount; i++)
+                {
+                        stepsVal.push($('#stepsListItem_' + (i+1)).children('input').val());
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~0 -0 !1 | +0 ~0 -0 !1 !]> git add public/index.js
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡ +0 ~1 -0 ~]> git commit -m "Force merging changes, will fix small issue in index.js"
+[Nate_New ba58cbd] Force merging changes, will fix small issue in index.js
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ↑]> git push
+fatal: unable to access 'https://github.com/natewhit44/Recipe-Repository-App.git/': Couldn't resolve host 'github.com'
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ↑]> git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 503 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/natewhit44/Recipe-Repository-App.git
+   f4820bb..ba58cbd  Nate_New -> Nate_New
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡]> history
+
+  Id CommandLine
+  -- -----------
+   1 ls
+   2 cd .\Group-13-HP-Big-Data-Analytics
+   3 git pull
+   4 git status
+   5 git add *
+   6 git commit -m "Moving back to GitHub"
+   7 git push
+   8 cd ..
+   9 ls
+  10 cd .\Recipe-Repository-App
+  11 git status
+  12 git pull
+  13 git branch
+  14 git fetch origin
+  15 git checkout -b newCreateRecipe origin/newCreateRecipe
+  16 git pull
+  17 git merge master
+  18 git status
+  19 git add public/index.js
+  20 git commit -m "Forcing Andrews changes, will go back to verify functionality"
+  21 git push
+  22 git checkout master
+  23 git pull
+  24 git status
+  25 git add public/index.js
+  26 git commit -m "Resolved index.js issues"
+  27 git push
+  28 git pull
+  29 git checkout Nate_New
+  30 cd ..
+  31 git clone https://github.com/OSU-CS290-F16/simple-server-with-mysql.git
+  32 git status
+  33 ls
+  34 cd .\Recipe-Repository-App
+  35 git status
+  36 git add *
+  37 git commit -m "Tested out rendering data from the DB, test successful, project placed back into working state"
+  38 git push
+  39 git merge master
+  40 git status
+  41 git diff
+  42 git add public/index.js
+  43 git commit -m "Force merging changes, will fix small issue in index.js"
+  44 git push
+  45 git push
+
+
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡]> ls
+
+
+    Directory: C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        12/2/2016   6:01 PM                node_modules
+d-----        12/2/2016   7:39 PM                public
+d-----        12/2/2016   6:04 PM                views
+-a----        12/2/2016   6:01 PM            621 app.js
+-a----        12/2/2016   6:01 PM            760 Create_Tables.sql
+-a----       11/22/2016   6:55 PM         252282 Food_Header.jpg
+-a----        12/2/2016   6:01 PM          18511 Load_Tables.sql
+-a----        12/2/2016   6:01 PM            730 package.json
+-a----       11/22/2016   6:55 PM            429 README.md
+-a----       11/25/2016   2:44 PM            607 recipe-icons.json
+-a----        12/1/2016   3:12 PM          11356 Recipe.json
+-a----       11/22/2016   6:55 PM           3982 Recipe_List.csv
+-a----       11/27/2016   8:40 AM          29533 Recipe_List.xlsx
+-a----        12/2/2016   7:16 PM           3105 server.js
+
+
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [Nate_New ≡]> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [master ≡]> git pull
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 1 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/natewhit44/Recipe-Repository-App
+   949b926..0f5bb50  master     -> origin/master
+Updating 949b926..0f5bb50
+Fast-forward
+ public/index.js                          |  3 +++
+ public/style.css                         |  6 ++---
+ server.js                                | 44 +++++++++++++++++++-------------
+ views/index-page.handlebars              | 11 ++++++--
+ views/partials/recipe-display.handlebars | 16 +++++++++---
+ 5 files changed, 53 insertions(+), 27 deletions(-)
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [master ≡]> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   public/index.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [master ≡ +0 ~1 -0 !]> git add public/index.js
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [master ≡ +0 ~1 -0 ~]> git commit -m "Fixed merge conflit, talk to teamates about this example to show them how to fix things like this easily."
+[master 17dc556] Fixed merge conflit, talk to teamates about this example to show them how to fix things like this easily.
+ 1 file changed, 7 deletions(-)
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [master ↑]> git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 481 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/natewhit44/Recipe-Repository-App.git
+   0f5bb50..17dc556  master -> master
+C:\Users\Neo_Hippy\Documents\GitHub\Recipe-Repository-App [master ≡]>

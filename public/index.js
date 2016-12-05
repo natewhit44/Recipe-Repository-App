@@ -1,51 +1,44 @@
-// jQuery functions to have a look at:
-// http://www.w3schools.com/jquery/jquery_examples.asp
-
-//LOOK AT THIS FOR EXAMPLES
-//ON HOW TO USE jQuery: 
-//http://stackoverflow.com/questions/27397529/jquery-listeners-to-links-buttons-and-document-ready-issue
-
-// -Selectors
-// -Events
-// -Hide/Show
-// -Fade
-// -Slide
-// -Animate
-// -Stop Animations
-// -HTML Get Content and Attributes
-// -HTML Set Content and Attributes
-// -HTML Add Elements/Contents (Append function!)
-// -Get and Set CSS Classes
-// -Method
-// -Dimensions
-// -Traversing Ancestors
-// -Traversing Descendants
-// -Traversing Siblings
-// -Traversing Filtering
-// -AJAX load() Method
-// -AJAX get() and post() Methods
-
-
 //keeps track of number of text boxes in create-recipe during the current session
 var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
+function sendFormData(){
+        var formData = JSON.stringify($("#searchForm").serializeArray());
+
+        console.log("== formData", formData);
+        $.ajax({
+            type: "POST",
+            url:"/test",
+            contentType: "application/json",
+            data: formData,
+            datatype: "json",
+            success: function(){
+                alert("something!");
+            },
+            error: function(textstatus, errorThrown) {
+                alert('text status ' + textstatus + ', err ' + errorThrown);
+            }
+        });
+    } 
 
 
 $(document).ready(function(){
 	console.log("Ready");
 
-	$('.category').on("click", function(){
-		console.log("\nA button in the left pane was clicked!")
-	});
-
 	$('#home').on("click", function(){
 		console.log("\nHome button pressed");
+		$('.home-page').show();
 	});
 
-	$('#categories').on("click", function(){
-		console.log("\nAbout button pressed");
+	$('#contact').on("click", function(){
+  		$('.home-page').hide();
+  		$('#contact-page').show();
+		console.log("Registering the contact");
+  	});
+
+	$('.category').on("click", function() {
+		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
 
 	$('#add-recipe-button').on("click", function(){
@@ -57,6 +50,9 @@ $(document).ready(function(){
 	   if(e.which === 13) { // return
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
+	      console.log("Trying to post form input");
+	      sendFormData();
+	      console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
 	});
@@ -85,7 +81,7 @@ $(document).ready(function(){
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
-		$('#home, #categories, #add-recipe-button').fadeToggle();
+		$('#home, #contact, #categories, #add-recipe-button').fadeToggle();
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
@@ -99,7 +95,7 @@ $(document).ready(function(){
 	ingredientBox.appendTo(ingredientListItem);
 	ingredientQuantity.appendTo(quantitySpan);
 	quantitySpan.appendTo(ingredientListItem);
-	
+
 
 	var addIngredientBtn = $(document.createElement('button')).click(function(){
 		$('#ingredientListItem_1').clone().find("input:text").val("").end().attr('id', 'ingredientListItem_' + (ingredientCount + 1)).appendTo('.addRecipe-list');
@@ -115,12 +111,12 @@ $(document).ready(function(){
 		}
 	});
 	$(removeIngredientBtn).text("Remove");
-	
+
 	//add initial ingredient textboxes
 
 	addIngredientBtn.appendTo('.addRecipe-list');
 	removeIngredientBtn.appendTo('.addRecipe-list');
-	ingredientListItem.appendTo('.addRecipe-list');	
+	ingredientListItem.appendTo('.addRecipe-list');
 
 
 	//add equipment textboxes and buttons
@@ -146,7 +142,7 @@ $(document).ready(function(){
 
 	addEquipmentBtn.appendTo('.addEquipment-list');
 	removeEquipmentBtn.appendTo('.addEquipment-list');
-	equipmentListItem.appendTo('.addEquipment-list');	
+	equipmentListItem.appendTo('.addEquipment-list');
 
 	//adds textboxes for typing the steps to follow in order to create a recipe
 
@@ -169,15 +165,15 @@ $(document).ready(function(){
 		}
 	});
 	$(removeStepBtn).text("Remove");
-	
+
 	//add initial step textboxes
 
 	addStepBtn.appendTo('.addStep-list');
 	removeStepBtn.appendTo('.addStep-list');
-	stepListItem.appendTo('.addStep-list');	
+	stepListItem.appendTo('.addStep-list');
 
 	//Saves info to a json using a "accept" button
-	
+
 	var acceptButton = $(document.createElement('button')).text("Accept!!!").attr("id", 'acceptButton').click(function(){
 		var success = true;
 		var titleVal;
@@ -199,18 +195,18 @@ $(document).ready(function(){
 		var cookingCookVal = $('#cookBox').val();
 		var cookingTempVal = $('#tempBox').val();
 		var deliciousImageVal = $('#imageBox').val();
-		
-		if (titleVal == "") 
+
+		if (titleVal == "")
 		{
 			alert("You can't make a recipe without a Title!!!  That is like first grade knowledge!!!");
 			success = false;
 		}
-		if (categoryVal == "") 
+		if (categoryVal == "")
 		{
 			alert("We need a category to put this recipe in!");
 			success = false;
 		}
-		if (serveVal == "") 
+		if (serveVal == "")
 		{
 			alert("How am I supposed to know how much this feeds my family?!?!");
 			success = false;
@@ -245,6 +241,7 @@ $(document).ready(function(){
 			}
 		}
 
+<<<<<<< HEAD
 		if (cookingPrepVal == "") 
 		{
 			alert("How long to prep? ");
@@ -263,6 +260,9 @@ $(document).ready(function(){
 
 
 		for (var i = 0; i < stepCount; i++)
+=======
+		for (var i = 0; i < stepsCount; i++)
+>>>>>>> master
 		{
 			stepsVal.push($('#stepListItem_' + (i+1)).children('input').val());
 			console.log(stepsVal);
@@ -273,8 +273,6 @@ $(document).ready(function(){
 				success = false;
 			}
 		}
-
-
 
 		if (success)
 		{

@@ -7,31 +7,38 @@ body {
 .left-navbar{
 	position: fixed;
 	width: 200px;
-	background-color: gray;
+	background-color: rgb(255, 173, 51);
 	left: 0;
   top: 90px;
 	height: 100%;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .left-nav-list{
- 	height: 300px;
+ 	/*height: 300px;*/
+  height: auto;
  	padding: 0px;
  	margin: 0px;
  	border: 0px;
 }
 
 .left-nav-list li{
+  margin: 5px;
+  background-color: rgba(18, 200, 30, .5);
   border-radius: 10px;
+  /*text-align: center;*/
+  height: 50px;
 }
 
 .left-nav-list li:hover{
+  background-color: rgba(18, 150, 30, .8);
   cursor: pointer;
 }
 
-.left-nav-list li a{
+.left-navbarav-list li a{
   text-decoration: none;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  color: white;
 }
 
 .left-nav-list li a:hover{
@@ -40,7 +47,7 @@ body {
 
 .right-frame{
   position: fixed;
-  background-color: gray;
+  background-color: rgb(255, 173, 51);
   height: 100%;
   width: 65px;
   top: 90px;
@@ -49,14 +56,79 @@ body {
 
 }
 
+.home-page{
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  /*background-color: blue;*/
+}
+
+.home-page-title{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  padding-bottom: 15px;
+  color: rgb(18, 142, 35);
+}
+
+.home-page-title h1{
+    font-size: 50px;
+}
+
+#home-page-text{
+/*  padding-top: 15px;*/
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  font-size: 24px;
+  width: 800px;
+  position: relative;
+  left: 25%;
+  top: 5%;
+}
+
+/*#home-page-img1{
+  padding-left: 300px;
+}
+
+#home-page-img2{
+  padding-left: 100px;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}*/
+
+#home-page-img3{
+ /* padding-left: 450px;*/
+ position: relative;
+ left: 36%;
+ bottom: -75px;
+ height: 400px;
+}
+
+#contact-page{
+  display: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.contact-title{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#contact-text{
+  position: relative;
+  font-size: 20px;
+  left: 10%;
+}
+
 .category{
 	color: white;
-	font-size: 2em;
+	font-size: 24px;
 	list-style-type: none;
 	padding: 15px;
 }
 
-.category a{
+.category label {
+  font-weight: lighter; 
 	text-decoration: none;
 	color: white;
 }
@@ -75,7 +147,7 @@ body {
   left: 202px;
   background-color: rgba(0, 102, 102,0.7);
   bottom: 28px;
-  height: 350px;
+  height: 505px;
   border-radius: 10px;
   display: none;
 }
@@ -103,11 +175,6 @@ body {
   overflow: scroll;
 }
 
-/*
-  Something is wrong with the clickability of 
-  this button from the perspective of the user.
-  Someone should look into it...
-*/
 .google-search:hover{
   cursor: pointer;
 }
@@ -130,7 +197,7 @@ footer{
   bottom: 0;
   left: 0;
   height: 26px;
-  background-color: gray;
+  background-color: rgb(255, 173, 51);
 }
 
 .copyright{
@@ -200,6 +267,36 @@ footer{
   width: 98%;
   background-color: #fcf2de;
   border-radius: 10px;
+}
+
+
+.recipe-title-icon-container {
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  padding: 5px;
+  background-color: rgba(167, 198, 153, .8);
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+}
+#icon {
+  top: 4px;
+  left: 20%;
+  height: 100px;
+  width: 100px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.recipe-title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recipe-title a {
+  color: #000;
 }
 /* Modal CSS from assignment 2*/
 #recipe-display-backdrop {
@@ -310,7 +407,7 @@ footer{
   left: 100px;
   border-radius: 10px;
   /*font-family: "Comic Sans MS", cursive, sans-serif;*/
-  
+
 }
 
 .modal-body {
@@ -497,13 +594,22 @@ nav {
   color: white;
 }
 
-#icon{
+#search-icon {
+  top: 4px;
+  left: 20%;
+  height: 38px;
+  width: 38px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+/*#search-icon{
   height: 40px;
   width: 40px;
   padding: 0px;
   margin: 0px;
   border: 0px;
-}
+}*/
 
 #search-box{
   width: 400px;
@@ -512,7 +618,7 @@ nav {
   top: 39px;
   right: 165px;
   border-radius: 10px;
-  display: none;    
+  display: none;
 
 }
 
