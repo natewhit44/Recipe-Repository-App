@@ -36,6 +36,52 @@ app.get('/', function(req,res) {
 	});
 });
 
+// app.post("/search", function (req, res) {
+//     console.log(req.body.name);
+//     res.send("== req.body",req.body);
+// });
+
+// Get information submitted
+app.post('/search', function(req, res) {
+   	//console.log(req.body);
+   	var searchTarget = req.body[0].value;
+
+   	// Set up query to search through recipe names
+   	// and ingredients looking for something like
+   	// %query%
+   	connection.query("SELECT DISTINCT recipe_name \
+   		FROM recipe_name JOIN ingredients \
+   		ON recipe_name.recipe_id = ingredients.recipe_id \
+   		WHERE recipe_name RLIKE '" + searchTarget + "' \
+   		OR ingredient_value RLIKE '" + searchTarget + "'", function(err, rows) {
+    if (err) {
+        console.log("== Error fectching recipes from DB: ", err);
+		res.status(500).send("Error fetching recipes: " + err);
+    } else {
+        //console.log("rows: ", rows);
+        successful_return = [];
+        rows.forEach(function(row) {
+        successful_return.push({
+            value: row.recipe_name,
+
+        });
+      	});
+
+      	console.log("== successful_return", successful_return);
+
+      	res.render('index-page', {
+			title: "Search Results",
+			success: successful_return
+    	});
+   		//res.status(200).send(successful_return);
+
+      }
+ 	});
+  console.log()
+   	console.log("You sent the name " + req.body[0].name + " and the address " + req.body[0].value);
+    //res.send("ok");
+});
+
 app.get('/categories', function(req, res) {
 	res.status(200).render('index-page', {
 		title: "~Categories~",
@@ -43,7 +89,13 @@ app.get('/categories', function(req, res) {
 	});
 });
 
-
+function getRecipeContent(recipeName) {
+  // var recipeTitle = "---";
+  connection.query("SELECT * FROM recipe_name WHERE recipe_name = '" + recipeName + "'", function(err, rows) {
+    console.log(rows[0].recipe_name);
+    return rows[0].recipe_name;
+  });
+};
 
 // app.get('/categories/:category', function(req, res, next) {
 // 	var requestedCategory = recipeContent[req.params.category];
@@ -57,41 +109,87 @@ app.get('/categories', function(req, res) {
 // 	}
 // });
 
-app.get('/categories/:category', function(req, res, next) {
+// app.get('/categories/:category', function(req, res, next) {
+//
+//   console.log("====== " + getRecipeContent("Taco Salad") + " ======");
+//
+//   var requestedRecipes = [];
+//   var recipeIDs = [];
+//
+// 	// Arrays for further connections
+// 	var equipment = [];
+// 	var ingredients = [];
+// 	var stepsArr = [];
+//
+// 	connection.query("SELECT * FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
+//     if (err) {
+//       console.log("== Error fectching recipes from DB: ", err);
+// 			res.status(500).send("Error fetching recipes: " + err);
+//     } else {
+//       rows.forEach(function(row) {
+//         // console.log("row: " + row.recipe_name);
+//         requestedRecipes.push({
+//           recipe_name:row.recipe_name,
+// 					recipe_category: row.recipe_category,
+// 					prep_time: row.prep_time,
+// 					cook_time: row.cook_time,
+// 					temp: row.temp,
+// 					yield: row.yeild
+//         });
+//       });
+//
+//       if (requestedRecipes.length == 0) {
+//         next();
+//       } else {
+//         res.status(200).render('index-page', {
+//           title: requestedRecipes[0].recipe_category,
+//           recipes: requestedRecipes
+//         });
+//
+//         rows.forEach(function(row){
+//   				recipeIDs.push({
+//   					recipe_id: row.recipe_id
+//   				});
+//   			});
+//         // for (var i = 0; i < recipeIDs.length; i++) {console.log("ID " + i + ": " + recipeIDs[i]);}
+//         // Get single variable recipe id
+//   			var refID = recipeIDs[0].recipe_id;
+//   			//console.log("== refID: ", refID);
+//
+//   			// Create dynamic query with variable
+//   			var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + connection.escape(refID);
+//   			//console.log("== dynamicQuery: ", dynamicQuery);
+//
+//   			// Grab equipment data from DB
+//   			connection.query(equipmentQuery, function(err, rows){
+//   				if(err){
+//   					console.log("== Error fectching equipment from DB: ", err);
+//   					res.status(500).send("Error fetching equipment: " + err);
+//   				} else{
+//   					//console.log("== raw rows: ", rows);
+//   					rows.forEach(function(row){
+//   						equipment.push({
+//   							equipment_piece: row.equipment
+//   						});
+//   					});
+//
+//             res.status(200).render('index-page', {equipment: equipment});
+//
+//           }
+//         });
+//       }
+//     }
+//   });
+// });
 
-  var requestedRecipes = [];
-
-	connection.query("SELECT * FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
-    if (err) {
-      console.log("== Error fectching recipes from DB: ", err);
-			res.status(500).send("Error fetching recipes: " + err);
-    } else {
-      rows.forEach(function(row) {
-        // console.log("row: " + row.recipe_name);
-        requestedRecipes.push({
-          // row: {
-            recipe_name:row.recipe_name,
-  					recipe_category: row.recipe_category,
-  					prep_time: row.prep_time,
-  					cook_time: row.cook_time,
-  					temp: row.temp,
-  					yield: row.yeild
-          // }
-        });
-      });
-      if (requestedRecipes.length > 0) {
-        // for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
-    		res.status(200).render('index-page', {
-    			title: requestedRecipes[0].recipe_category,
-    			recipes: requestedRecipes
-    		});
-      } else {
-        next();
-      }
-      // console.log(requestedRecipes);
-    }
-  });
-});
+function allIDConditions(recipeIDs) {
+  var condition = "";
+  for (var i = 0; i < recipeIDs.length - 1; i++) {
+    condition = condition + connection.escape(recipeIDs[i]) + " OR ";
+  }
+  condition = condition + connection.escape(recipeIDs[recipeIDs.length - 1]);
+  return condition;
+}
 
 // Temp handler to test sql rendering
 app.get('/mysql', function(req,res){
@@ -105,13 +203,14 @@ app.get('/mysql', function(req,res){
 	var ingredients = [];
 	var stepsArr = [];
 
-	connection.query("SELECT * FROM recipe_name WHERE recipe_name = 'Taco Salad'", function(err, rows){
+	// connection.query("SELECT * FROM recipe_name WHERE recipe_name = 'Taco Salad'", function(err, rows){
+  connection.query("SELECT * FROM recipe_name WHERE recipe_category = 'mexican'", function(err, rows){
 		if(err){
 			console.log("== Error fectching recipes from DB: ", err);
 			res.status(500).send("Error fetching recipes: " + err);
 		} else{
 			//console.log("== raw rows: ", rows);
-			
+
 			rows.forEach(function(row){
 				recipeMain.push({
 					recipe_name:row.recipe_name,
@@ -123,21 +222,23 @@ app.get('/mysql', function(req,res){
 				});
 			});
 
-			
+
 			rows.forEach(function(row){
 				recipeIDs.push({
 					recipe_id: row.recipe_id
 				});
 			});
-			
-			// Get single variable recipe id 
+
+			// Get single variable recipe id
 			var refID = recipeIDs[0].recipe_id;
 			//console.log("== refID: ", refID);
 
 			// Create dynamic query with variable
-			var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + connection.escape(refID);
+      // var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + connection.escape(refID);
+			// var equipmentQuery = "SELECT * FROM equipment WHERE " + connection.escape(recipeIDs[0]) + " OR " + connection.escape(recipeIDs[1]);
+      var equipmentQuery = "SELECT * FROM equipment WHERE " + allIDConditions(recipeIDs);
 			//console.log("== dynamicQuery: ", dynamicQuery);
-
+      console.log(equipmentQuery);
 			// Grab equipment data from DB
 			connection.query(equipmentQuery, function(err, rows){
 				if(err){
@@ -150,10 +251,11 @@ app.get('/mysql', function(req,res){
 							equipment_piece: row.equipment
 						});
 					});
-				
-			//console.log("== equipment: ", equipment);
-			
-			var ingredientQuery = "SELECT * FROM ingredients WHERE recipe_id = " + connection.escape(refID);
+
+			console.log("== equipment: ", equipment);
+
+			// var ingredientQuery = "SELECT * FROM ingredients WHERE recipe_id = " + connection.escape(refID);
+      var ingredientQuery = "SELECT * FROM ingredients WHERE " + allIDConditions(recipeIDs);
 
 			// Grab ingredients data from DB
 			connection.query(ingredientQuery, function(err, rows){
@@ -167,12 +269,12 @@ app.get('/mysql', function(req,res){
 							ingredient_value: row.ingredient_value
 						});
 					});
-				
+
 			//console.log("== ingredient: ", ingredients);
-		
 
-			var stepsQuery = "SELECT * FROM steps WHERE recipe_id = " + connection.escape(refID);
 
+			// var stepsQuery = "SELECT * FROM steps WHERE recipe_id = " + connection.escape(refID);
+      var stepsQuery = "SELECT * FROM steps WHERE " + allIDConditions(recipeIDs);
 			// Grab steps data from DB
 			connection.query(stepsQuery, function(err, rows){
 				if(err){
@@ -185,16 +287,16 @@ app.get('/mysql', function(req,res){
 							step_value: row.steps
 						});
 					});
-				
-			//console.log("== steps: ", steps);
-			
 
-			console.log("== final recipeMain: ", recipeMain);
-			console.log("== final equipment: ", equipment);
-			console.log("== final ingredients: ", ingredients);
-			console.log("== final steps: ", stepsArr);
-			
-			
+			//console.log("== steps: ", steps);
+
+
+			// console.log("== final recipeMain: ", recipeMain);
+			// console.log("== final equipment: ", equipment);
+			// console.log("== final ingredients: ", ingredients);
+			// console.log("== final steps: ", stepsArr);
+
+
 			res.render('index-page',{
 				title: "MySQL Results",
 				recipeMain: recipeMain,
