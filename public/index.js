@@ -42,6 +42,22 @@ $(document).ready(function(){
 		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
 
+<<<<<<< HEAD
+=======
+  $('.recipe-title-icon-container').on("click", function() {
+    // console.log("--- url: " + "http://localhost:3000/categories/" + $(this).find('label').attr('for'));
+    console.log("\nIcon clicked!!!");
+    document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
+  });
+
+  // if (document.location.href.indexOf('/categories/') !== -1 &&\
+  //     document.location.href.indexOf() )
+  
+  $('#show-recipe').on("click", function() {
+    $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
+  });
+
+>>>>>>> 5c836c9241b2321ec68825d1cfaa1248f3bb863d
 	$('#add-recipe-button').on("click", function(){
 		console.log("\nContact button pressed");
 	});
@@ -73,9 +89,22 @@ $(document).ready(function(){
 		console.log("\nAdd note button clicked");
 		$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
 	});
+  // $('.recipe-title-icon-container').on('click', function(){
+  //   console.log("\nicon clicked!!!");
+	// 	$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
+	// });
 
 	$('#go-back').on('click', function(){
 		 $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeOut( "slow");
+     var splitPath = document.location.pathname.split('/');
+     var newPath = "http://localhost:3000";
+
+     for (i = 1; i < splitPath.length - 1; i++) {
+       newPath += "/";
+       newPath += splitPath[i];
+     }
+     console.log("new url: " + newPath);
+     document.location.href = newPath;
 	});
 
 	// $('#addGo-back').on('click', function(){
