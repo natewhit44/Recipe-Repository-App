@@ -15,30 +15,21 @@
         <ul class="recipe-list">
           {{#each content.ingredients}}
           <li class="recipe-list-item ingredient">{{this.ingredient_value}}, <span class="quantity">{{this.units_value}}</span></li>
-          <!-- <li class="recipe-list-item ingredient">Lean ground beef, <span class="quantity">1 lb.</span></li>
-          <li class="recipe-list-item ingredient">Taco seasoning mix, <span class="quantity">1.25 oz.</span></li>
-          <li class="recipe-list-item ingredient">Chili beans, <span class="quantity">16 oz.</span></li> -->
           {{/each}}
         </ul>
         <h3 id="recipe-component-header">Equipment:</h3>
         <ul class="recipe-list">
           {{#each content.equipment}}
           <li class="recipe-list-item ingredient">{{this.equipment_piece}}</li>
-          <!-- <li class="recipe-list-item ingredient">Large Skillet</li>
-          <li class="recipe-list-item ingredient">Large Bowl</li> -->
           {{/each}}
         </ul>
         <h3 id="recipe-component-header">Temperature and Time:</h3>
         <ul class="recipe-list">
           <li class="recipe-list-item ingredient">Preperation: {{content.recipeMain.0.prep_time}}</li>
-          {{!-- {{prep_time}} --}}
           <li class="recipe-list-item ingredient">Cook: {{content.recipeMain.0.cook_time}}</li>
-          {{!-- {{cook_time}} --}}
           <li class="recipe-list-item ingredient">Temperature: {{content.recipeMain.0.temp}}</li>
-          {{!-- {{temp}} --}}
         </ul>
         <h3 id="recipe-component-header">Serves 4-6</h3>
-        {{!-- {{yield}} --}}
       </div>
 
     </div>
@@ -49,8 +40,6 @@
         <ol class="recipe-list">
           {{#each content.steps}}
           <li class="recipe-list-item step">{{this.step_value}}</li>
-          <!-- <li class="recipe-list-item step">In a large skillet over medium-high heat, brown the ground beef and drain excess fat. Stir in the taco seasoning, chili beans and French-style dressing. Fill the dressing bottle 2/3 full of water and add to the skillet. Bring to a boil, reduce heat and simmer for 15 minutes.</li>
-          <li class="recipe-list-item step">Crush the bag of chips, open the bag, and toss the broken chips into a large bowl with the lettuce, cheese and tomatoes. When the meat mixture is done, combine it with the lettuce, tomatoes, chips and mix well. Then, add salsa and sour cream.</li> -->
           {{/each}}
         </ol>
       </div>

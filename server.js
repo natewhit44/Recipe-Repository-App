@@ -107,7 +107,6 @@ app.get('/categories', function(req, res) {
 app.get('/categories/:category', function(req, res, next) {
 
   var recipeHeader = [];
-  var recipeIDs = [];
 
 	connection.query("SELECT recipe_id, recipe_name, recipe_category FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
     if (err) {
@@ -115,7 +114,6 @@ app.get('/categories/:category', function(req, res, next) {
 			res.status(500).send("Error fetching recipes: " + err);
     } else {
       rows.forEach(function(row) {
-        // console.log("row: " + row.recipe_name);
         recipeHeader.push({
           recipe_id: row.recipe_id,
           recipe_name:row.recipe_name,
@@ -124,8 +122,7 @@ app.get('/categories/:category', function(req, res, next) {
       });
 
       if (recipeHeader.length > 0) {
-        // for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
-    		res.status(200).render('index-page', {
+        res.status(200).render('index-page', {
     			title: recipeHeader[0].recipe_category,
     			recipeHeader: recipeHeader
     		});
