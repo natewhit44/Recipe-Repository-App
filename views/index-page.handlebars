@@ -9,9 +9,12 @@
     	{{> contact-page}}
  --}}
 			<h1 class="recipe-header">List of Recipes:</h1>
-
+			<div id="show-recipe">SHOW</div>
 			<!-- <h3>Title: {{title}}</h3>
 			<h4>Recipes:</h4> -->
+
+
+
 			{{#each recipes}}
 				{{> recipe-icon-title categoryName = this.recipe_category id = this.recipe_id}}
 			{{/each}}
