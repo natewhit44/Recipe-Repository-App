@@ -40,50 +40,55 @@ app.get('/', function(req,res) {
 // });
 
 // Get information submitted
-app.post('/search', function(req, res) {
+app.get('/search/:query', function(req, res, next) {
    	//console.log(req.body);
-   	var searchTarget = req.body[0].value;
+   	//var searchTarget = req.body[0].value;
 
    	// Set up query to search through recipe names
    	// and ingredients looking for something like
    	// %query%
-   	connection.query("SELECT DISTINCT recipe_name \
-   		FROM recipe_name JOIN ingredients \
-   		ON recipe_name.recipe_id = ingredients.recipe_id \
-   		WHERE recipe_name RLIKE '" + searchTarget + "' \
-   		OR ingredient_value RLIKE '" + searchTarget + "'", function(err, rows) {
+
+  	connection.query("SELECT DISTINCT recipe_name \
+		FROM recipe_name JOIN ingredients \
+		ON recipe_name.recipe_id = ingredients.recipe_id \
+		WHERE recipe_name RLIKE '" + req.params.query + "' \
+		OR ingredient_value RLIKE '" + req.params.query + "'", function(err, rows) {
     if (err) {
         console.log("== Error fectching recipes from DB: ", err);
 		res.status(500).send("Error fetching recipes: " + err);
+		next();
     } else {
         //console.log("rows: ", rows);
         successful_return = [];
         rows.forEach(function(row) {
         successful_return.push({
-            value: row.recipe_name,
-
+            value: row.recipe_name
         });
       	});
 
       	console.log("== successful_return", successful_return);
 
-      	res.render('index-page', {
-			title: "Search Results",
+      	res.status(200).render('index-page', {
 			success: successful_return
     	});
+
+    	 console.log("== post render");
    		//res.status(200).send(successful_return);
 
       }
  	});
-   	console.log("You sent the name " + req.body[0].name + " and the address " + req.body[0].value);
+   	//console.log("You sent the name " + req.body[0].name + " and the address " + req.body[0].value);
     //res.send("ok");
 });
 
-app.get('/?query=#', function(req, res){
-	res.status(200).render('index-page',{
+// app.get('/?query:hash', function(req, res){
+// 		var searchTarget = req.body[0].value;
+// 		console.log("== searchTarget", searchTarget);
 
-	});
-});
+// 	// res.status(200).render('index-page',{
+
+// 	// });
+// });
 
 app.get('/categories', function(req, res) {
 	res.status(200).render('index-page', {

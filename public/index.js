@@ -3,13 +3,13 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
-function sendFormData(){
+function sendFormData(rawData){
         var formData = JSON.stringify($("#searchForm").serializeArray());
 
+        console.log("== rawData", rawData);
         console.log("== formData", formData);
         $.ajax({
-            type: "POST",
-            url:"/search",
+            url:"/search/" + rawData,
             contentType: "application/json",
             data: formData,
             datatype: "json",
@@ -51,11 +51,11 @@ $(document).ready(function(){
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
 
-	      if(query){
-	      	window.location.href = '/search/' + query;
-	      }
+	      // if(query){
+	      // 	window.location.href = '/query/' + query;
+	      // }
 	      //console.log("Trying to post form input");
-	      //sendFormData();
+	      sendFormData(query);
 	      //console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
@@ -304,7 +304,7 @@ $(document).ready(function(){
 				$('#stepListItem_' + (i+1)).children('input').val("");
 			}
 
-			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
+			// $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
 		}
 		//else, allow user to fix mistakes
 
