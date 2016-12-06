@@ -3,24 +3,26 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
-function sendFormData(){
-        var formData = JSON.stringify($("#searchForm").serializeArray());
+function sendFormData(rawData){
+        var formData = JSON.stringify(rawData);
 
+        console.log("== rawData", rawData);
         console.log("== formData", formData);
         $.ajax({
-            type: "POST",
-            url:"/search",
+        	type: "GET",
+            url: "/search/" + rawData,
             contentType: "application/json",
             data: formData,
             datatype: "json",
             success: function(){
-                alert("something!");
+                alert("See console for output!");
             },
-            error: function(textstatus, errorThrown) {
-                alert('text status ' + textstatus + ', err ' + errorThrown);
+            error: function() {
+                alert('See console for output!);
             }
         });
     }
+
 
 
 $(document).ready(function(){
@@ -65,11 +67,11 @@ $(document).ready(function(){
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
 
-	      if(query){
-	      	window.location.href = '/search/' + query;
-	      }
+	      // if(query){
+	      // 	window.location.href = '/search/' + query;
+	      // }
 	      //console.log("Trying to post form input");
-	      //sendFormData();
+	      sendFormData(query);
 	      //console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
