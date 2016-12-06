@@ -50,9 +50,13 @@ $(document).ready(function(){
 	   if(e.which === 13) { // return
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
-	      console.log("Trying to post form input");
-	      sendFormData();
-	      console.log("Post data transmission");
+
+	      if(query){
+	      	window.location.href = '/search/' + query;
+	      }
+	      //console.log("Trying to post form input");
+	      //sendFormData();
+	      //console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
 	});

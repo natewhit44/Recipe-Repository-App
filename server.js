@@ -17,8 +17,6 @@ var connection = mysql.createConnection({
   database: "cs290_whitlocn"
 });
 
-
-
 // Use Handlebars as the view engine for the app.
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -79,6 +77,12 @@ app.post('/search', function(req, res) {
  	});
    	console.log("You sent the name " + req.body[0].name + " and the address " + req.body[0].value);
     //res.send("ok");
+});
+
+app.get('/?query=#', function(req, res){
+	res.status(200).render('index-page',{
+
+	});
 });
 
 app.get('/categories', function(req, res) {
@@ -221,7 +225,8 @@ app.get('/mysql', function(req,res){
 					//console.log("== raw rows: ", rows);
 					rows.forEach(function(row){
 						ingredients.push({
-							ingredient_value: row.ingredient_value
+							ingredient_value: row.ingredient_value,
+							units_value: row.units
 						});
 					});
 
@@ -247,10 +252,10 @@ app.get('/mysql', function(req,res){
 			//console.log("== steps: ", steps);
 
 
-			console.log("== final recipeMain: ", recipeMain);
-			console.log("== final equipment: ", equipment);
-			console.log("== final ingredients: ", ingredients);
-			console.log("== final steps: ", stepsArr);
+			// console.log("== final recipeMain: ", recipeMain);
+			// console.log("== final equipment: ", equipment);
+			// console.log("== final ingredients: ", ingredients);
+			// console.log("== final steps: ", stepsArr);
 
 
 			res.render('index-page',{
