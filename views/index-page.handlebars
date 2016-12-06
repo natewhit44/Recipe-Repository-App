@@ -11,22 +11,22 @@
 			<h1 class="recipe-header">List of Recipes:</h1>
 
 			<!-- <h3>Title: {{title}}</h3>
-			<h4>Recipes:</h4> -->
+			<h4>Recipes:</h4>
 			{{#each recipes}}
 				{{> recipe-icon-title categoryName = this.recipe_category}}
-			{{/each}}
+			{{/each}} -->
 
-            <h1>Test Zone</h1>
-            {{#each success}}
-                <p>Target Area:
-                    {{this.value}}
-                </p>
-            {{/each}}
+      <!-- <h1>Test Zone</h1>
+      {{#each success}}
+          <p>Target Area:
+              {{this.value}}
+          </p>
+      {{/each}} -->
 
-{{!-- 
+
 
 	 	 <h3>Main Recipe Info: </h3>
-    	{{#each recipeMain}}
+    	{{#each recipeContent.recipeMain}}
     		<p>{{this.recipe_name}}
     		{{this.recipe_category}}
     		{{this.prep_time}}
@@ -37,22 +37,22 @@
     	{{/each}}
 
     	<h3>Equipment: </h3>
-    	{{#each equipment}}
+    	{{#each recipeContent.equipment}}
     		<p>{{this.equipment_piece}}
     		</p>
     	{{/each}}
 
     	<h3>Ingredients: </h3>
-    	{{#each ingredients}}
+    	{{#each recipeContent.ingredients}}
     		<p>{{this.ingredient_value}}
     		</p>
     	{{/each}}
 
     	<h3>Steps: </h3>
-    	{{#each steps}}
+    	{{#each recipeContent.steps}}
     		<p>{{this.step_value}}
     		</p>
-    	{{/each}} --}}
+    	{{/each}}
 
 
 		<div class="recipe-list">
@@ -83,7 +83,7 @@
    </form>
   </div>
 
-        
+
 
 	{{> google-search}}
 
