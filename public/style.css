@@ -310,6 +310,11 @@ footer{
   background-color: rgba(0, 0, 0, 0.85);
   display: none;
 }
+#show-recipe {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+}
 #recipe-display-modal {
   position: fixed;
   height: auto;
