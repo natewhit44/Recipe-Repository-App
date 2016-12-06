@@ -109,7 +109,7 @@ app.get('/categories/:category', function(req, res, next) {
   var recipeHeader = [];
   var recipeIDs = [];
 
-	connection.query("SELECT * FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
+	connection.query("SELECT recipe_id, recipe_name, recipe_category FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
     if (err) {
       console.log("== Error fectching recipes from DB: ", err);
 			res.status(500).send("Error fetching recipes: " + err);
