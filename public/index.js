@@ -20,7 +20,7 @@ function sendFormData(){
                 alert('text status ' + textstatus + ', err ' + errorThrown);
             }
         });
-    } 
+    }
 
 
 $(document).ready(function(){
@@ -68,16 +68,16 @@ $(document).ready(function(){
 
 	$('#add-recipe-button').on('click', function(){
 		console.log("\nAdd note button clicked");
-		$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeIn( "slow");
+		$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
 	});
 
 	$('#go-back').on('click', function(){
-		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
+		 $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeOut( "slow");
 	});
 
-	$('#addGo-back').on('click', function(){
-		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
-	});
+	// $('#addGo-back').on('click', function(){
+	// 	 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
+	// });
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
@@ -241,17 +241,17 @@ $(document).ready(function(){
 			}
 		}
 
-		if (cookingPrepVal == "") 
+		if (cookingPrepVal == "")
 		{
 			alert("How long to prep? ");
 			success = false;
 		}
-		if (cookingCookVal == "") 
+		if (cookingCookVal == "")
 		{
 			alert("How am I supposed to know how long I need to cook this?");
 			success = false;
 		}
-		if (cookingTempVal == "") 
+		if (cookingTempVal == "")
 		{
 			alert("I might end up burning my food without this!");
 			success = false;
@@ -300,7 +300,7 @@ $(document).ready(function(){
 				$('#stepListItem_' + (i+1)).children('input').val("");
 			}
 
-			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
+			// $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
 		}
 		//else, allow user to fix mistakes
 

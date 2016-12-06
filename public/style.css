@@ -310,7 +310,16 @@ footer{
   background-color: rgba(0, 0, 0, 0.85);
   display: none;
 }
-
+#recipe-display-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  display: none;
+  /*overflow: scroll;*/
+}
 #recipe-modal {
   position: fixed;
   top: 0;
@@ -373,7 +382,7 @@ footer{
 
 #go-back{
   position: relative;
-  top: 35px;
+  top: -20px;
   left: 20px;
   height: 30px;
   width: 30px;
@@ -381,22 +390,6 @@ footer{
 
 #go-back:hover{
   cursor: pointer;
-}
-
-#image-placeholder{
-  background-color: blue;
-  height: 250px;
-  width: 320px;
-  position: relative;
-  border-radius: 10px;
-  bottom: 325px;
-  right: 540px;
-}
-
-#image-placeholder img{
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
 }
 
 #modal-content {
