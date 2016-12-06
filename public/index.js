@@ -49,9 +49,7 @@ $(document).ready(function(){
     document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
   });
 
-  // if (document.location.href.indexOf('/categories/') !== -1 &&\
-  //     document.location.href.indexOf() )
-  
+
   $('#show-recipe').on("click", function() {
     $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
   });
