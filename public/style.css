@@ -219,7 +219,7 @@ footer{
   width: 86%;
   bottom: 29px;
   border-radius: 10px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .recipe{
