@@ -300,7 +300,7 @@ $(document).ready(function(){
 				$('#stepListItem_' + (i+1)).children('input').val("");
 			}
 
-			// $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
+			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
 		}
 		//else, allow user to fix mistakes
 

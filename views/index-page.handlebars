@@ -24,7 +24,6 @@
       {{/each}} -->
 
 
-
 	 	 <h3>Main Recipe Info: </h3>
     	{{#each recipeContent.recipeMain}}
     		<p>{{this.recipe_name}}
@@ -93,4 +92,4 @@
 
 <button type="button" class="google-search">Google Search?</button>
 
-{{> recipe-display}}
+{{> recipe-display content = recipeContent}}
