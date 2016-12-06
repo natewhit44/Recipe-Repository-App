@@ -70,18 +70,23 @@ $(document).ready(function(){
 		console.log("\nRecipe icon was pressed\n\nImplement double click");
 	});
 
+	// $('#add-recipe-button').on('click', function(){
+	// 	console.log("\nAdd note button clicked");
+	// 	$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
+	// });
+
 	$('#add-recipe-button').on('click', function(){
 		console.log("\nAdd note button clicked");
-		$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
+		$('#recipe-display-backdrop, #addModal-header, #addRecipe-modal').fadeIn( "slow");
 	});
 
 	$('#go-back').on('click', function(){
-		 $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeOut( "slow");
+		 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
 	});
 
-	// $('#addGo-back').on('click', function(){
-	// 	 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
-	// });
+	$('#addGo-back').on('click', function(){
+		 $('#recipe-display-backdrop, #addModal-header, #addRecipe-modal').fadeOut( "slow");
+	});
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
@@ -92,22 +97,22 @@ $(document).ready(function(){
 	//creates ingredient textboxes and add/remove buttons
 
 	var ingredientListItem = $(document.createElement('li')).attr('id', 'ingredientListItem_1');
-	var ingredientBox = $(document.createElement('input')).attr('class', 'ingredientBox');
+	var ingredientBox = $(document.createElement('input')).attr({'class': 'ingredientBox', 'name': 'ingredient', 'type': 'text'});
 	var quantitySpan = $(document.createElement('span')).attr('class', 'quantitySpan').text(" Quantity: ");
-	var ingredientQuantity = $(document.createElement('input')).attr('class', 'ingredientQuantity');
+	var ingredientQuantity = $(document.createElement('input')).attr({'class': 'ingredientQuantity', 'name': 'quantity', 'type': 'text'});
 
 	ingredientBox.appendTo(ingredientListItem);
 	ingredientQuantity.appendTo(quantitySpan);
 	quantitySpan.appendTo(ingredientListItem);
 
 
-	var addIngredientBtn = $(document.createElement('button')).click(function(){
+	var addIngredientBtn = $(document.createElement('label')).attr({'class': 'addButton'}).click(function(){
 		$('#ingredientListItem_1').clone().find("input:text").val("").end().attr('id', 'ingredientListItem_' + (ingredientCount + 1)).appendTo('.addRecipe-list');
 		ingredientCount++;
 	});
 	$(addIngredientBtn).text("Add");
 
-	var removeIngredientBtn = $(document.createElement('button')).click(function(){
+	var removeIngredientBtn = $(document.createElement('label')).attr('class', 'addButton').click(function(){
 		if (ingredientCount > 1)
 		{
 			$('#ingredientListItem_' + ingredientCount).remove();
@@ -126,17 +131,17 @@ $(document).ready(function(){
 	//add equipment textboxes and buttons
 
 	var equipmentListItem = $(document.createElement('li')).attr('id', 'equipmentListItem_1');
-	var equipmentBox = $(document.createElement('input')).attr('class', 'equipmentBox');
+	var equipmentBox = $(document.createElement('input')).attr({'class': 'equipmentBox', 'name': 'equipment', 'type': 'text'});
 
 	equipmentBox.appendTo(equipmentListItem);
 
-	var addEquipmentBtn = $(document.createElement('button')).click(function(){
+	var addEquipmentBtn = $(document.createElement('label')).attr('class', 'addButton').click(function(){
 		$('#equipmentListItem_1').clone().find("input:text").val("").end().attr('id', 'equipmentListItem_' + (equipmentCount + 1)).appendTo('.addEquipment-list');
 		equipmentCount++;
 	});
 	$(addEquipmentBtn).text("Add");
 
-	var removeEquipmentBtn = $(document.createElement('button')).click(function(){
+	var removeEquipmentBtn = $(document.createElement('label')).attr('class', 'addButton').click(function(){
 		if (equipmentCount > 1){
 			$('#equipmentListItem_' + equipmentCount).remove();
 			equipmentCount--;
@@ -151,17 +156,17 @@ $(document).ready(function(){
 	//adds textboxes for typing the steps to follow in order to create a recipe
 
 	var stepListItem = $(document.createElement('li')).attr('id', 'stepListItem_1');
-	var stepBox = $(document.createElement('input')).attr('class', 'stepBox');
+	var stepBox = $(document.createElement('input')).attr({'class': 'stepBox', 'name': 'step', 'type': 'text'});
 
 	stepBox.appendTo(stepListItem);
 
-	var addStepBtn = $(document.createElement('button')).click(function(){
+	var addStepBtn = $(document.createElement('label')).attr('class', 'addButton').click(function(){
 		$('#stepListItem_1').clone().find("input:text").val("").end().attr('id', 'stepListItem_' + (stepCount + 1)).appendTo('.addStep-list');
 		stepCount++;
 	});
 	$(addStepBtn).text("Add");
 
-	var removeStepBtn = $(document.createElement('button')).click(function(){
+	var removeStepBtn = $(document.createElement('label')).attr('class', 'addButton').click(function(){
 		if (stepCount > 1)
 		{
 			$('#stepListItem_' + stepCount).remove();
@@ -178,7 +183,7 @@ $(document).ready(function(){
 
 	//Saves info to a json using a "accept" button
 
-	var acceptButton = $(document.createElement('button')).text("Accept!!!").attr("id", 'acceptButton').click(function(){
+	var acceptButton = $(document.createElement('label')).text("Accept!!!").attr({"id": 'acceptButton', 'class': 'addButton'}).click(function(){
 		var success = true;
 		var titleVal;
 		var categoryVal;
@@ -220,7 +225,7 @@ $(document).ready(function(){
 		{
 			ingredientsVal.push($('#ingredientListItem_' + (i+1)).children('input').val());
 			quantityVal.push($('#ingredientListItem_' + (i+1)).children('span').children('input').val());
-			console.log("ingredient count:" + ingredientCount);
+			//console.log("ingredient count:" + ingredientCount);
 
 			if (ingredientsVal[i] == "")
 			{
@@ -266,7 +271,7 @@ $(document).ready(function(){
 
 		{
 			stepsVal.push($('#stepListItem_' + (i+1)).children('input').val());
-			console.log(stepsVal);
+			//console.log(stepsVal);
 
 			if (stepsVal[i] == "")
 			{
@@ -278,6 +283,24 @@ $(document).ready(function(){
 		if (success)
 		{
 			//Put your code here. Create the recipe json/database.
+			var userInput = JSON.stringify($("#fullUserInput").serializeArray());
+			console.log(userInput);
+
+			$.ajax({
+	            type: "GET",
+	            url:"/create-recipe",
+	            contentType: "application/json",
+	            data: userInput,
+	            datatype: "json",
+
+	            success: function(){
+	                alert("YES!");
+	            },
+
+	            error: function(textstatus, errorThrown) {
+	                alert('text status ' + textstatus + ', err ' + errorThrown);
+	            }
+        	});
 
 
 			$('#titleBox').val("");
@@ -304,7 +327,7 @@ $(document).ready(function(){
 				$('#stepListItem_' + (i+1)).children('input').val("");
 			}
 
-			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
+			$('#recipe-display-backdrop, #modal-header, #addRecipe-modal').fadeOut( "slow")
 		}
 		//else, allow user to fix mistakes
 

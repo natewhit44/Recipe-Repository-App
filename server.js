@@ -34,6 +34,10 @@ app.get('/', function(req,res) {
 	});
 });
 
+app.get("/create-recipe/*", function(req, res){
+	console.log("This place is lonely...");
+	console.log(req.body);
+});
 // app.post("/search", function (req, res) {
 //     console.log(req.body.name);
 //     res.send("== req.body",req.body);
