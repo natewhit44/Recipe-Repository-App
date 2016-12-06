@@ -50,7 +50,7 @@ $(document).ready(function(){
 
   // if (document.location.href.indexOf('/categories/') !== -1 &&\
   //     document.location.href.indexOf() )
-  
+
   $('#show-recipe').on("click", function() {
     $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
   });
@@ -86,7 +86,7 @@ $(document).ready(function(){
 
 	$('#add-recipe-button').on('click', function(){
 		console.log("\nAdd note button clicked");
-		$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
+		$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeIn( "slow");
 	});
   // $('.recipe-title-icon-container').on('click', function(){
   //   console.log("\nicon clicked!!!");
