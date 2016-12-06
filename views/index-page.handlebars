@@ -4,24 +4,16 @@
 	{{> left-navbar}}
 
   <div class="recipe-workspace">
-  		 {{> home-page}}
+  		{{> home-page}}
 
     	{{> contact-page}}
 
 			<h1 class="recipe-header">List of Recipes:</h1>
-<<<<<<< HEAD
 
-		{{!-- 	<h3>Title: </h3> --}}
-            {{!-- {{title}} --}}
-{{!-- 			<h4>Recipes:</h4> --}}
-=======
 			<div id="show-recipe">SHOW</div>
 			<!-- <h3>Title: {{title}}</h3>
 			<h4>Recipes:</h4> -->
 
-
-
->>>>>>> 5c836c9241b2321ec68825d1cfaa1248f3bb863d
 			{{#each recipes}}
 				{{> recipe-icon-title categoryName = this.recipe_category}}
 			{{/each}}

@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 	$('#home').on("click", function(){
 		console.log("\nHome button pressed");
+		$('#contact-page').hide();
 		$('.home-page').show();
 	});
 
@@ -42,8 +43,6 @@ $(document).ready(function(){
 		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
 
-<<<<<<< HEAD
-=======
   $('.recipe-title-icon-container').on("click", function() {
     // console.log("--- url: " + "http://localhost:3000/categories/" + $(this).find('label').attr('for'));
     console.log("\nIcon clicked!!!");
@@ -57,7 +56,6 @@ $(document).ready(function(){
     $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
   });
 
->>>>>>> 5c836c9241b2321ec68825d1cfaa1248f3bb863d
 	$('#add-recipe-button').on("click", function(){
 		console.log("\nContact button pressed");
 	});
