@@ -386,3 +386,156 @@ VALUES
 (LAST_INSERT_ID(),'In a large bowl, whisk together the oil, vinegar, mustard, honey, ¼ teaspoon salt, and ⅛ teaspoon pepper.'),
 (LAST_INSERT_ID(),'Add the frisée, avocado, blue cheese, and almonds and toss to coat.');
 COMMIT;
+
+BEGIN;
+
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('Basic Nachos', 'Etc', '5 mins', '2 mins','200-250F','Serves 2-4');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Plate');
+
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Tortilla chips','1 bag'),
+(LAST_INSERT_ID(),'Shredded cheese', '2 c'),
+(LAST_INSERT_ID(),'Sour cream', '1 c');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Open bag of chips and pour on a plate, then cover with cheese.'),
+(LAST_INSERT_ID(),'Put plate of chips and cheese in the microwave and heat for about 2 minutes.'),
+(LAST_INSERT_ID(),'Take out of microwave and put sour cream on then enjoy!');
+COMMIT;
+
+BEGIN;
+
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('Hot black tea', 'Etc', '3 mins', '5 mins','Boiling','Serves 4-8');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Jug');
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Tea bags','4 bags'),
+(LAST_INSERT_ID(),'Water', '1 gallon');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Pour water into a pot or coffe maker (remove coffee grounds if ther is any) and boil the water.'),
+(LAST_INSERT_ID(),'Take boiling water and put tea bags in it and let it sit for about 20 minutes.'),
+(LAST_INSERT_ID(),'Pour into a gallon sized jug and serve.');
+COMMIT;
+
+BEGIN;
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('French fries', 'Sides', '10-15 mins', '5-10 mins','375F','Serves 4-8');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Deep fryer'),
+(LAST_INSERT_ID(),'Serving platter');
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Potatoes','4 pc'),
+(LAST_INSERT_ID(),'Salt', '2 tsp');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Slice up potatoes and put into deep fryer.'),
+(LAST_INSERT_ID(),'Remove from deep fryer.'),
+(LAST_INSERT_ID(),'Salt them then serve.');
+COMMIT;
+
+BEGIN;
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('Buttered toast', 'Sides', '10-15 mins', '5-10 mins','375F','Serves 1');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Toaster'),
+(LAST_INSERT_ID(),'Butter knife');
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Bread','1 slice'),
+(LAST_INSERT_ID(),'Butter', '2 tsp');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Put bread in toaster for 2 minutes or until browned.'),
+(LAST_INSERT_ID(),'Remove toast from toaster.'),
+(LAST_INSERT_ID(),'Butter toast.');
+COMMIT;
+
+BEGIN;
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('Crab', 'Seafood', '10 mins', '20 mins','High','Serves 1-2');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Boiling pot');
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Crab','1 pc'),
+(LAST_INSERT_ID(),'Butter', '2 tsp');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Boil the crab for 20 minutes.'),
+(LAST_INSERT_ID(),'Remove crab and crack meat out of shell.'),
+(LAST_INSERT_ID(),'Butter if needed.');
+COMMIT;
+
+BEGIN;
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('Buttered shrimp', 'Seafood', '5 mins', '10-20 mins','Medium','Serves 1-4');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Pan');
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Shrimp','24 oz'),
+(LAST_INSERT_ID(),'Butter', '2 tsp');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Pour shrimp into pan.'),
+(LAST_INSERT_ID(),'Sautee the shrimp in butter for 10-20 minutes.'),
+(LAST_INSERT_ID(),'Cool and then serve.');
+COMMIT;
+
+BEGIN;
+INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
+VALUES('Cheese burger', 'Entree', '5 mins', '10 mins','Medium-high','Serves 1');
+
+INSERT INTO equipment(recipe_id, equipment)
+VALUES
+(LAST_INSERT_ID(),'Skillet');
+
+INSERT INTO ingredients(recipe_id, ingredient_value, units)
+VALUES
+(LAST_INSERT_ID(),'Beef patty','6 oz'),
+(LAST_INSERT_ID(),'Cheese', '1 pc');
+
+
+INSERT INTO steps(recipe_id, steps)
+VALUES
+(LAST_INSERT_ID(),'Cook hamburger patty on grill or skillet for 10 minutes, or until ready.'),
+(LAST_INSERT_ID(),'Put on cheese and remove form heat, let cool them put any condiments you want on it.'),
+(LAST_INSERT_ID(),'Put it on buns and enjoy!');
+COMMIT;
