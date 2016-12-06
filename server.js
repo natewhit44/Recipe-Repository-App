@@ -114,6 +114,7 @@ app.get('/categories', function(req, res) {
 app.get('/categories/:category', function(req, res, next) {
 
   var requestedRecipes = [];
+  var recipeIDs = [];
 
 	connection.query("SELECT * FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
     if (err) {
@@ -123,18 +124,22 @@ app.get('/categories/:category', function(req, res, next) {
       rows.forEach(function(row) {
         // console.log("row: " + row.recipe_name);
         requestedRecipes.push({
-          // row: {
-            recipe_name:row.recipe_name,
-  					recipe_category: row.recipe_category,
-  					prep_time: row.prep_time,
-  					cook_time: row.cook_time,
-  					temp: row.temp,
-  					yield: row.yeild
-          // }
+          recipe_id: row.recipe_id,
+          recipe_name:row.recipe_name,
+					recipe_category: row.recipe_category,
+					prep_time: row.prep_time,
+					cook_time: row.cook_time,
+					temp: row.temp,
+					yield: row.yeild
+        });
+      });
+      rows.forEach(function(row){
+        recipeIDs.push({
+          recipe_id: row.recipe_id
         });
       });
       if (requestedRecipes.length > 0) {
-        for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
+        // for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
     		res.status(200).render('index-page', {
     			title: requestedRecipes[0].recipe_category,
     			recipes: requestedRecipes
@@ -145,6 +150,10 @@ app.get('/categories/:category', function(req, res, next) {
       // console.log(requestedRecipes);
     }
   });
+});
+
+app.get('/categories/:category/:id', function(req, res, next) {
+  res.status(200).send("category: " + req.params.category + "\nid: " + req.params.id);
 });
 
 function allIDConditions(recipeIDs) {
@@ -267,6 +276,7 @@ app.get('/mysql', function(req,res){
 				title: "MySQL Results",
         recipeContent: {
   				recipeMain: recipeMain,
+          recipeIDs: recipeIDs,
   				equipment: equipment,
   				ingredients: ingredients,
   				steps: stepsArr

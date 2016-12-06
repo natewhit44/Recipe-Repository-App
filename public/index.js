@@ -38,8 +38,14 @@ $(document).ready(function(){
   	});
 
 	$('.category').on("click", function() {
+    console.log("---------------- clicked: " + $(this).find('label').attr('for'));
 		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
+
+  $('.recipe-title-icon-container').on("click", function() {
+    // console.log("--- url: " + "http://localhost:3000/categories/" + $(this).find('label').attr('for'));
+    document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
+  });
 
 	$('#add-recipe-button').on("click", function(){
 		console.log("\nContact button pressed");
