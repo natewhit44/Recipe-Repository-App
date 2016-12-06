@@ -4,12 +4,13 @@ var equipmentCount = 1;
 var stepCount = 1;
 
 function sendFormData(rawData){
-        var formData = JSON.stringify($("#searchForm").serializeArray());
+        var formData = JSON.stringify(rawData);
 
         console.log("== rawData", rawData);
         console.log("== formData", formData);
         $.ajax({
-            url:"/search/" + rawData,
+        	type: "GET",
+            url: "/search/" + rawData,
             contentType: "application/json",
             data: formData,
             datatype: "json",
@@ -38,14 +39,8 @@ $(document).ready(function(){
   	});
 
 	$('.category').on("click", function() {
-    console.log("---------------- clicked: " + $(this).find('label').attr('for'));
 		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
-
-  $('.recipe-title-icon-container').on("click", function() {
-    // console.log("--- url: " + "http://localhost:3000/categories/" + $(this).find('label').attr('for'));
-    document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
-  });
 
 	$('#add-recipe-button').on("click", function(){
 		console.log("\nContact button pressed");
@@ -56,10 +51,8 @@ $(document).ready(function(){
 	   if(e.which === 13) { // return
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
-
-	      // if(query){
-	      // 	window.location.href = '/query/' + query;
-	      // }
+	      //document.location.href = "http://localhost:3000/search/" + query;
+	      
 	      //console.log("Trying to post form input");
 	      sendFormData(query);
 	      //console.log("Post data transmission");

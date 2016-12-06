@@ -34,11 +34,6 @@ app.get('/', function(req,res) {
 	});
 });
 
-// app.post("/search", function (req, res) {
-//     console.log(req.body.name);
-//     res.send("== req.body",req.body);
-// });
-
 // Get information submitted
 app.get('/search/:query', function(req, res, next) {
    	//console.log(req.body);
@@ -48,28 +43,30 @@ app.get('/search/:query', function(req, res, next) {
    	// and ingredients looking for something like
    	// %query%
 
-  	connection.query("SELECT DISTINCT recipe_name \
+  	connection.query("SELECT DISTINCT recipe_name, recipe_category \
 		FROM recipe_name JOIN ingredients \
 		ON recipe_name.recipe_id = ingredients.recipe_id \
 		WHERE recipe_name RLIKE '" + req.params.query + "' \
 		OR ingredient_value RLIKE '" + req.params.query + "'", function(err, rows) {
     if (err) {
-        console.log("== Error fectching recipes from DB: ", err);
+        //console.log("== Error fectching recipes from DB: ", err);
 		res.status(500).send("Error fetching recipes: " + err);
 		next();
     } else {
         //console.log("rows: ", rows);
         successful_return = [];
         rows.forEach(function(row) {
-        successful_return.push({
-            value: row.recipe_name
-        });
+        	successful_return.push({
+	            recipe_name: row.recipe_name,
+	            recipe_category: row.recipe_category
+        	});
       	});
 
       	console.log("== successful_return", successful_return);
 
       	res.status(200).render('index-page', {
-			success: successful_return
+      		title: "Search Query",
+			search_results: successful_return
     	});
 
     	 console.log("== post render");
@@ -81,35 +78,12 @@ app.get('/search/:query', function(req, res, next) {
     //res.send("ok");
 });
 
-// app.get('/?query:hash', function(req, res){
-// 		var searchTarget = req.body[0].value;
-// 		console.log("== searchTarget", searchTarget);
-
-// 	// res.status(200).render('index-page',{
-
-// 	// });
-// });
-
 app.get('/categories', function(req, res) {
 	res.status(200).render('index-page', {
 		title: "~Categories~",
 		category: recipeContent
 	});
 });
-
-
-
-// app.get('/categories/:category', function(req, res, next) {
-// 	var requestedCategory = recipeContent[req.params.category];
-// 	if (requestedCategory) {
-// 		res.status(200).render('index-page', {
-// 			title: requestedCategory.category,
-// 			recipes: requestedCategory.recipes
-// 		});
-// 	} else {
-// 		next();
-// 	}
-// });
 
 app.get('/categories/:category', function(req, res, next) {
 
