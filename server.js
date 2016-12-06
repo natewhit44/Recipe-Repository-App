@@ -164,7 +164,7 @@ app.get('/mysql', function(req,res){
 	var stepsArr = [];
 
 	// connection.query("SELECT * FROM recipe_name WHERE recipe_category = 'mexican'", function(err, rows){
-  connection.query("SELECT * FROM recipe_name WHERE recipe_name = 'Chocolate Milk'", function(err, rows){
+  connection.query("SELECT * FROM recipe_name WHERE recipe_name = 'Taco Salad'", function(err, rows){
 		if(err){
 			console.log("== Error fectching recipes from DB: ", err);
 			res.status(500).send("Error fetching recipes: " + err);
@@ -194,8 +194,8 @@ app.get('/mysql', function(req,res){
 			//console.log("== refID: ", refID);
 
 			// Create dynamic query with variable
-			// var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + connection.escape(refID);
-      var equipmentQuery = "SELECT * FROM equipment WHERE " + allIDConditions(recipeIDs);
+			var equipmentQuery = "SELECT * FROM equipment WHERE recipe_id = " + connection.escape(refID);
+      // var equipmentQuery = "SELECT * FROM equipment WHERE " + allIDConditions(recipeIDs);
 			//console.log("== dynamicQuery: ", dynamicQuery);
 
 			// Grab equipment data from DB
@@ -213,8 +213,8 @@ app.get('/mysql', function(req,res){
 
 			//console.log("== equipment: ", equipment);
 
-			// var ingredientQuery = "SELECT * FROM ingredients WHERE recipe_id = " + connection.escape(refID);
-      var ingredientQuery = "SELECT * FROM ingredients WHERE " + allIDConditions(recipeIDs);
+			var ingredientQuery = "SELECT * FROM ingredients WHERE recipe_id = " + connection.escape(refID);
+      // var ingredientQuery = "SELECT * FROM ingredients WHERE " + allIDConditions(recipeIDs);
 
 			// Grab ingredients data from DB
 			connection.query(ingredientQuery, function(err, rows){
@@ -233,8 +233,8 @@ app.get('/mysql', function(req,res){
 			//console.log("== ingredient: ", ingredients);
 
 
-			// var stepsQuery = "SELECT * FROM steps WHERE recipe_id = " + connection.escape(refID);
-      var stepsQuery = "SELECT * FROM steps WHERE " + allIDConditions(recipeIDs);
+			var stepsQuery = "SELECT * FROM steps WHERE recipe_id = " + connection.escape(refID);
+      // var stepsQuery = "SELECT * FROM steps WHERE " + allIDConditions(recipeIDs);
 
 			// Grab steps data from DB
 			connection.query(stepsQuery, function(err, rows){
