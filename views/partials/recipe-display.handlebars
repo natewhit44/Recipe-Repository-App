@@ -3,8 +3,7 @@
   <div id="modal-dialog">
 
     <div id="modal-header">
-      <h1>Taco Salad</h1>
-      {{!-- {{recipe_name}} --}}
+      <h1>Test: {{content.recipeMain.0.recipe_name}}</h1>
     </div>
 
     <img src="/images/go-back.png" id="go-back">
@@ -14,17 +13,20 @@
       <div class="recipe-component">
         <h3 id="recipe-component-header">Ingredients:</h3>
         <ul class="recipe-list">
-        {{!-- {{#each ingredient}} --}}
-          <li class="recipe-list-item ingredient">Lean ground beef, <span class="quantity">1 lb.</span></li>
+          {{#each content.ingredients}}
+          <li class="recipe-list-item ingredient">{{this.ingredient_value}}, <span class="quantity">(quantity)</span></li>
+          <!-- <li class="recipe-list-item ingredient">Lean ground beef, <span class="quantity">1 lb.</span></li>
           <li class="recipe-list-item ingredient">Taco seasoning mix, <span class="quantity">1.25 oz.</span></li>
-          <li class="recipe-list-item ingredient">Chili beans, <span class="quantity">16 oz.</span></li>
-          <!--etc.-->
+          <li class="recipe-list-item ingredient">Chili beans, <span class="quantity">16 oz.</span></li> -->
+          {{/each}}
         </ul>
         <h3 id="recipe-component-header">Equipment:</h3>
         <ul class="recipe-list">
-        {{!-- {{#each equipement}} --}}
-          <li class="recipe-list-item ingredient">Large Skillet</li>
-          <li class="recipe-list-item ingredient">Large Bowl</li>
+          {{#each content.equipement}}
+          <li class="recipe-list-item ingredient">this.equipment_piece</li>
+          <!-- <li class="recipe-list-item ingredient">Large Skillet</li>
+          <li class="recipe-list-item ingredient">Large Bowl</li> -->
+          {{/each}}
         </ul>
         <h3 id="recipe-component-header">Temperature and Time:</h3>
         <ul class="recipe-list">
