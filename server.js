@@ -108,7 +108,7 @@ app.get('/categories', function(req, res) {
 
 app.get('/categories/:category', function(req, res, next) {
 
-  var requestedRecipes = [];
+  var recipeHeader = [];
   var recipeIDs = [];
 
 	connection.query("SELECT * FROM recipe_name WHERE recipe_category = '" + req.params.category + "'", function(err, rows) {
@@ -118,26 +118,18 @@ app.get('/categories/:category', function(req, res, next) {
     } else {
       rows.forEach(function(row) {
         // console.log("row: " + row.recipe_name);
-        requestedRecipes.push({
+        recipeHeader.push({
           recipe_id: row.recipe_id,
           recipe_name:row.recipe_name,
 					recipe_category: row.recipe_category,
-					prep_time: row.prep_time,
-					cook_time: row.cook_time,
-					temp: row.temp,
-					yield: row.yeild
         });
       });
-      rows.forEach(function(row){
-        recipeIDs.push({
-          recipe_id: row.recipe_id
-        });
-      });
-      if (requestedRecipes.length > 0) {
+
+      if (recipeHeader.length > 0) {
         // for (var i = 0; i < requestedRecipes.length; i++) {console.log(requestedRecipes[i]);}
     		res.status(200).render('index-page', {
-    			title: requestedRecipes[0].recipe_category,
-    			recipes: requestedRecipes
+    			title: recipeHeader[0].recipe_category,
+    			recipeHeader: recipeHeader
     		});
       } else {
         next();
@@ -243,7 +235,7 @@ app.get('/categories/:category/:id', function(req, res, next) {
                   // console.log("== final ingredients: ", ingredients);
                   // console.log("== final steps: ", stepsArr);
 
-                  
+
                   res.render('index-page',{
                     title: "MySQL Results",
                     recipeContent: {
