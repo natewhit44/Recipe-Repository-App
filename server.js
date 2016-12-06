@@ -159,7 +159,8 @@ app.get('/mysql', function(req,res){
 	var ingredients = [];
 	var stepsArr = [];
 
-	connection.query("SELECT * FROM recipe_name WHERE recipe_category = 'mexican'", function(err, rows){
+	// connection.query("SELECT * FROM recipe_name WHERE recipe_category = 'mexican'", function(err, rows){
+  connection.query("SELECT * FROM recipe_name WHERE recipe_name = 'Chocolate Milk'", function(err, rows){
 		if(err){
 			console.log("== Error fectching recipes from DB: ", err);
 			res.status(500).send("Error fetching recipes: " + err);
@@ -254,10 +255,12 @@ app.get('/mysql', function(req,res){
 
 			res.render('index-page',{
 				title: "MySQL Results",
-				recipeMain: recipeMain,
-				equipment: equipment,
-				ingredients: ingredients,
-				steps: stepsArr
+        recipeContent: {
+  				recipeMain: recipeMain,
+  				equipment: equipment,
+  				ingredients: ingredients,
+  				steps: stepsArr
+        }
 			});
 		}});
 		}});
