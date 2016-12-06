@@ -3,13 +3,14 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
-function sendFormData(){
-        var formData = JSON.stringify($("#searchForm").serializeArray());
+function sendFormData(rawData){
+        var formData = JSON.stringify(rawData);
 
+        console.log("== rawData", rawData);
         console.log("== formData", formData);
         $.ajax({
-            type: "POST",
-            url:"/search",
+        	type: "GET",
+            url: "/search/" + rawData,
             contentType: "application/json",
             data: formData,
             datatype: "json",
@@ -28,6 +29,7 @@ $(document).ready(function(){
 
 	$('#home').on("click", function(){
 		console.log("\nHome button pressed");
+		$('#contact-page').hide();
 		$('.home-page').show();
 	});
 
@@ -38,7 +40,6 @@ $(document).ready(function(){
   	});
 
 	$('.category').on("click", function() {
-    console.log("---------------- clicked: " + $(this).find('label').attr('for'));
 		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
 
@@ -62,12 +63,10 @@ $(document).ready(function(){
 	   if(e.which === 13) { // return
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
-
-	      if(query){
-	      	window.location.href = '/search/' + query;
-	      }
+	      //document.location.href = "http://localhost:3000/search/" + query;
+	      
 	      //console.log("Trying to post form input");
-	      //sendFormData();
+	      sendFormData(query);
 	      //console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
@@ -329,7 +328,7 @@ $(document).ready(function(){
 				$('#stepListItem_' + (i+1)).children('input').val("");
 			}
 
-			$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
+			// $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow")
 		}
 		//else, allow user to fix mistakes
 

@@ -4,63 +4,34 @@
 	{{> left-navbar}}
 
   <div class="recipe-workspace">
-{{!--   		 {{> home-page}}
+  		{{> home-page}}
 
     	{{> contact-page}}
- --}}
+
 			<h1 class="recipe-header">List of Recipes:</h1>
+<<<<<<< HEAD
+
+			<div id="show-recipe">SHOW</div>
+=======
 			{{#if recipeContent}}
 			<div id="show-recipe">Click here</div>
 			{{/if}}
+>>>>>>> d5d5582231fe938aba8556cae31b7c39f613ae35
 			<!-- <h3>Title: {{title}}</h3>
 			<h4>Recipes:</h4> -->
 
-
-
 			{{#each recipes}}
-				{{> recipe-icon-title categoryName = this.recipe_category id = this.recipe_id}}
+				{{> recipe-icon-title categoryName = this.recipe_category}}
 			{{/each}}
 
-      <!-- <h1>Test Zone</h1>
-      {{#each success}}
-          <p>Target Area:
-              {{this.value}}
-          </p>
-      {{/each}} -->
-
-
-	 	 <!-- <h3>Main Recipe Info: </h3>
-    	{{#each recipeContent.recipeMain}}
-    		<p>{{this.recipe_name}}
-    		{{this.recipe_category}}
-    		{{this.prep_time}}
-    		{{this.cook_time}}
-    		{{this.temp}}
-    		{{this.yield}}
-    		</p>
-    	{{/each}}
-
-    	<h3>Equipment: </h3>
-    	{{#each recipeContent.equipment}}
-    		<p>{{this.equipment_piece}}
-    		</p>
-    	{{/each}}
-
-    	<h3>Ingredients: </h3>
-    	{{#each recipeContent.ingredients}}
-    		<p>{{this.ingredient_value}}
-    		</p>
-    	{{/each}}
-
-    	<h3>Steps: </h3>
-    	{{#each recipeContent.steps}}
-    		<p>{{this.step_value}}
-    		</p>
-    	{{/each}} -->
-
+{{!--         <h1>Test Zone: {{title}}</h1>
+        {{#each search_results}}
+            <p>{{this.recipe_name}}</p>
+            <p>{{this.recipe_category}}</p>
+        {{/each}} --}}
 
 		<div class="recipe-list">
-			<!-- {{#if recipes}}
+	{{!-- 		{{#if recipes}}
 				{{#each recipes}}
 					{{> recipe-icon-title categoryName = ../title}}
 				{{/each}}
@@ -73,8 +44,7 @@
 						{{/each}}
 					{{/each}}
 				{{/if}}
-			{{/if}} -->
-
+			{{/if}} --}}
 		</div>
 	</div>
 
@@ -83,7 +53,7 @@
 
   <div id="search-box">
     <form id="searchForm">
-        <input id="search-box-input" type="text" name="query" placeholder="Enter search query...">
+        <input id="search-box-input" name="query" placeholder="Enter search query...">
    </form>
   </div>
 
