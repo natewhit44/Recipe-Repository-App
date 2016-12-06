@@ -18,7 +18,7 @@ function sendFormData(rawData){
                 alert("See console for output!");
             },
             error: function() {
-                alert('See console for output!);
+                alert('See console for output!');
             }
         });
     }
