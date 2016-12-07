@@ -3,25 +3,25 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
-function sendFormData(rawData){
-        var formData = JSON.stringify(rawData);
+// function sendFormData(rawData){
+//         var formData = JSON.stringify(rawData);
 
-        console.log("== rawData", rawData);
-        console.log("== formData", formData);
-        $.ajax({
-        	type: "GET",
-            url: "/search/" + rawData,
-            contentType: "application/json",
-            data: formData,
-            datatype: "json",
-            success: function(){
-                alert("See console for output!");
-            },
-            error: function() {
-                alert('See console for output!');
-            }
-        });
-    }
+//         console.log("== rawData", rawData);
+//         console.log("== formData", formData);
+//         $.ajax({
+//         	type: "GET",
+//             url: "/search/" + rawData,
+//             contentType: "application/json",
+//             data: formData,
+//             datatype: "json",
+//             success: function(){
+//                 alert("See console for output!");
+//             },
+//             error: function() {
+//                 alert('See console for output!');
+//             }
+//         });
+//     }
 
 
 
@@ -67,11 +67,11 @@ $(document).ready(function(){
 	      var query = $('#search-box-input').val();
 	      console.log("\nQuery: ", query);
 
-	      // if(query){
-	      // 	window.location.href = '/search/' + query;
-	      // }
+	      if(query){
+	      	window.location.href = '/search/' + query;
+	      }
 	      //console.log("Trying to post form input");
-	      sendFormData(query);
+	      //sendFormData(query);
 	      //console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
@@ -107,7 +107,7 @@ $(document).ready(function(){
      console.log("new url: " + newPath);
      document.location.href = newPath;
 	});
-	
+
 	// $('#addGo-back').on('click', function(){
 	// 	 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
 	// });
