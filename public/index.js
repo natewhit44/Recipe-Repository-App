@@ -107,7 +107,7 @@ $(document).ready(function(){
      console.log("new url: " + newPath);
      document.location.href = newPath;
 	});
-
+	
 	// $('#addGo-back').on('click', function(){
 	// 	 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
 	// });
