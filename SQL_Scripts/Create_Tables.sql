@@ -1,4 +1,5 @@
---Create tables
+--Script that creates the tables used for
+--the Recipe Repository App
 CREATE TABLE recipe_name(
 	recipe_id int NOT NULL AUTO_INCREMENT,
 	recipe_name VARCHAR(128) NOT NULL,

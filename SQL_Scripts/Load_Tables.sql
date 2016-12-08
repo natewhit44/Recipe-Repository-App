@@ -1,5 +1,8 @@
-BEGIN;
+--Script to manually load two recipes
+--for each category, serves as base material
 
+--Awesome Easy Burritos
+BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Awesome Easy Burritos', 'Mexican', '20 mins', '30 mins','200-250F','Serves 4-6');
 
@@ -7,7 +10,6 @@ INSERT INTO equipment(recipe_id, equipment)
 VALUES
 (LAST_INSERT_ID(),'Large Skillet'),
 (LAST_INSERT_ID(),'9x13 baking pan');
-
 
 INSERT INTO ingredients(recipe_id, ingredient_value, units)
 VALUES
@@ -21,7 +23,6 @@ VALUES
 (LAST_INSERT_ID(),'Chopped tomatoes', '1 c'),
 (LAST_INSERT_ID(),'Sour cream (for topping)', '1 Tbls');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Brown the beef in a large skillet until it is ready; drain well when done. At this point, onions can be added if they are desired.'),
@@ -32,9 +33,7 @@ VALUES
 (LAST_INSERT_ID(),'Once you have rolled them all and placed in pans, brush lightly with butter or margarine. Spread remaining salsa on top (I like to use lots and have some left over if anyone wants to add more). Serve with extra salsa and sour cream.');
 COMMIT;
 
-
-
-
+--Taco Salad
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Taco Salad', 'Mexican', '10 mins', '30 mins','Medium-high','Serves 4-6');
@@ -43,7 +42,6 @@ INSERT INTO equipment(recipe_id, equipment)
 VALUES
 (LAST_INSERT_ID(),'Large Skillet'),
 (LAST_INSERT_ID(),'Large Bowl');
-
 
 INSERT INTO ingredients(recipe_id, ingredient_value, units)
 VALUES
@@ -58,16 +56,13 @@ VALUES
 (LAST_INSERT_ID(),'Sour cream', '4 Tbls'),
 (LAST_INSERT_ID(),'Prepared salsa', '1/2 c');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'In a large skillet over medium-high heat, brown the ground beef and drain excess fat. Stir in the taco seasoning, chili beans and French-style dressing. Fill the dressing bottle 2/3 full of water and add to the skillet. Bring to a boil, reduce heat and simmer for 15 minutes.'),
 (LAST_INSERT_ID(),'Crush the bag of chips, open the bag, and toss the broken chips into a large bowl with the lettuce, cheese and tomatoes. When the meat mixture is done, combine it with the lettuce, tomatoes, chips and mix well. Then, add salsa and sour cream.');
 COMMIT;
 
-
-
-
+--Greek Pita Pizza
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Greek Pita Pizza', 'Greek', '15 mins', '15 mins','350F','Serves 3-4');
@@ -76,7 +71,6 @@ INSERT INTO equipment(recipe_id, equipment)
 VALUES
 (LAST_INSERT_ID(),'Oven'),
 (LAST_INSERT_ID(),'Pizza Tray');
-
 
 INSERT INTO ingredients(recipe_id, ingredient_value, units)
 VALUES
@@ -90,7 +84,6 @@ VALUES
 (LAST_INSERT_ID(),'Bell pepper', '1 c'),
 (LAST_INSERT_ID(),'Parmesan cheese, grated', '3 Tbls');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Preheat oven to 350F and spray a large baking sheet lightly with cooking spray.'),
@@ -100,7 +93,7 @@ VALUES
 (LAST_INSERT_ID(),'Bake for 15 minutes or until hot and the green pepper is done.');
 COMMIT;
 
-
+--Chickpea Falafel Burgers
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Chickpea Falafel Burgers', 'Greek', '15 mins', '10 mins','High','Serves 3-4');
@@ -110,7 +103,6 @@ VALUES
 (LAST_INSERT_ID(),'Food processor'),
 (LAST_INSERT_ID(),'Mixing bowl'),
 (LAST_INSERT_ID(),'Large skillet');
-
 
 INSERT INTO ingredients(recipe_id, ingredient_value, units)
 VALUES
@@ -126,7 +118,6 @@ VALUES
 (LAST_INSERT_ID(),'Bread crumbs', '1/2 c'),
 (LAST_INSERT_ID(),'Egg whites', '2 pcs');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Heat 1 tablespoon of oil in a large skillet over medium-high heat. Add green onions and mushrooms, and fry until tender, stirring frequently.'),
@@ -136,6 +127,7 @@ VALUES
 (LAST_INSERT_ID(),'Heat enough oil to cover the bottom of a large skillet over medium heat. Form the bean mixture into 4 balls, and flatten into patties. Place the burgers in the hot skillet, and fry for about 5 minutes on each side, until nicely browned.');
 COMMIT;
 
+--Ginger-Garlic Shrimp
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Ginger-Garlic Shrimp', 'Asian', '5 mins', '10 mins','Medium-high','Serves 4');
@@ -155,7 +147,6 @@ VALUES
 (LAST_INSERT_ID(),'Shaohsing rice wine', '3 Tbls'),
 (LAST_INSERT_ID(),'Green onions', '4 pcs');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'In a bowl, sprinkle 1 1/2 teaspoons salt over shrimp and mix gently with your hands, about 1 minute. Pour shrimp into a colander and rinse well with cool water.'),
@@ -163,6 +154,7 @@ VALUES
 (LAST_INSERT_ID(),'Add shrimp and rice wine; stir constantly until shrimp are almost all pink on the outside, about 2 minutes. Add green onions and stir just until shrimp are opaque in the center (cut to test), about 1 minute longer.');
 COMMIT;
 
+--Vietnamese Noodle Soup
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Vietnamese Noodle Soup', 'Asian', '20 mins', '20 mins','High','Serves 4');
@@ -187,16 +179,15 @@ VALUES
 (LAST_INSERT_ID(),'Fish sauce', '2 Tbls'),
 (LAST_INSERT_ID(),'Bean sprouts', '1 c');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Prepare the rice noodles as the label directs.'),
 (LAST_INSERT_ID(),'Meanwhile, place a large pot over high heat. Poke the meat all over with a fork to tenderize it and season with salt and pepper. Sear the meat until charred but still rare, 2 to 3 minutes per side, then transfer to a plate. Add the onion and ginger to the pot; cook about 4 minutes. Add the broth, 3 cups water, the star anise and cinnamon, reduce the heat and simmer about 20 minutes.'),
 (LAST_INSERT_ID(),'Meanwhile, thinly slice the scallions and jalapenos (remove seeds for less heat) and tear the cilantro. Thinly slice the meat against the grain. Drain the noodles.'),
 (LAST_INSERT_ID(),'Add the fish sauce to the broth and boil 5 minutes. Discard the ginger, star anise and cinnamon stick. Remove and slice the onion. Divide the noodles among 4 bowls; top with the broth, beef, scallions, cilantro, bean sprouts, jalapenos and onion.');
-
 COMMIT;
 
+--Chcoclate Milk
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Chocolate Milk', 'Beverages', '5 mins', '0 mins','Ambient','Serves 2');
@@ -212,7 +203,6 @@ VALUES
 (LAST_INSERT_ID(),'Powder sugar', '2 Tbls'),
 (LAST_INSERT_ID(),'Vanilla', '1/2 tsp');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Pour milk into blender. Add in cocoa, powder sugar, and vanilla. Blend all ingredients until fully incorporated, about 30 seconds.'),
@@ -220,6 +210,7 @@ VALUES
 (LAST_INSERT_ID(),'This will last about one week covered in the fridge. (Or the life of the milk)');
 COMMIT;
 
+--Basic Vanilla Shake
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Basic Vanilla Shake', 'Beverages', '3 mins', '0 mins','Ambient','Serves 1');
@@ -233,12 +224,12 @@ VALUES
 (LAST_INSERT_ID(),'Milk','1/3 c'),
 (LAST_INSERT_ID(),'Premium vanilla ice cream', '10 oz');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'In a blender, combine the milk and ice cream and blend until smooth. Serve immediately.');
 COMMIT;
 
+--Basic Scrambled Eggs
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Basic Scrambled Eggs', 'Breakfast', '1 mins', '4 mins','Medium-High','Serves 2');
@@ -254,7 +245,6 @@ VALUES
 (LAST_INSERT_ID(),'Butter', '2 tsp'),
 (LAST_INSERT_ID(),'Salt and Pepper', 'To taste');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Beat eggs, milk, salt and pepper in medium bowl until blended.'),
@@ -262,6 +252,7 @@ VALUES
 (LAST_INSERT_ID(),'Continue cooking – pulling, lifting and folding eggs – until thickened and no visible liquid egg remains.');
 COMMIT;
 
+--French Toast
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('French Toast', 'Breakfast', '10 mins', '5 mins','High','Serves 4');
@@ -277,7 +268,6 @@ VALUES
 (LAST_INSERT_ID(),'Ground nutmeg', '1/2 tsp'),
 (LAST_INSERT_ID(),'Day-old bread', '8 pcs');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Beat eggs, milk and nutmeg in shallow dish until blended. Soak 1 bread slice at a time in egg mixture, turning once, letting stand about 1 minute per side.'),
@@ -285,6 +275,7 @@ VALUES
 (LAST_INSERT_ID(),'Place as many bread slices in hot pan as will fit in single layer. Immediately reduce heat to medium. Cook until golden brown and no visible liquid egg remains, 2 to 3 minutes per side. Repeat to cook remaining bread. Serve immediately.');
 COMMIT;
 
+--Quick Cherry Crisp
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Quick Cherry Crisp', 'Dessert', '8 mins', '12 mins','Medium-high','Serves 4');
@@ -303,7 +294,6 @@ VALUES
 (LAST_INSERT_ID(),'Melted butter', '2 Tbls'),
 (LAST_INSERT_ID(),'Chopped pecans or almonds', '1/4 c');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'In a small bowl, combine sugar and cornstarch. In a large saucepan, sprinkle cornstarch mixture over cherries; stir to combine. Cook and stir over medium heat about 10 minutes or until thickened and bubbly. Cook and stir for 2 minutes more.'),
@@ -311,6 +301,7 @@ VALUES
 (LAST_INSERT_ID(),'Divide cherry mixture among four dessert dishes. Sprinkle cookie mixture over cherry mixture. If desired, serve with ice cream.');
 COMMIT;
 
+--Rocky Road Parfaits
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Rocky Road Parfaits', 'Dessert', '15 mins', '0 mins','Abmient','Serves 4');
@@ -334,6 +325,7 @@ VALUES
 (LAST_INSERT_ID(),'Sprinkle with peanuts and marshmallows. If desired, garnish with chocolate curls.');
 COMMIT;
 
+--Herb Salad with Veggies
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Herb Salad with Veggies', 'Salad', '15 mins', '0 mins','Abmient','Serves 4');
@@ -360,6 +352,7 @@ VALUES
 (LAST_INSERT_ID(),'Add the lettuce, tomatoes, bell pepper, pita chips, and Feta and toss to coat. Season with ¼ teaspoon each salt and black pepper.');
 COMMIT;
 
+--Avacado and Blue Cheese Salad
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Avocado and Blue Cheese Salad', 'Salad', '10 mins', '3-5 mins','350F','Serves 4');
@@ -387,8 +380,8 @@ VALUES
 (LAST_INSERT_ID(),'Add the frisée, avocado, blue cheese, and almonds and toss to coat.');
 COMMIT;
 
+--Basic Nachos
 BEGIN;
-
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Basic Nachos', 'Etc', '5 mins', '2 mins','200-250F','Serves 2-4');
 
@@ -396,13 +389,11 @@ INSERT INTO equipment(recipe_id, equipment)
 VALUES
 (LAST_INSERT_ID(),'Plate');
 
-
 INSERT INTO ingredients(recipe_id, ingredient_value, units)
 VALUES
 (LAST_INSERT_ID(),'Tortilla chips','1 bag'),
 (LAST_INSERT_ID(),'Shredded cheese', '2 c'),
 (LAST_INSERT_ID(),'Sour cream', '1 c');
-
 
 INSERT INTO steps(recipe_id, steps)
 VALUES
@@ -411,10 +402,10 @@ VALUES
 (LAST_INSERT_ID(),'Take out of microwave and put sour cream on then enjoy!');
 COMMIT;
 
+--Hot Black Tea
 BEGIN;
-
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
-VALUES('Hot black tea', 'Etc', '3 mins', '5 mins','Boiling','Serves 4-8');
+VALUES('Hot Black Tea', 'Etc', '3 mins', '5 mins','Boiling','Serves 4-8');
 
 INSERT INTO equipment(recipe_id, equipment)
 VALUES
@@ -425,7 +416,6 @@ VALUES
 (LAST_INSERT_ID(),'Tea bags','4 bags'),
 (LAST_INSERT_ID(),'Water', '1 gallon');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Pour water into a pot or coffe maker (remove coffee grounds if ther is any) and boil the water.'),
@@ -433,9 +423,10 @@ VALUES
 (LAST_INSERT_ID(),'Pour into a gallon sized jug and serve.');
 COMMIT;
 
+-- French Fries
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
-VALUES('French fries', 'Sides', '10-15 mins', '5-10 mins','375F','Serves 4-8');
+VALUES('French Fries', 'Sides', '10-15 mins', '5-10 mins','375F','Serves 4-8');
 
 INSERT INTO equipment(recipe_id, equipment)
 VALUES
@@ -447,7 +438,6 @@ VALUES
 (LAST_INSERT_ID(),'Potatoes','4 pc'),
 (LAST_INSERT_ID(),'Salt', '2 tsp');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Slice up potatoes and put into deep fryer.'),
@@ -455,9 +445,10 @@ VALUES
 (LAST_INSERT_ID(),'Salt them then serve.');
 COMMIT;
 
+--Buttered Toast
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
-VALUES('Buttered toast', 'Sides', '10-15 mins', '5-10 mins','375F','Serves 1');
+VALUES('Buttered Toast', 'Sides', '10-15 mins', '5-10 mins','375F','Serves 1');
 
 INSERT INTO equipment(recipe_id, equipment)
 VALUES
@@ -469,7 +460,6 @@ VALUES
 (LAST_INSERT_ID(),'Bread','1 slice'),
 (LAST_INSERT_ID(),'Butter', '2 tsp');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Put bread in toaster for 2 minutes or until browned.'),
@@ -477,6 +467,7 @@ VALUES
 (LAST_INSERT_ID(),'Butter toast.');
 COMMIT;
 
+--Crab
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
 VALUES('Crab', 'Seafood', '10 mins', '20 mins','High','Serves 1-2');
@@ -490,7 +481,6 @@ VALUES
 (LAST_INSERT_ID(),'Crab','1 pc'),
 (LAST_INSERT_ID(),'Butter', '2 tsp');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Boil the crab for 20 minutes.'),
@@ -498,9 +488,10 @@ VALUES
 (LAST_INSERT_ID(),'Butter if needed.');
 COMMIT;
 
+--Buttered Shrimp
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
-VALUES('Buttered shrimp', 'Seafood', '5 mins', '10-20 mins','Medium','Serves 1-4');
+VALUES('Buttered Shrimp', 'Seafood', '5 mins', '10-20 mins','Medium','Serves 1-4');
 
 INSERT INTO equipment(recipe_id, equipment)
 VALUES
@@ -511,7 +502,6 @@ VALUES
 (LAST_INSERT_ID(),'Shrimp','24 oz'),
 (LAST_INSERT_ID(),'Butter', '2 tsp');
 
-
 INSERT INTO steps(recipe_id, steps)
 VALUES
 (LAST_INSERT_ID(),'Pour shrimp into pan.'),
@@ -519,9 +509,10 @@ VALUES
 (LAST_INSERT_ID(),'Cool and then serve.');
 COMMIT;
 
+--Cheese Burger
 BEGIN;
 INSERT INTO recipe_name (recipe_name, recipe_category, prep_time, cook_time, temp, yeild)
-VALUES('Cheese burger', 'Entree', '5 mins', '10 mins','Medium-high','Serves 1');
+VALUES('Cheese Burger', 'Entree', '5 mins', '10 mins','Medium-high','Serves 1');
 
 INSERT INTO equipment(recipe_id, equipment)
 VALUES
@@ -531,7 +522,6 @@ INSERT INTO ingredients(recipe_id, ingredient_value, units)
 VALUES
 (LAST_INSERT_ID(),'Beef patty','6 oz'),
 (LAST_INSERT_ID(),'Cheese', '1 pc');
-
 
 INSERT INTO steps(recipe_id, steps)
 VALUES

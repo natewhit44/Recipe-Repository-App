@@ -3,28 +3,6 @@ var ingredientCount = 1;
 var equipmentCount = 1;
 var stepCount = 1;
 
-// function sendFormData(rawData){
-//         var formData = JSON.stringify(rawData);
-
-//         console.log("== rawData", rawData);
-//         console.log("== formData", formData);
-//         $.ajax({
-//         	type: "GET",
-//             url: "/search/" + rawData,
-//             contentType: "application/json",
-//             data: formData,
-//             datatype: "json",
-//             success: function(){
-//                 alert("See console for output!");
-//             },
-//             error: function() {
-//                 alert('See console for output!');
-//             }
-//         });
-//     }
-
-
-
 $(document).ready(function(){
 	console.log("Ready");
 
@@ -40,18 +18,15 @@ $(document).ready(function(){
   	});
 
 	$('.category').on("click", function() {
-    console.log("---------------- clicked: " + $(this).find('label').attr('for'));
+		$('.home-page').hide();
+   		console.log("---------------- clicked: " + $(this).find('label').attr('for'));
 		document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
 	});
 
   $('.recipe-title-icon-container').on("click", function() {
-    // console.log("--- url: " + "http://localhost:3000/categories/" + $(this).find('label').attr('for'));
     console.log("\nIcon clicked!!!");
     document.location.href = "http://localhost:3000/categories/" + $(this).find('label').attr('for');
   });
-
-  // if (document.location.href.indexOf('/categories/') !== -1 &&\
-  //     document.location.href.indexOf() )
 
   $('#show-recipe').on("click", function() {
     $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
@@ -65,14 +40,10 @@ $(document).ready(function(){
 	$('#search-box-input').bind('keypress', function(e){
 	   if(e.which === 13) { // return
 	      var query = $('#search-box-input').val();
-	      console.log("\nQuery: ", query);
 
 	      if(query){
 	      	window.location.href = '/search/' + query;
 	      }
-	      //console.log("Trying to post form input");
-	      //sendFormData(query);
-	      //console.log("Post data transmission");
 	      $('#search-box-input').val('');
 	   }
 	});
@@ -90,10 +61,6 @@ $(document).ready(function(){
 		console.log("\nAdd note button clicked");
 		$('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeIn( "slow");
 	});
-  // $('.recipe-title-icon-container').on('click', function(){
-  //   console.log("\nicon clicked!!!");
-	// 	$('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeIn( "slow");
-	// });
 
 	$('#go-back').on('click', function(){
 		 $('#recipe-display-backdrop, #modal-header, #recipe-display-modal').fadeOut( "slow");
@@ -108,9 +75,6 @@ $(document).ready(function(){
      document.location.href = newPath;
 	});
 
-	// $('#addGo-back').on('click', function(){
-	// 	 $('#recipe-display-backdrop, #modal-header, #recipe-modal').fadeOut( "slow");
-	// });
 
 	$('#search-button').on('click', function(){
 		$('#search-box, #search-box-input').fadeToggle();
@@ -118,8 +82,9 @@ $(document).ready(function(){
 		//$('#search-button').stop().animate({height: "61px"});
 	});
 
-	//creates ingredient textboxes and add/remove buttons
+	// ANDREWS SECTION OF JS
 
+	//creates ingredient textboxes and add/remove buttons
 	var ingredientListItem = $(document.createElement('li')).attr('id', 'ingredientListItem_1');
 	var ingredientBox = $(document.createElement('input')).attr('class', 'ingredientBox');
 	var quantitySpan = $(document.createElement('span')).attr('class', 'quantitySpan').text(" Quantity: ");
@@ -340,22 +305,3 @@ $(document).ready(function(){
 	});
 	acceptButton.appendTo('#acceptButton-container');
 });
-
-
-// Recipe icon hash table
-var iconDict = {}
-
-iconDict.mexican = '/images/Mexican/favicon-96x96.png';
-iconDict.greek = '/images/Greek/favicon-96x96.png';
-iconDict.asian = '/images/Asian/favicon-96x96.png';
-iconDict.italian = '/images/Italian/favicon-96x96.png';
-iconDict.etc = '/images/Etc./favicon-96x96.png';
-iconDict.beverage = '/images/Beverage/favicon-96x96.png';
-iconDict.breakfast = '/images/Breakfast/favicon-96x96.png';
-iconDict.dessert = '/images/Dessert/favicon-96x96.png';
-iconDict.salad = '/images/Salad/favicon-96x96.png';
-iconDict.side = '/images/Side_Dish/favicon-96x96.png';
-iconDict.seafood = '/images/Seafood/favicon-96x96.png'
-iconDict.entree = '/images/Entree/favicon-96x96.png';
-
-console.log('== iconDict.mexian', iconDict.mexican)

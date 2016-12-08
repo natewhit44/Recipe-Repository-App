@@ -1,77 +1,26 @@
 {{> header}}
 
 <main>
-	{{> left-navbar}}
-
-{{!--   {{> home-page}} --}}
-  
-  {{> contact-page}}
 
   <div class="recipe-workspace">
 
+    
+  {{!-- {{> home-page}} --}}
+  
+  {{!-- {{> contact-page}} --}}
+
+
 			<h1 class="recipe-header">List of Recipes:</h1>
 			{{#if recipeContent}}<button id="show-recipe">Click here</button>{{/if}}
-
-
-
 
 			{{#each recipeHeader}}
 				{{> recipe-icon-title categoryName = this.recipe_category id = this.recipe_id}}
 			{{/each}}
 
-     {{!--  <h1>Test Zone {{title}}</h1> --}}
       {{#each search_results}}
         {{> recipe-icon-title categoryName = this.recipe_category id = this.recipe_id}}
       {{/each}}
 
-{{!-- 
-	 	  <h3>Main Recipe Info: </h3>
-    	{{#each recipeContent.recipeMain}}
-    		<p>{{this.recipe_name}}
-    		{{this.recipe_category}}
-    		{{this.prep_time}}
-    		{{this.cook_time}}
-    		{{this.temp}}
-    		{{this.yield}}
-    		</p>
-    	{{/each}}
-
-    	<h3>Equipment: </h3>
-    	{{#each recipeContent.equipment}}
-    		<p>{{this.equipment_piece}}
-    		</p>
-    	{{/each}}
-
-    	<h3>Ingredients: </h3>
-    	{{#each recipeContent.ingredients}}
-    		<p>{{this.ingredient_value}}
-    		</p>
-    	{{/each}}
-
-    	<h3>Steps: </h3>
-    	{{#each recipeContent.steps}}
-    		<p>{{this.step_value}}
-    		</p>
-    	{{/each}}  --}}
-
-
-		<div class="recipe-list">
-		{{!-- 	 {{#if recipes}}
-				{{#each recipes}}
-					{{> recipe-icon-title categoryName = ../title}}
-				{{/each}}
-			{{else}}
-				{{#if category}}
-					{{#each category}}
-						<h3>{{@key}}</h3>
-						{{#each this.recipes}}
-							<p>{{this.title}}</p>
-						{{/each}}
-					{{/each}}
-				{{/if}}
-			{{/if}} --}}
-
-		</div>
 	</div>
 
 

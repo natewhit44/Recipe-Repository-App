@@ -18,8 +18,28 @@
   </head>
 
   <body>
+    {{> left-navbar}}
+    
     {{{body}}}
+
+    <div id="search-box">
+      <input id="search-box-input" type="text" name="query" placeholder="Enter search query...">
+    </div>
+
+    <button type="button" class="google-search">Google Search?</button>
+
+    <div class="right-frame"></div>
+
+    {{> google-search}}
+
   </body>
+
+  {{> footer}}
+
+ 
+  {{> recipe-display content = recipeContent}}
+
+  {{> create-recipe}}
 
   <script src="/index.js"></script>
 
